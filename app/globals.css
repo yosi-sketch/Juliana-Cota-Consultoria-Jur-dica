@@ -1,0 +1,147 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+  --brand-red: #c5162e;
+  --brand-red-dark: #9d1428;
+  --brand-red-deep: #310d15;
+  --brand-ink: #201d1d;
+  --brand-ink-soft: #716b69;
+  --brand-ivory: #faf7f3;
+  --brand-paper: #ffffff;
+}
+
+@theme inline {
+  --font-serif: var(--font-display), "Cormorant Garamond", Georgia, serif;
+  --font-sans: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
+  --color-ink: #201d1d;
+  --color-ink-soft: #716b69;
+  --color-ivory: #faf7f3;
+  --color-brand-50: #fcf0f1;
+  --color-brand-100: #f6dfe2;
+  --color-brand-200: #edc0c7;
+  --color-brand-300: #df929e;
+  --color-brand-400: #d26879;
+  --color-brand-500: #c5162e;
+  --color-brand-600: #ae142b;
+  --color-brand-700: #9d1428;
+  --color-brand-800: #77111f;
+  --color-brand-900: #500e19;
+  --color-brand-950: #310d15;
+  --shadow-card: 0 18px 48px rgba(38, 22, 22, 0.09);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+body {
+  background: var(--brand-ivory);
+  color: var(--brand-ink);
+  font-family: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
+}
+
+::selection {
+  background: #9d1428;
+  color: #fff;
+}
+
+.eyebrow,
+.eyebrow-light {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.67rem;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.eyebrow {
+  color: #9d1428;
+}
+
+.eyebrow-light {
+  color: #f4c5cb;
+}
+
+.eyebrow::before,
+.eyebrow-light::before {
+  width: 1.75rem;
+  height: 1px;
+  flex: none;
+  background: currentColor;
+  content: "";
+}
+
+.nav-link {
+  position: relative;
+  padding-block: 0.5rem;
+  color: #625b59;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: color 180ms ease;
+}
+
+.nav-link::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  background: #9d1428;
+  content: "";
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 180ms ease;
+}
+
+.nav-link:hover {
+  color: #9d1428;
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+.footer-link {
+  transition: color 180ms ease;
+}
+
+.footer-link:hover {
+  color: #f4c5cb;
+}
+
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: #eee9e4;
+}
+
+::-webkit-scrollbar-thumb {
+  border: 2px solid #eee9e4;
+  border-radius: 999px;
+  background: #bd9297;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9d1428;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+  }
+}
