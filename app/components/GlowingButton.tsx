@@ -9,6 +9,7 @@ interface GlowingButtonProps {
   onClick?: () => void;
   className?: string;
   size?: "sm" | "md" | "lg";
+  variant?: "gold" | "outline" | "white";
 }
 
 export default function GlowingButton({
@@ -18,6 +19,7 @@ export default function GlowingButton({
   onClick,
   className = "",
   size = "md",
+  variant = "gold",
 }: GlowingButtonProps) {
   const sizeClasses = {
     sm: "px-5 py-3 text-[10px] tracking-[0.13em]",
@@ -25,10 +27,17 @@ export default function GlowingButton({
     lg: "px-7 py-4 text-xs tracking-[0.14em]",
   }[size];
 
+  const variantClasses = {
+    gold: "border border-brand-700 bg-brand-700 text-white shadow-sm shadow-brand-950/15 hover:-translate-y-0.5 hover:border-brand-800 hover:bg-brand-800 hover:shadow-md hover:shadow-brand-700/25",
+    outline: "border border-brand-700/50 bg-transparent text-brand-800 hover:-translate-y-0.5 hover:border-brand-700 hover:bg-brand-50 hover:text-brand-900",
+    white: "border border-white bg-white text-brand-900 shadow-sm hover:-translate-y-0.5 hover:bg-brand-50 hover:text-brand-950 hover:shadow-md",
+  }[variant];
+
   const classes =
-    "inline-flex items-center justify-center gap-2 rounded-full border border-brand-700 bg-brand-700 font-semibold uppercase text-white transition-all duration-200 hover:-translate-y-0.5 hover:border-brand-800 hover:bg-brand-800 focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-brand-700 " +
-    "select-none text-center " +
+    "inline-flex items-center justify-center gap-2 rounded-full font-semibold uppercase transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-brand-700 select-none text-center cursor-pointer " +
     sizeClasses +
+    " " +
+    variantClasses +
     " " +
     className;
 
