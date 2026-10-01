@@ -16,31 +16,32 @@ import {
   CheckCircle2,
   Clock,
   HeartHandshake,
-  Landmark,
   Mail,
   MapPin,
   Menu,
   Phone,
   Scale,
+  ShieldCheck,
   Star,
   X,
 } from "lucide-react";
 import GlowingButton from "./components/GlowingButton";
 
-const WHATSAPP_NUMBER = "5535997405607";
-const PHONE_DISPLAY = "(35) 99740-5607";
-const EMAIL_CONTACT = "contato@draizabellarenno.com";
+const WHATSAPP_NUMBER = "5535998609735";
+const PHONE_DISPLAY = "(35) 99860-9735";
+const EMAIL_CONTACT = "contato@giovanafranklin.adv.br";
+const OAB_NUMBER = "OAB/MG 208.554";
+const INSTAGRAM_URL = "https://www.instagram.com/advocacia.giovanafranklin/";
+const GOOGLE_MAPS_URL =
+  "https://www.google.com/maps/search/?api=1&query=Advocacia+Giovana+Franklin+Av.+Arlindo+Figueiredo+756+B+Passos+MG";
 
 function getWhatsAppUrl(message?: string) {
   const defaultText =
-    "Olá, Dra. Izabella Rennó. Gostaria de solicitar uma consulta jurídica especializada.";
+    "Olá, Dra. Giovana Franklin. Gostaria de solicitar uma consulta jurídica especializada.";
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
     message || defaultText
   )}`;
 }
-
-const GOOGLE_MAPS_URL =
-  "https://www.google.com/maps/search/?api=1&query=Dra.+Izabella+Renn%C3%B3+Del-Ducca+de+Souza%2C+Edif%C3%ADcio+Santa+Clara%2C+R.+Cel.+Francisco+Braz%2C+185+-+Sl+205+-+Centro%2C+Itajub%C3%A1+-+MG%2C+37500-005";
 
 function WhatsAppIcon({
   size = 17,
@@ -59,6 +60,33 @@ function WhatsAppIcon({
       className={className}
     >
       <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.63C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.59 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67ZM8.53 7.33C8.37 7.33 8.1 7.39 7.87 7.64C7.65 7.89 7.02 8.48 7.02 9.69C7.02 10.9 7.9 12.07 8.02 12.23C8.15 12.39 9.74 14.85 12.19 15.91C12.77 16.16 13.23 16.31 13.58 16.42C14.17 16.61 14.71 16.58 15.13 16.52C15.6 16.45 16.58 15.93 16.78 15.35C16.99 14.77 16.99 14.27 16.93 14.17C16.86 14.07 16.71 14.01 16.47 13.89C16.24 13.77 15.11 13.21 14.9 13.14C14.69 13.06 14.54 13.02 14.39 13.25C14.23 13.47 13.8 13.98 13.67 14.13C13.54 14.27 13.41 14.29 13.18 14.17C12.95 14.06 11.98 13.74 10.84 12.72C9.95 11.92 9.34 10.94 9.17 10.65C9.01 10.36 9.15 10.2 9.27 10.08C9.37 9.98 9.5 9.8 9.62 9.66C9.74 9.52 9.78 9.42 9.86 9.26C9.94 9.1 9.9 8.95 9.84 8.83C9.78 8.71 9.32 7.57 9.13 7.11C8.94 6.66 8.75 6.72 8.6 6.71C8.47 6.71 8.31 6.71 8.15 6.71L8.53 7.33Z" />
+    </svg>
+  );
+}
+
+function InstagramIcon({
+  size = 17,
+  className = "",
+}: {
+  size?: number;
+  className?: string;
+}) {
+  return (
+    <svg
+      aria-hidden="true"
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+    >
+      <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
     </svg>
   );
 }
@@ -90,143 +118,203 @@ interface PracticeArea {
 
 const practiceAreas: PracticeArea[] = [
   {
+    id: "previdenciario-inss",
+    title: "Direito Previdenciário",
+    icon: Award,
+    tag: "Benefícios & INSS",
+    summary:
+      "Concessão célere e revisão de aposentadorias, benefícios por incapacidade, BPC/LOAS, pensão por morte e recuperação de descontos indevidos.",
+    details:
+      "A conquista e a manutenção do seu benefício previdenciário exigem rigor analítico e combatividade perante as exigências do INSS. Atuamos administrativamente e judicialmente na concessão de aposentadorias (idade, tempo de contribuição, especial e rural), benefícios por incapacidade, pensão por morte, reversão de indeferimentos e no cancelamento e restituição em dobro de descontos indevidos e empréstimos fraudulentos que oneram sua renda.",
+    topics: [
+      "Concessão de aposentadorias (Idade, Tempo de Contribuição, Especial e Rural)",
+      "Cancelamento e restituição de descontos indevidos na aposentadoria (RMC e consignados)",
+      "Benefícios por incapacidade temporária e permanente (Auxílio-doença e Aposentadoria por Invalidez)",
+      "BPC/LOAS para idosos em vulnerabilidade e pessoas com deficiência",
+      "Pensão por morte, auxílio-reclusão e recursos contra negativas do INSS",
+      "Revisões de benefícios concedidos para aumento da renda mensal",
+    ],
+    whatsAppText:
+      "Olá, Dra. Giovana Franklin. Gostaria de uma consulta especializada em Direito Previdenciário e Benefícios do INSS.",
+  },
+  {
+    id: "planejamento-previdenciario",
+    title: "Planejamento Previdenciário",
+    icon: ShieldCheck,
+    tag: "Estratégia & Futuro",
+    summary:
+      "Estudo aprofundado do histórico contributivo para garantir a aposentadoria no momento exato e com o maior valor financeiro possível.",
+    details:
+      "Após as profundas mudanças trazidas pela Reforma da Previdência, dar entrada na aposentadoria sem um planejamento prévio pode custar dezenas de milhares de reais ao longo da vida. Analisamos detalhadamente todo o seu extrato CNIS, corrigimos pendências cadastrais, simulamos as regras de transição mais vantajosas e orientamos o recolhimento futuro ideal para maximizar sua Renda Mensal Inicial.",
+    topics: [
+      "Auditoria minuciosa do CNIS e retificação de vínculos e remunerações pendentes",
+      "Simulação e cálculo comparativo de todas as regras de transição da Reforma",
+      "Projeção precisa da Renda Mensal Inicial (RMI) em múltiplos cenários",
+      "Cálculo de custo-benefício de contribuições para evitar pagamentos desnecessários",
+      "Planejamento sob medida para autônomos, empresários, profissionais liberais e celetistas",
+      "Definição da melhor data para solicitar o benefício no teto ideal",
+    ],
+    whatsAppText:
+      "Olá, Dra. Giovana Franklin. Gostaria de agendar um Planejamento Previdenciário completo para o meu caso.",
+  },
+  {
+    id: "direito-trabalho",
+    title: "Direito do Trabalho",
+    icon: Briefcase,
+    tag: "Combatividade & Direitos",
+    summary:
+      "Defesa firme dos direitos do trabalhador em rescisões indiretas, reversão de justas causas, horas extras e reparação por assédio.",
+    details:
+      "Reconhecida por clientes pela bravura e dedicação em causas trabalhistas, a atuação da Dra. Giovana Franklin assegura que nenhuma violação cometida pelo empregador passe despercebida. Protegemos trabalhadores em pedidos de rescisão indireta (Art. 483 da CLT), cobrança de horas extraordinárias, adicionais de insalubridade e periculosidade, verbas rescisórias retidas e indenizações por assédio moral e doenças ocupacionais.",
+    topics: [
+      "Rescisão indireta por falta grave do empregador (Art. 483 da CLT) com saque integral do FGTS + 40%",
+      "Reversão de demissão por justa causa indevida para dispensa sem justa causa",
+      "Cobrança de horas extras, intervalos interjornada/intrajornada e adicional noturno",
+      "Adicionais legais de insalubridade, periculosidade e equiparação salarial",
+      "Indenizações por assédio moral, perseguição e ambiente de trabalho degradante",
+      "Assessoria preventiva e compliance trabalhista para empresas e empregadores",
+    ],
+    whatsAppText:
+      "Olá, Dra. Giovana Franklin. Gostaria de uma consulta jurídica especializada em Direito do Trabalho.",
+  },
+  {
     id: "civel-contratos",
     title: "Direito Cível & Contratos",
     icon: Scale,
-    tag: "Padrão HarvardX",
+    tag: "Rigor & Proteção Patrimonial",
     summary:
-      "Assessoria estratégica em contratos com padrão internacional, auditoria de riscos, responsabilidade civil e litígios patrimoniais.",
+      "Estruturação e auditoria de contratos, cobrança e execução de créditos, responsabilidade civil e soluções patrimoniais seguras.",
     details:
-      "Com formação especializada e certificada pela Harvard Law School (HarvardX em Contract Law), a Dra. Izabella Rennó atua na elaboração e revisão minuciosa de contratos civis e comerciais de alta relevância. A atuação abrange também o cancelamento e anulação de doações por ingratidão (Artigo 555 do Código Civil), rescisões contratuais, reparações por danos morais e materiais e disputas patrimoniais complexas.",
+      "Atuação profunda na prevenção de riscos e na solução assertiva de litígios civis e contratuais. Da elaboração técnica e revisão de contratos civis e comerciais à cobrança judicial de títulos, ações indenizatórias por danos materiais e morais, resolução contratual com perdas e danos e defesa em disputas possessórias e imobiliárias, assegurando a solidez do seu patrimônio.",
     topics: [
-      "Auditoria preventiva & elaboração de contratos (HarvardX)",
-      "Anulação e revogação de doações por ingratidão",
-      "Responsabilidade civil e reparação por danos",
-      "Execução de títulos e disputas patrimoniais",
+      "Elaboração, auditoria de riscos e blindagem técnica de instrumentos contratuais",
+      "Ações de cobrança, execução de títulos judiciais e extrajudiciais e recuperação de crédito",
+      "Responsabilidade civil e ações indenizatórias por danos morais e materiais",
+      "Resolução e rescisão contratual com apuração de perdas e danos e cláusulas penais",
+      "Direito imobiliário, contratos de locação, reintegração de posse e usucapião",
+      "Defesa do consumidor contra abusos bancários e cobranças irregulares",
     ],
     whatsAppText:
-      "Olá, Dra. Izabella Rennó. Gostaria de uma consulta especializada em Direito Cível e Contratos.",
-  },
-  {
-    id: "consumidor-bancario",
-    title: "Direito do Consumidor & Bancário",
-    icon: Landmark,
-    tag: "Defesa Intransigente",
-    summary:
-      "Combate incisivo a abusos de instituições financeiras, juros abusivos, fraudes, negativações indevidas e violações de tempo.",
-    details:
-      "Proteção rigorosa contra práticas abusivas de bancos e fornecedores. Atuação especializada em fraudes bancárias, empréstimos consignados não solicitados, cobrança de juros extorsivos, negativações indevidas no SPC/Serasa e ressarcimento pelo desvio produtivo do consumidor — incluindo indenizações por tempo excessivo e prejudicial em filas de agências bancárias.",
-    topics: [
-      "Fraudes financeiras e empréstimos fraudulentos",
-      "Revisão de juros e cláusulas bancárias abusivas",
-      "Tempo excessivo em fila de banco (desvio produtivo)",
-      "Indenizações por negativação indevida e cobrança vexatória",
-    ],
-    whatsAppText:
-      "Olá, Dra. Izabella Rennó. Gostaria de uma consulta especializada em Direito do Consumidor e Bancário.",
+      "Olá, Dra. Giovana Franklin. Gostaria de uma consulta jurídica em Direito Cível e Contratos.",
   },
   {
     id: "familia-sucessoes",
-    title: "Família & Sucessões",
+    title: "Cível, Família & Sucessões",
     icon: HeartHandshake,
-    tag: "Atendimento Humanizado",
+    tag: "Acolhimento & Celeridade",
     summary:
-      "Condução sensível, técnica e discreta em inventários, partilhas judiciais e extrajudiciais, divórcios e planejamento sucessório.",
+      "Condução sensível, rápida e resolutiva em inventários extrajudiciais em cartório, divórcios, partilhas e planejamento sucessório.",
     details:
-      "As questões de família e sucessões exigem equilíbrio entre firmeza jurídica e sensibilidade humana. Atuação estruturada em inventários judiciais e extrajudiciais rápidos em cartório, planejamento sucessório para resguardo do patrimônio familiar, divórcios consensuais e litigiosos, partilha de bens, fixação e revisão de pensão alimentícia e guarda de menores.",
+      "Questões familiares e sucessórias exigem delicadeza no trato humano combinada com absoluto domínio técnico. Atuamos com extrema celeridade na realização de inventários em cartório de notas ou judiciais, partilha de patrimônio, divórcios consensuais e litigiosos, guarda de menores, fixação e revisão de alimentos e planejamento sucessório para preservação e perpetuação de bens da família.",
     topics: [
-      "Inventários judiciais e extrajudiciais ágeis",
-      "Planejamento sucessório e proteção patrimonial",
-      "Divórcio consensual e litigioso com partilha",
-      "Pensão alimentícia, guarda e convivência",
+      "Inventários extrajudiciais ágeis em cartório de notas e inventários judiciais",
+      "Divórcio consensual e litigioso com partilha estratégica de bens",
+      "Fixação, revisão, exoneração e execução de pensão alimentícia em atraso",
+      "Regulamentação e modificação de guarda e regime de convivência familiar",
+      "Planejamento sucessório, testamentos e doações com cláusulas protetivas",
+      "Reconhecimento e dissolução de união estável com divisão de bens",
     ],
     whatsAppText:
-      "Olá, Dra. Izabella Rennó. Gostaria de uma consulta especializada em Direito de Família e Sucessões.",
-  },
-  {
-    id: "trabalhista-previdenciario",
-    title: "Trabalhista & Previdenciário",
-    icon: Briefcase,
-    tag: "Rigor & Direitos",
-    summary:
-      "Resguardo enfático de direitos trabalhistas, consultoria preventiva empresarial e concessão de benefícios e pensões do INSS.",
-    details:
-      "Defesa dos direitos de profissionais e empresas nas relações de trabalho: rescisão indireta, verbas rescisórias inadimplidas, horas extraordinárias, equiparação salarial e compliance preventivo. No âmbito previdenciário, atuação detalhada para concessão de pensão por morte, aposentadorias especiais, auxílios e planejamento previdenciário minucioso.",
-    topics: [
-      "Reclamatórias trabalhistas e rescisões contratuais",
-      "Concessão de pensão por morte e auxílios do INSS",
-      "Planejamento e revisão de aposentadorias",
-      "Consultoria jurídica preventiva e contratos de trabalho",
-    ],
-    whatsAppText:
-      "Olá, Dra. Izabella Rennó. Gostaria de uma consulta especializada em Direito Trabalhista e Previdenciário.",
+      "Olá, Dra. Giovana Franklin. Gostaria de uma consulta especializada em Direito de Família e Sucessões.",
   },
 ];
 
 const clientReviews = [
   {
-    name: "Louise Bianca",
-    reviewsCount: "5 avaliações",
+    name: "Sabrina Faria",
+    reviewsCount: "3 avaliações",
     date: "Há 1 ano",
-    highlight: "Lê todo o processo com cuidado absoluto",
+    highlight: "Trabalha com bravura e maestria, ótima defensora dos direitos",
     content:
-      "Dra Izabella é extremamente dedicada ao que faz, uma das únicas - senão a única - que realmente lê todo o processo e escreve todas as suas manifestações com determinação, atenção e cuidado! Só tenho elogios ao escritório, ao atendimento e ao desempenho da Dra! Excepcional! 🙏🏻",
+      "Tenho uma admiração muito grande pelo trabalho da Dra Giovana e indico ela sempre! Pois sempre obtive sucesso nas causas das quais ela sempre esteve à frente! Trabalha com bravura e maestria, uma ótima defensora dos direitos humanos!!",
   },
   {
-    name: "Henrique Nunes",
-    reviewsCount: "1 avaliação",
+    name: "Cesar Piantino",
+    reviewsCount: "3 avaliações",
     date: "Há 3 anos",
-    highlight: "Atendimento diferenciado e segurança técnica",
+    highlight: "Solucionou meus problemas com rapidez e comprometimento",
     content:
-      "Atendimento diferenciado! Uma grande profissional que transmite confiança para o cliente, pois fala com segurança mostrando que entende do que fala. O investimento vale a pena. Serviço de qualidade e com seriedade! Recomendo!",
+      "Ótimo atendimento. Fui muito bem recebido pela Dra. Giovana, que solucionou meus problemas com rapidez e comprometimento! Indico para todos.",
   },
   {
-    name: "Valter Luiz Arruda",
-    reviewsCount: "4 avaliações",
-    date: "Há 9 meses",
-    highlight: "Séria, dedicada e objetivos alcançados",
+    name: "Ana Rodrigues",
+    reviewsCount: "1 avaliação",
+    date: "Há 2 anos",
+    highlight: "Resolveu o desconto indevido na minha aposentadoria de forma rápida",
     content:
-      "Excelente profissional. Séria e dedicada. Foi muito bom tê-la como advogada. Objetivos alcançados.",
+      "Fui muito bem atendida. Dra Giovana resolveu a questão do desconto indevido na minha aposentadoria. De forma rápida e muito comprometida.",
   },
   {
-    name: "Caique Oliveira",
+    name: "Gabriela Bárbara",
+    reviewsCount: "1 avaliação",
+    date: "Há 1 ano",
+    highlight: "Super atenciosa, realmente vai atrás dos nossos direitos",
+    content:
+      "Advogada Giovana excelente! Super atenciosa, realmente vai atrás dos nossos direitos. Atendimento ótimo!",
+  },
+  {
+    name: "Maria Luiza Machado Fernandes",
     reviewsCount: "3 avaliações",
     date: "Há 2 anos",
-    highlight: "Conhecimento incrível e muita cordialidade",
+    highlight: "Atendimento impecável da Dra. Giovana. Recomendo de olhos fechados",
     content:
-      "Dra Izabella é uma excelente advogada e de um conhecimento incrível. Muito responsável e profissional no que faz. Super dedicada com seus clientes, trata a todos de maneira cordial. Esclarece todas às dúvidas de maneira clara.",
+      "Excelente profissional! Atendimento impecável da Dra. Giovana. Recomendo de olhos fechados.",
   },
   {
-    name: "Izabel Nogueira",
-    reviewsCount: "1 avaliação",
-    date: "Há 1 ano",
-    highlight: "Confiança e empenho ao máximo",
-    content:
-      "A Doutora Izabella é muito atenciosa e competente, sentimos muita confiança que ela vai se empenhar ao máximo para que consigamos atingir nossos objetivos.",
-  },
-  {
-    name: "Carlos Jader",
-    reviewsCount: "5 avaliações",
-    date: "Há 2 anos",
-    highlight: "Grande conhecimento e cuidado com o cliente",
-    content:
-      "Excelente advogada! Se preocupa com os clientes, trata todos muito bem! Recomendo, pois além de uma ótima pessoa é uma profissional dedicada e com grande conhecimento!",
-  },
-  {
-    name: "Edson Lima",
-    reviewsCount: "9 avaliações",
+    name: "Projeta Imóveis",
+    reviewsCount: "6 avaliações",
     date: "Há 3 anos",
-    highlight: "Serviço que superou expectativas",
+    highlight: "Profissional exemplar, dedicação em todos os momentos",
     content:
-      "A Drª Izabella é uma excelente profissional. Foi indicada por um amigo meu e prestou um excepcional serviço superando minhas expectativas. Eu a recomendo.",
+      "Profissional exemplar. Dedicação em todos os momentos que precisei, êxito em alguns e outros ainda em andamento que com certeza teremos vitória!",
   },
   {
-    name: "Isabela Santos",
-    reviewsCount: "1 avaliação",
-    date: "Há 4 anos",
-    highlight: "Trabalho impecável e correto",
+    name: "Lígia Ulhôa",
+    reviewsCount: "12 avaliações",
+    date: "Há 3 anos",
+    highlight: "Atenciosa, pontual, muito inteligente, indico demais",
     content:
-      "A Dra. é uma excelente advogada, extremamente correta e competente, trabalha de forma impecável. Recomendo demais!",
+      "Profissional excelente, atenciosa, pontual, muito inteligente, indico demais.",
+  },
+  {
+    name: "Dinamar Oliveira",
+    reviewsCount: "1 avaliação",
+    date: "Há 2 anos",
+    highlight: "Muito honesta, trabalha com dedicação e amor",
+    content:
+      "Excelente advogada, muito honesta, trabalha com dedicação e amor. Fui muito bem atendida, excelente advogada.",
+  },
+  {
+    name: "Ana Carolina Ribeiro",
+    reviewsCount: "3 avaliações",
+    date: "Há 3 anos",
+    highlight: "Advogada extremamente atenciosa e competente",
+    content:
+      "Excelente escritório, advogada extremamente atenciosa e competente. Indico de olhos fechados!",
+  },
+  {
+    name: "Idelma Costa",
+    reviewsCount: "2 avaliações",
+    date: "Há 1 ano",
+    highlight: "Profissional educada, competente, super indico",
+    content:
+      "Profissional educada, competente, sem muita formalidade, super indico.",
+  },
+  {
+    name: "Douvane Oliveira",
+    reviewsCount: "1 avaliação",
+    date: "Há 3 anos",
+    highlight: "Excelente profissional e muito honesta",
+    content:
+      "Excelente profissional super indico, muito honesta, super indico.",
+  },
+  {
+    name: "Elaine Ribeiro De Melo",
+    reviewsCount: "3 avaliações",
+    date: "Há 9 meses",
+    highlight: "Maravilhosa, Giovana é muito competente no que faz",
+    content:
+      "Maravilhosa, Giovana é muito competente no que faz.",
   },
 ];
 
@@ -287,21 +375,21 @@ export default function Home() {
     <MotionConfig reducedMotion="user">
       <main className="overflow-hidden bg-ivory text-ink">
         {/* Navigation Bar */}
-        <header className="sticky top-0 z-40 border-b border-ink/10 bg-ivory/95 backdrop-blur-xl">
-          <div className="mx-auto flex h-[90px] max-w-7xl items-center justify-between gap-5 px-5 sm:h-[105px] sm:px-8 lg:px-12">
+        <header className="sticky top-0 z-40 border-b border-white/10 bg-black/95 backdrop-blur-xl">
+          <div className="mx-auto flex h-[95px] max-w-7xl items-center justify-between gap-5 px-5 sm:h-[110px] sm:px-8 lg:px-12">
             <a
               href="#inicio"
-              aria-label="Izabella Rennó Advocacia — Início"
+              aria-label="Advocacia Giovana Franklin — Início"
               onClick={closeMenu}
               className="flex items-center gap-3 transition-opacity hover:opacity-90"
             >
               <Image
-                src="/logo.png"
+                src="/logo-light.png"
                 width={500}
-                height={171}
-                alt="Izabella Rennó Advocacia — OAB/MG 201.285"
+                height={165}
+                alt="Advocacia Giovana Franklin — OAB/MG 208.554"
                 priority
-                className="h-16 w-auto object-contain sm:h-[77px]"
+                className="h-14 w-auto object-contain sm:h-[72px]"
               />
             </a>
 
@@ -331,11 +419,20 @@ export default function Home() {
 
             <div className="hidden items-center gap-3 lg:flex">
               <a
+                href={INSTAGRAM_URL}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Instagram da Advocacia Giovana Franklin"
+                className="grid size-10 place-items-center rounded-full border border-white/20 text-brand-300 transition-all hover:border-brand-400 hover:bg-white/10 hover:text-white"
+              >
+                <InstagramIcon size={17} />
+              </a>
+              <a
                 href={getWhatsAppUrl()}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="WhatsApp da Dra. Izabella Rennó"
-                className="grid size-10 place-items-center rounded-full border border-ink/15 text-brand-700 transition-all hover:border-brand-700 hover:bg-brand-50 hover:text-brand-800"
+                aria-label="WhatsApp da Dra. Giovana Franklin"
+                className="grid size-10 place-items-center rounded-full border border-white/20 text-brand-300 transition-all hover:border-brand-400 hover:bg-white/10 hover:text-white"
               >
                 <WhatsAppIcon size={18} />
               </a>
@@ -354,7 +451,7 @@ export default function Home() {
               aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
               aria-expanded={menuOpen}
               aria-controls="mobile-navigation"
-              className="grid size-11 place-items-center rounded-full border border-ink/15 text-ink lg:hidden"
+              className="grid size-11 place-items-center rounded-full border border-white/20 text-white lg:hidden"
               onClick={() => setMenuOpen((open) => !open)}
             >
               {menuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -370,7 +467,7 @@ export default function Home() {
                 animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}
                 transition={{ duration: 0.22 }}
-                className="overflow-hidden border-t border-ink/10 bg-ivory px-6 lg:hidden"
+                className="overflow-hidden border-t border-white/10 bg-black px-6 lg:hidden"
               >
                 <div className="mx-auto flex max-w-7xl flex-col gap-1 py-4">
                   {[
@@ -385,20 +482,31 @@ export default function Home() {
                       key={label}
                       href={href}
                       onClick={closeMenu}
-                      className="py-3 text-sm font-medium text-ink-soft hover:text-brand-700"
+                      className="py-3 text-sm font-medium text-white/80 hover:text-brand-300"
                     >
                       {label}
                     </a>
                   ))}
-                  <a
-                    className="mt-3 inline-flex items-center justify-center gap-2 rounded-full bg-brand-700 px-5 py-3.5 text-xs font-semibold uppercase tracking-[0.13em] text-white shadow-md transition-all hover:bg-brand-800"
-                    href={getWhatsAppUrl()}
-                    target="_blank"
-                    rel="noreferrer"
-                    onClick={closeMenu}
-                  >
-                    <WhatsAppIcon size={16} /> Falar no WhatsApp
-                  </a>
+                  <div className="mt-3 flex flex-col gap-2">
+                    <a
+                      className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-700 px-5 py-3.5 text-xs font-semibold uppercase tracking-[0.13em] text-white shadow-md transition-all hover:bg-brand-800"
+                      href={getWhatsAppUrl()}
+                      target="_blank"
+                      rel="noreferrer"
+                      onClick={closeMenu}
+                    >
+                      <WhatsAppIcon size={16} /> Falar no WhatsApp
+                    </a>
+                    <a
+                      className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/5 px-5 py-3 text-xs font-semibold text-white/90 hover:bg-white/10"
+                      href={INSTAGRAM_URL}
+                      target="_blank"
+                      rel="noreferrer"
+                      onClick={closeMenu}
+                    >
+                      <InstagramIcon size={15} /> Siga no Instagram
+                    </a>
+                  </div>
                 </div>
               </motion.nav>
             )}
@@ -422,16 +530,16 @@ export default function Home() {
             >
               <motion.p variants={reveal} className="eyebrow mb-6">
                 <span className="size-2 rounded-full bg-brand-700" />
-                OAB/MG 201.285 · Edifício Santa Clara · Itajubá - MG
+                OAB/MG 208.554 · Av. Arlindo Figueiredo · Passos - MG
               </motion.p>
 
               <motion.h1
                 variants={reveal}
-                className="max-w-[760px] font-serif text-[3.2rem] leading-[0.98] tracking-[-0.045em] text-ink sm:text-6xl lg:text-[4.9rem]"
+                className="max-w-[760px] font-serif text-[3.1rem] leading-[0.98] tracking-[-0.045em] text-ink sm:text-6xl lg:text-[4.75rem]"
               >
-                Alta precisão jurídica com{" "}
+                Excelência jurídica e atuação combativa com{" "}
                 <span className="italic text-brand-700 font-serif">
-                  dedicação exclusiva
+                  dedicação artesanal
                 </span>{" "}
                 a cada causa.
               </motion.h1>
@@ -440,10 +548,11 @@ export default function Home() {
                 variants={reveal}
                 className="mt-7 max-w-xl text-[15px] leading-7 text-ink-soft sm:text-base sm:leading-8"
               >
-                Atendimento humanizado, ético e resolutivo conduzido pela Dra.
-                Izabella Rennó. Soluções jurídicas seguras nas áreas Cível,
-                Contratos, Consumidor & Bancário, Família e Trabalhista —
-                presencial em Itajubá e on-line em todo o Brasil.
+                Atendimento acolhedor, ético e resolutivo conduzido pela Dra.
+                Giovana Franklin. Soluções jurídicas estratégicas em Direito
+                Previdenciário, Planejamento Previdenciário, Direito do Trabalho,
+                Cível e Família — sede estruturada em Passos/MG e atendimento
+                digital seguro em todo o Brasil.
               </motion.p>
 
               <motion.div
@@ -456,7 +565,7 @@ export default function Home() {
                   size="lg"
                   className="rounded-full shadow-md"
                 >
-                  <WhatsAppIcon size={16} /> Falar com a Dra. Izabella
+                  <WhatsAppIcon size={16} /> Falar com a Dra. Giovana
                 </GlowingButton>
                 <a
                   href="#atuacao"
@@ -475,16 +584,16 @@ export default function Home() {
                 className="mt-12 flex flex-wrap items-center gap-x-7 gap-y-4 border-t border-ink/10 pt-6 text-xs text-ink-soft"
               >
                 <span className="inline-flex items-center gap-2 font-medium">
-                  <Award size={16} className="text-brand-700" /> Formação
-                  HarvardX em Contratos
+                  <Star size={15} className="fill-brand-700 text-brand-700" />{" "}
+                  4,9 estrelas no Google (43 avaliações)
                 </span>
                 <span className="inline-flex items-center gap-2 font-medium">
-                  <Star size={15} className="fill-brand-700 text-brand-700" />{" "}
-                  4,9 estrelas no Google (50+ avaliações)
+                  <ShieldCheck size={16} className="text-brand-700" /> Inscrição
+                  OAB/MG 208.554
                 </span>
                 <span className="inline-flex items-center gap-2 font-medium">
                   <MapPin size={15} className="text-brand-700" /> Presencial em
-                  Itajubá e on-line
+                  Passos - MG e on-line
                 </span>
               </motion.div>
             </motion.div>
@@ -498,51 +607,58 @@ export default function Home() {
                 delay: 0.18,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="relative mx-auto w-full max-w-[470px] lg:ml-auto lg:mr-3"
+              className="relative mx-auto w-full max-w-[480px] lg:ml-auto lg:mr-3"
             >
-              {/* Outer decorative gold border */}
-              <div className="absolute -inset-3 -rotate-2 rounded-[46%_46%_5%_5%] border border-brand-700/25 sm:-inset-4" />
+              {/* Luxury ambient backlight aura */}
+              <div className="absolute -inset-4 rounded-3xl bg-gradient-to-tr from-brand-700/20 via-brand-400/10 to-transparent blur-2xl -z-10" />
 
-              {/* Main portrait */}
-              <div className="relative aspect-[0.82] overflow-hidden rounded-[46%_46%_5%_5%] bg-[#ded7d0] shadow-card">
+              {/* Architectural gold outer hairline frame */}
+              <div className="absolute -inset-2.5 rounded-2xl border border-brand-700/30 pointer-events-none" />
+
+              {/* Main portrait executive card */}
+              <div className="relative aspect-[0.76] overflow-hidden rounded-2xl bg-[#14110e] shadow-2xl ring-1 ring-black/10">
                 <Image
-                  src="/imgi_8_652076002_18074248049545715_1199206770821780813_n.jpg"
-                  alt="Dra. Izabella Rennó Del-Ducca de Souza — Advogada OAB/MG 201.285"
+                  src="/giovana-franklin-hero.jpg"
+                  alt="Dra. Giovana Franklin — Advogada OAB/MG 208.554"
                   fill
                   priority
                   sizes="(max-width: 640px) 90vw, (max-width: 1024px) 70vw, 42vw"
                   className="object-cover object-[50%_15%]"
                 />
-                <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-brand-950/85 via-brand-950/40 to-transparent" />
-                <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between gap-3 text-white sm:bottom-8 sm:left-8 sm:right-8">
+
+                {/* Gradient vignette on bottom */}
+                <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
+
+                {/* Executive name overlay */}
+                <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between gap-3 text-white sm:bottom-7 sm:left-7 sm:right-7">
                   <div>
-                    <p className="font-serif text-2xl font-normal tracking-wide">
-                      Dra. Izabella Rennó
+                    <p className="font-serif text-2xl font-normal tracking-wide text-white">
+                      Dra. Giovana Franklin
                     </p>
-                    <p className="mt-1 text-[10px] uppercase tracking-[0.2em] text-brand-200">
-                      OAB/MG 201.285 · Advocacia
+                    <p className="mt-1 text-[10px] uppercase tracking-[0.2em] text-brand-300">
+                      OAB/MG 208.554 · Advocacia
                     </p>
                   </div>
-                  <span className="grid size-11 shrink-0 place-items-center rounded-full border border-brand-300/40 bg-brand-950/40 text-brand-200 backdrop-blur-sm">
+                  <span className="grid size-11 shrink-0 place-items-center rounded-full border border-brand-300/40 bg-black/60 text-brand-300 backdrop-blur-md">
                     <Scale size={18} />
                   </span>
                 </div>
               </div>
 
               {/* Floating badges */}
-              <div className="absolute -left-4 top-[14%] rounded-full border border-brand-700/20 bg-ivory px-4 py-2.5 text-[10px] font-bold tracking-[0.14em] text-brand-800 shadow-card sm:-left-9 sm:px-5">
-                ATENDIMENTO MINUCIOSO
+              <div className="absolute -left-3 top-[10%] rounded-full border border-brand-700/30 bg-ivory/95 px-4 py-2.5 text-[10px] font-bold tracking-[0.14em] text-brand-800 shadow-xl backdrop-blur-md sm:-left-6 sm:px-5">
+                ATENDIMENTO ARTESANAL
               </div>
 
-              <div className="absolute -right-3 bottom-[22%] rounded-2xl border border-brand-700/20 bg-white/95 p-3.5 shadow-card backdrop-blur-md sm:-right-8">
+              <div className="absolute -right-3 bottom-[18%] rounded-2xl border border-brand-700/30 bg-white/95 p-4 shadow-2xl backdrop-blur-md sm:-right-6">
                 <div className="flex items-center gap-2 text-brand-700">
-                  <Star size={14} className="fill-brand-700" />
+                  <Star size={15} className="fill-brand-700" />
                   <span className="font-serif text-lg font-bold text-ink">
                     4,9 / 5,0
                   </span>
                 </div>
                 <p className="mt-0.5 text-[10px] uppercase tracking-wider text-ink-soft">
-                  50+ Avaliações Google
+                  43 Avaliações Google
                 </p>
               </div>
             </motion.div>
@@ -556,10 +672,10 @@ export default function Home() {
         >
           <div className="mx-auto grid max-w-7xl gap-7 px-5 py-8 sm:grid-cols-4 sm:gap-4 sm:px-8 lg:px-12">
             {[
-              ["4,9 ★", "nota máxima com 50+ avaliações no Google"],
-              ["HarvardX", "certificação em Direito Contratual"],
-              ["OAB/MG", "nº 201.285 com atuação especializada"],
-              ["Itajubá & Brasil", "atendimento presencial e 100% on-line"],
+              ["4,9 ★", "nota de excelência com 43 avaliações no Google"],
+              ["OAB/MG", "nº 208.554 com atuação combativa"],
+              ["Passos - MG", "Av. Arlindo Figueiredo, 756 - B"],
+              ["Brasil Inteiro", "atendimento presencial e 100% on-line"],
             ].map(([value, label], index) => (
               <div
                 key={label}
@@ -580,13 +696,13 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Sobre a Dra. Izabella Rennó */}
+        {/* Sobre a Dra. Giovana Franklin */}
         <section
           id="sobre"
           className="scroll-mt-24 bg-white py-20 sm:py-28 lg:py-32"
         >
           <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-[0.94fr_1.06fr] lg:gap-20 lg:px-12">
-            {/* Office photo with HarvardX Certificate */}
+            {/* OAB Institutional Photo Presentation */}
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -594,30 +710,30 @@ export default function Home() {
               variants={reveal}
               className="relative mx-auto w-full max-w-[540px]"
             >
-              <div className="relative aspect-[0.95] overflow-hidden rounded-[2px] bg-[#ded7d0] shadow-card">
+              <div className="relative aspect-[0.93] overflow-hidden rounded-[2px] bg-[#d9d3cb] shadow-card">
                 <Image
-                  src="/imgi_46_669839595_18577841050053593_6416266873760283509_n.jpg"
-                  alt="Dra. Izabella Rennó em seu escritório com certificado HarvardX em Contract Law"
+                  src="/giovana-franklin-oab.jpg"
+                  alt="Dra. Giovana Franklin — OAB Minas Gerais Subseção Passos"
                   fill
                   sizes="(max-width: 1024px) 90vw, 45vw"
-                  className="object-cover object-[50%_25%]"
+                  className="object-cover object-[50%_15%]"
                 />
               </div>
 
               {/* Authority card */}
-              <div className="absolute -bottom-6 right-3 max-w-[270px] border-l-2 border-brand-700 bg-ivory px-5 py-4 shadow-card sm:-right-6 sm:px-6">
+              <div className="absolute -bottom-6 right-3 max-w-[290px] border-l-2 border-brand-700 bg-ivory px-5 py-4 shadow-card sm:-right-6 sm:px-6">
                 <div className="flex items-center gap-2 text-brand-700">
-                  <Award size={16} />
+                  <ShieldCheck size={16} />
                   <p className="text-[10px] font-bold uppercase tracking-[0.16em]">
-                    Harvard Law School
+                    OAB Minas Gerais
                   </p>
                 </div>
                 <p className="mt-1 font-serif text-lg leading-snug text-ink">
-                  Contract Law Certification
+                  51ª Subseção Passos
                 </p>
                 <p className="mt-1 text-[11px] leading-4 text-ink-soft">
-                  Formação contínua de padrão internacional aplicada à sua
-                  defesa.
+                  Presença institucional ativa, compromisso ético e atuação
+                  firme na defesa intransigente dos direitos de cada cliente.
                 </p>
               </div>
 
@@ -632,7 +748,7 @@ export default function Home() {
               variants={stagger}
             >
               <motion.p variants={reveal} className="eyebrow">
-                TRAJETÓRIA & RIGOR TÉCNICO
+                TRAJETÓRIA & COMPROMISSO COM A DEFESA
               </motion.p>
               <motion.h2
                 variants={reveal}
@@ -640,32 +756,32 @@ export default function Home() {
               >
                 Uma advocacia que une{" "}
                 <span className="italic text-brand-700">
-                  profundidade jurídica
+                  bravura técnica
                 </span>{" "}
-                e compromisso pessoal.
+                e acolhimento humano.
               </motion.h2>
 
               <motion.p
                 variants={reveal}
                 className="mt-6 max-w-xl text-[15px] leading-7 text-ink-soft"
               >
-                A Dra. Izabella Rennó Del-Ducca de Souza (OAB/MG 201.285)
-                consolida sua prática na advocacia sob um princípio
-                fundamental: cada causa é única e merece atenção artesanal. Não
-                utilizamos petições genéricas nem respostas padronizadas.
+                A <strong className="text-ink">Dra. Giovana Franklin (OAB/MG 208.554)</strong>{" "}
+                consolida sua trajetória na advocacia alicerçada em valores
+                inegociáveis: estudo minucioso de cada detalhe do processo, combate
+                leal e firme pelos direitos do constituinte e atendimento empático
+                sem formalismos desnecessários.
               </motion.p>
 
               <motion.p
                 variants={reveal}
                 className="mt-4 max-w-xl text-[15px] leading-7 text-ink-soft"
               >
-                Com certificação de excelência internacional pela prestigiada{" "}
-                <strong className="text-ink">
-                  Harvard Law School (HarvardX em Contract Law)
-                </strong>
-                , a Dra. Izabella alia rigor analítico, clareza absoluta na
-                comunicação e atuação combativa em litígios cíveis, bancários,
-                contratuais e familiares.
+                Elogiada por seus clientes pela clareza, honestidade e rapidez
+                na solução de conflitos — desde complexas concessões de
+                aposentadoria e cessação de descontos indevidos até disputas
+                trabalhistas, contratos civis e inventários —, a Dra. Giovana
+                trata cada demanda com dedicação artesanal, sem petições
+                massificadas ou respostas genéricas.
               </motion.p>
 
               <motion.div
@@ -674,33 +790,32 @@ export default function Home() {
               >
                 <div className="flex items-center gap-2.5 text-xs text-ink font-medium">
                   <CheckCircle2 size={16} className="text-brand-700 shrink-0" />
-                  <span>Leitura minuciosa de cada lauda processual</span>
+                  <span>Análise detalhada de cada linha dos autos processuais</span>
                 </div>
                 <div className="flex items-center gap-2.5 text-xs text-ink font-medium">
                   <CheckCircle2 size={16} className="text-brand-700 shrink-0" />
-                  <span>Transparência total em cada etapa do caso</span>
+                  <span>Transparência total e comunicação direta pelo WhatsApp</span>
                 </div>
                 <div className="flex items-center gap-2.5 text-xs text-ink font-medium">
                   <CheckCircle2 size={16} className="text-brand-700 shrink-0" />
-                  <span>Escritório sediado no Centro de Itajubá</span>
+                  <span>Escritório estruturado na Av. Arlindo Figueiredo em Passos</span>
                 </div>
                 <div className="flex items-center gap-2.5 text-xs text-ink font-medium">
                   <CheckCircle2 size={16} className="text-brand-700 shrink-0" />
-                  <span>Atendimento on-line em todo o país</span>
+                  <span>Atendimento on-line rápido e seguro em todo o Brasil</span>
                 </div>
               </motion.div>
 
               <motion.div variants={reveal} className="mt-9">
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dra. Izabella Rennó. Gostaria de entender como o escritório pode atuar no meu caso."
+                    "Olá, Dra. Giovana Franklin. Gostaria de entender como o escritório pode atuar no meu caso."
                   )}
                   target="_blank"
                   size="md"
                   className="rounded-full shadow-md"
                 >
-                  <WhatsAppIcon size={16} /> Agendar consulta com a Dra.
-                  Izabella
+                  <WhatsAppIcon size={16} /> Agendar consulta com a Dra. Giovana
                 </GlowingButton>
               </motion.div>
             </motion.div>
@@ -722,16 +837,16 @@ export default function Home() {
             >
               <Heading
                 eyebrow="ÁREAS DE ATUAÇÃO ESTRATÉGICA"
-                description="Atuação técnica aprofundada para proteger seu patrimônio, sua família e seus direitos fundamentais."
+                description="Atuação técnica aprofundada para proteger seus benefícios, seu trabalho, seu patrimônio e sua família."
               >
-                Segurança jurídica e estratégia nos{" "}
+                Segurança jurídica e combatividade nos{" "}
                 <span className="italic text-brand-700">
                   momentos mais decisivos.
                 </span>
               </Heading>
               <p className="max-w-[260px] pb-1 text-xs leading-6 text-ink-soft">
                 Toque em uma área para visualizar os temas atendidos e consultar
-                diretamente a Dra. Izabella.
+                diretamente a Dra. Giovana.
               </p>
             </motion.div>
 
@@ -740,7 +855,7 @@ export default function Home() {
               whileInView="visible"
               viewport={{ once: true, amount: 0.12 }}
               variants={stagger}
-              className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4"
+              className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5"
             >
               {practiceAreas.map((area, index) => {
                 const Icon = area.icon;
@@ -748,7 +863,7 @@ export default function Home() {
                   <motion.article
                     key={area.id}
                     variants={reveal}
-                    className="group flex min-h-[340px] flex-col border border-ink/10 bg-white p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-brand-700/40 hover:shadow-card sm:p-8"
+                    className="group flex min-h-[350px] flex-col border border-ink/10 bg-white p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-brand-700/40 hover:shadow-card sm:p-7"
                   >
                     <div className="flex items-start justify-between">
                       <span className="grid size-12 place-items-center rounded-full bg-brand-50 text-brand-700 transition-colors group-hover:bg-brand-700 group-hover:text-white">
@@ -763,7 +878,7 @@ export default function Home() {
                       <span className="inline-block rounded-full bg-brand-50 px-2.5 py-1 text-[9px] font-bold uppercase tracking-wider text-brand-800">
                         {area.tag}
                       </span>
-                      <h3 className="mt-3 font-serif text-[1.65rem] leading-tight text-ink">
+                      <h3 className="mt-3 font-serif text-[1.55rem] leading-tight text-ink">
                         {area.title}
                       </h3>
                       <p className="mt-3 text-[13px] leading-6 text-ink-soft">
@@ -789,20 +904,20 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Informação e Análise Jurídica (Posts reais fornecidos) */}
-        <section id="artigos" className="bg-[#ede7df] py-20 sm:py-28">
+        {/* Informação e Análise Jurídica */}
+        <section id="artigos" className="bg-[#eee8e0] py-20 sm:py-28">
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
             <div className="grid items-end gap-7 md:grid-cols-[1fr_auto]">
               <Heading
                 eyebrow="ANÁLISE & CONTEÚDO JURÍDICO"
-                description="Orientações e esclarecimentos práticos da Dra. Izabella Rennó sobre situações concretas do dia a dia."
+                description="Orientações e esclarecimentos práticos da Dra. Giovana Franklin sobre direitos previdenciários, civis e trabalhistas."
               >
                 Esclarecimento de direitos sobre{" "}
-                <span className="italic text-brand-700">temas reais.</span>
+                <span className="italic text-brand-700">situações reais.</span>
               </Heading>
               <a
                 href={getWhatsAppUrl(
-                  "Olá, Dra. Izabella. Vi seus conteúdos informativos e gostaria de tirar uma dúvida jurídica."
+                  "Olá, Dra. Giovana. Vi seus conteúdos informativos e gostaria de tirar uma dúvida jurídica sobre meu caso."
                 )}
                 target="_blank"
                 rel="noreferrer"
@@ -813,7 +928,7 @@ export default function Home() {
             </div>
 
             <div className="mt-11 grid gap-8 md:grid-cols-2">
-              {/* Card 1: Banco / Tempo na fila */}
+              {/* Card 1: Direito Previdenciário / Descontos Indevidos */}
               <motion.article
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -821,82 +936,78 @@ export default function Home() {
                 transition={{ duration: 0.65 }}
                 className="group relative flex flex-col overflow-hidden rounded-[2px] border border-brand-700/20 bg-brand-950 text-white shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-brand-700/40"
               >
-                <div className="relative aspect-[1080/840] w-full overflow-hidden bg-[#1a120c]">
+                <div className="relative aspect-[1080/700] w-full overflow-hidden bg-[#18120d]">
                   <Image
-                    src="/imgi_37_624713445_18079582943205098_4776356004155678095_n.jpg"
-                    alt="Quanto vale seu tempo na fila do banco? — Dra. Izabella Rennó"
+                    src="/artigo-previdenciario.webp"
+                    alt="Direito Previdenciário e INSS — Dra. Giovana Franklin"
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
-                    className="object-cover object-top transition-transform duration-700 group-hover:scale-[1.02]"
+                    className="object-cover object-center transition-transform duration-700 group-hover:scale-[1.03]"
                   />
                 </div>
                 <div className="flex flex-1 flex-col justify-between p-7 sm:p-8">
                   <div>
                     <span className="inline-block rounded-full bg-brand-700/35 px-3 py-1 text-[9px] font-bold uppercase tracking-[0.2em] text-brand-200">
-                      Direito do Consumidor & Bancário
+                      Direito Previdenciário & INSS
                     </span>
                     <h3 className="mt-4 font-serif text-2xl leading-snug sm:text-3xl text-white">
-                      Quanto vale seu tempo na fila do banco?
+                      Desconto Indevido na Aposentadoria: Como cessar cobranças ilegais e recuperar valores no INSS
                     </h3>
                     <p className="mt-3 text-xs leading-6 text-white/70">
-                      A espera excessiva e desarrazoada em agências bancárias que
-                      ultrapassa os limites legais pode ensejar reparação civil
-                      com base na teoria do desvio produtivo do consumidor.
+                      Mensalidades de associações não autorizadas, reservas de margem (RMC) e empréstimos consignados fraudulentos têm comprometido o benefício de inúmeros aposentados. É possível requerer a cessação imediata dos descontos, restituição dos valores cobrados em dobro e indenização por danos morais.
                     </p>
                   </div>
                   <a
                     href={getWhatsAppUrl(
-                      "Olá, Dra. Izabella. Gostaria de orientações sobre problemas com banco ou tempo abusivo de espera."
+                      "Olá, Dra. Giovana. Notei um desconto estranho na minha aposentadoria/benefício do INSS e gostaria de ajuda para verificar."
                     )}
                     target="_blank"
                     rel="noreferrer"
                     className="mt-6 inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.16em] text-brand-200 transition-colors hover:text-white"
                   >
-                    Analisar minha situação <ArrowUpRight size={14} />
+                    Analisar meu extrato de benefício <ArrowUpRight size={14} />
                   </a>
                 </div>
               </motion.article>
 
-              {/* Card 2: Doação e Ingratidão */}
+              {/* Card 2: Direito Civil / Inventário em Cartório */}
               <motion.article
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.65, delay: 0.1 }}
-                className="group relative flex flex-col overflow-hidden rounded-[2px] border border-brand-700/20 bg-[#1f1814] text-white shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-brand-700/40"
+                className="group relative flex flex-col overflow-hidden rounded-[2px] border border-brand-700/20 bg-[#1b1511] text-white shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-brand-700/40"
               >
-                <div className="relative aspect-[1080/840] w-full overflow-hidden bg-[#18110d]">
+                <div className="relative aspect-[1080/700] w-full overflow-hidden bg-[#16100c]">
                   <Image
-                    src="/imgi_40_623014577_18101084674836895_2038662800172169102_n.jpg"
-                    alt="Posso cancelar uma doação por ingratidão de quem recebeu? — Dra. Izabella Rennó"
+                    src="/artigo-civil-contratos.webp"
+                    alt="Direito Civil, Contratos e Família — Dra. Giovana Franklin"
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
-                    className="object-cover object-top transition-transform duration-700 group-hover:scale-[1.02]"
+                    className="object-cover object-center transition-transform duration-700 group-hover:scale-[1.03]"
                   />
                 </div>
                 <div className="flex flex-1 flex-col justify-between p-7 sm:p-8">
                   <div>
                     <span className="inline-block rounded-full bg-brand-700/35 px-3 py-1 text-[9px] font-bold uppercase tracking-[0.2em] text-brand-200">
-                      Direito Civil & Patrimonial
+                      Direito Civil & Família
                     </span>
                     <h3 className="mt-4 font-serif text-2xl leading-snug sm:text-3xl text-white">
-                      Posso cancelar uma doação por ingratidão de quem recebeu?
+                      Inventário em Cartório: Como realizar a partilha de bens com agilidade e economia tributária
                     </h3>
                     <p className="mt-3 text-xs leading-6 text-white/70">
-                      O Código Civil resguarda expressamente hipóteses legais em
-                      que a doação pode ser revogada quando comprovada conduta
-                      grave do donatário ou descumprimento de obrigações.
+                      Havendo acordo entre herdeiros capazes, o inventário extrajudicial em cartório de notas soluciona a transferência do patrimônio em semanas, evitando litígios judiciais prolongados e possibilitando a adequada apuração tributária do ITCMD com segurança documental.
                     </p>
                   </div>
                   <a
                     href={getWhatsAppUrl(
-                      "Olá, Dra. Izabella. Gostaria de tirar dúvidas sobre cancelamento de doação ou proteção de bens."
+                      "Olá, Dra. Giovana. Gostaria de orientações sobre inventário em cartório ou partilha de bens da família."
                     )}
                     target="_blank"
                     rel="noreferrer"
                     className="mt-6 inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.16em] text-brand-200 transition-colors hover:text-white"
                   >
-                    Analisar minha situação <ArrowUpRight size={14} />
+                    Analisar situação sucessória <ArrowUpRight size={14} />
                   </a>
                 </div>
               </motion.article>
@@ -913,11 +1024,11 @@ export default function Home() {
             <Heading
               eyebrow="NOSSO COMPROMISSO PROFISSIONAL"
               light
-              description="A condução de cada demanda com a máxima técnica, transparência irrestrita e respeito ao tempo e aos anseios de quem nos procura."
+              description="A condução de cada demanda com a máxima técnica, transparência irrestrita e respeito absoluto ao tempo e aos direitos de quem nos procura."
             >
-              A precisão jurídica aliada ao{" "}
+              A precisão jurídica aliada à{" "}
               <span className="italic text-brand-200">
-                respeito que sua causa merece.
+                bravura que sua causa merece.
               </span>
             </Heading>
 
@@ -931,18 +1042,18 @@ export default function Home() {
               {[
                 [
                   "01",
-                  "Estudo aprofundado de cada linha processual",
-                  "Como ressaltam nossos clientes em depoimentos públicos, lemos o processo inteiro com extremo critério e redigimos manifestações minuciosas, sem modelos genéricos.",
+                  "Estudo aprofundado e artesanal de cada caso",
+                  "Como enfatizam nossos clientes em avaliações públicas, analisamos os autos minuciosamente e redigimos peças sob medida para a sua realidade, sem modelos genéricos ou automáticos.",
                 ],
                 [
                   "02",
                   "Comunicação direta, transparente e acessível",
-                  "Você é mantido informado sobre cada movimentação em linguagem clara, sabendo exatamente quais são as chances, os riscos e as estratégias em curso.",
+                  "Você é informado sobre cada andamento em linguagem clara e objetiva, compreendendo com exatidão as probabilidades, os prazos e a estratégia jurídica adotada.",
                 ],
                 [
                   "03",
-                  "Estratégia e combatividade de alto padrão",
-                  "Aliamos atualização doutrinária contínua e jurisprudência dos tribunais superiores para defender seus interesses com a máxima firmeza e combatividade.",
+                  "Combatividade e maestria perante a Justiça",
+                  "Aliamos atualização jurídica constante aos precedentes mais recentes dos tribunais para resguardar seus direitos com firmeza, ética e determinação inabalável.",
                 ],
               ].map(([number, title, description]) => (
                 <motion.div
@@ -975,7 +1086,7 @@ export default function Home() {
               <div>
                 <Heading
                   eyebrow="PROVA SOCIAL & AVALIAÇÕES REAIS"
-                  description="A reputação consolidada da Dra. Izabella Rennó é construída através da dedicação extrema em cada caso. Confira as avaliações no perfil público do Google."
+                  description="A reputação consolidada da Dra. Giovana Franklin é construída na dedicação minuciosa a cada cliente. Veja o que dizem aqueles que confiaram suas causas ao escritório no Google."
                 >
                   Confiança comprovada por quem{" "}
                   <span className="italic text-brand-700">
@@ -997,11 +1108,11 @@ export default function Home() {
                 {/* Rating highlights pills */}
                 <div className="mt-9 flex flex-wrap gap-2">
                   {[
-                    "Clareza nas explicações",
+                    "Bravura e maestria",
                     "Extremamente atenciosa",
-                    "Profundo conhecimento técnico",
-                    "Leitura minuciosa do processo",
-                    "Objetivos alcançados",
+                    "Rapidez e comprometimento",
+                    "Honestidade inegociável",
+                    "Competência e dedicação",
                   ].map((tag) => (
                     <span
                       key={tag}
@@ -1046,7 +1157,7 @@ export default function Home() {
                   </div>
                   <div className="pb-1 text-right">
                     <p className="font-serif text-3xl font-semibold text-brand-700">
-                      50+ avaliações
+                      43 avaliações
                     </p>
                     <p className="mt-1 text-xs text-ink-soft">
                       Perfil profissional verificado no Google
@@ -1056,7 +1167,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Testimonials Grid */}
+            {/* Testimonials Grid - Row 1 */}
             <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {clientReviews.slice(0, 4).map((review) => (
                 <div
@@ -1101,12 +1212,57 @@ export default function Home() {
               ))}
             </div>
 
-            {/* Second row of reviews */}
+            {/* Testimonials Grid - Row 2 */}
             <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {clientReviews.slice(4, 8).map((review) => (
                 <div
                   key={review.name}
                   className="flex flex-col justify-between border border-ink/10 bg-ivory/60 p-6 transition-all duration-200 hover:-translate-y-1 hover:shadow-card"
+                >
+                  <div>
+                    <div className="flex items-center justify-between gap-2">
+                      <div className="flex gap-0.5 text-brand-700">
+                        {Array.from({ length: 5 }, (_, i) => (
+                          <Star
+                            key={i}
+                            size={13}
+                            fill="currentColor"
+                            strokeWidth={1}
+                          />
+                        ))}
+                      </div>
+                      <span className="text-[10px] text-ink-soft">
+                        {review.date}
+                      </span>
+                    </div>
+
+                    <p className="mt-4 text-xs font-bold text-brand-800">
+                      &ldquo;{review.highlight}&rdquo;
+                    </p>
+
+                    <p className="mt-2.5 text-[13px] leading-6 text-ink-soft italic">
+                      &ldquo;{review.content}&rdquo;
+                    </p>
+                  </div>
+
+                  <div className="mt-6 border-t border-ink/10 pt-4">
+                    <p className="font-serif text-base font-semibold text-ink">
+                      {review.name}
+                    </p>
+                    <p className="text-[10px] uppercase tracking-wider text-ink-soft">
+                      {review.reviewsCount} no Google
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Testimonials Grid - Row 3 */}
+            <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {clientReviews.slice(8, 12).map((review) => (
+                <div
+                  key={review.name}
+                  className="flex flex-col justify-between border border-ink/10 bg-white p-6 transition-all duration-200 hover:-translate-y-1 hover:shadow-card"
                 >
                   <div>
                     <div className="flex items-center justify-between gap-2">
@@ -1157,7 +1313,7 @@ export default function Home() {
             <div>
               <Heading
                 eyebrow="CONTATO & LOCALIZAÇÃO"
-                description="Agende sua consulta presencial no coração de Itajubá ou realize seu atendimento de forma totalmente on-line com total segurança."
+                description="Agende sua consulta presencial em nosso escritório na Av. Arlindo Figueiredo em Passos ou realize seu atendimento de forma 100% on-line com total sigilo e comodidade."
               >
                 Estamos prontos para{" "}
                 <span className="italic text-brand-700">ouvir sua história.</span>
@@ -1181,7 +1337,7 @@ export default function Home() {
               <div className="mt-10 space-y-4 text-xs text-ink-soft">
                 <div className="flex items-center gap-3">
                   <Clock size={16} className="text-brand-700" />
-                  <span>Segunda a Sexta: 09h às 18h (sob agendamento)</span>
+                  <span>Segunda a Sexta: 08h30 às 18h (sob agendamento prévio)</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Phone size={16} className="text-brand-700" />
@@ -1201,6 +1357,17 @@ export default function Home() {
                     {EMAIL_CONTACT}
                   </a>
                 </div>
+                <div className="flex items-center gap-3">
+                  <InstagramIcon size={16} className="text-brand-700" />
+                  <a
+                    href={INSTAGRAM_URL}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="hover:text-brand-700 transition-colors"
+                  >
+                    @advocacia.giovanafranklin
+                  </a>
+                </div>
               </div>
             </div>
 
@@ -1217,26 +1384,26 @@ export default function Home() {
                     Sede do Escritório
                   </p>
                   <p className="mt-1 font-serif text-2xl text-ink">
-                    Itajubá · Minas Gerais
+                    Passos · Minas Gerais
                   </p>
                 </div>
               </div>
 
               <address className="mt-7 max-w-md not-italic text-[14px] leading-7 text-ink-soft">
                 <strong className="text-ink font-semibold">
-                  Edifício Santa Clara
+                  Advocacia Giovana Franklin
                 </strong>
                 <br />
-                Rua Cel. Francisco Braz, 185 - Sala 205
+                Av. Arlindo Figueiredo, 756 - B
                 <br />
-                Centro, Itajubá - MG, CEP 37500-005, Brasil
+                Bairro São Francisco, Passos - MG, CEP 37903-662, Brasil
               </address>
 
               <div className="my-7 h-px bg-ink/10" />
 
               <div className="flex flex-wrap items-center justify-between gap-4">
                 <p className="text-xs text-ink-soft">
-                  Atendimento presencial no Centro e on-line em todo o Brasil
+                  Atendimento presencial com fácil estacionamento e assessoria digital para todo o país
                 </p>
                 <a
                   href={GOOGLE_MAPS_URL}
@@ -1256,20 +1423,19 @@ export default function Home() {
           <div className="mx-auto flex max-w-7xl flex-col justify-between gap-7 sm:flex-row sm:items-center">
             <div>
               <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-200">
-                IZABELLA RENNÓ ADVOCACIA · OAB/MG 201.285
+                ADVOCACIA GIOVANA FRANKLIN · {OAB_NUMBER}
               </p>
               <h2 className="mt-3 max-w-2xl font-serif text-3xl leading-tight sm:text-4xl text-white">
-                Pronto para defender seus direitos com quem realmente se dedica
-                à sua causa?
+                Pronto para defender seus direitos com quem atua com bravura e dedicação à sua causa?
               </h2>
             </div>
             <a
               href={getWhatsAppUrl(
-                "Olá, Dra. Izabella. Gostaria de agendar uma consulta inicial para avaliar meu caso."
+                "Olá, Dra. Giovana. Gostaria de agendar uma consulta inicial para avaliar meu caso."
               )}
               target="_blank"
               rel="noreferrer"
-              className="group inline-flex w-fit shrink-0 items-center gap-3 rounded-full bg-white px-7 py-4 text-[11px] font-bold uppercase tracking-[0.14em] text-brand-900 shadow-md transition-all hover:-translate-y-0.5 hover:bg-brand-50 hover:shadow-lg"
+              className="group inline-flex w-fit shrink-0 items-center gap-3 rounded-full bg-white px-7 py-4 text-[11px] font-bold uppercase tracking-[0.14em] text-brand-950 shadow-md transition-all hover:-translate-y-0.5 hover:bg-brand-50 hover:shadow-lg"
             >
               <WhatsAppIcon size={17} /> Falar no WhatsApp <ArrowUpRight size={15} />
             </a>
@@ -1280,21 +1446,21 @@ export default function Home() {
         <footer className="bg-brand-950 px-5 py-14 text-white sm:px-8 lg:px-12">
           <div className="mx-auto grid max-w-7xl gap-10 sm:grid-cols-2 lg:grid-cols-[1.2fr_0.8fr_1fr]">
             <div>
-              <div className="inline-flex rounded-sm bg-white/95 p-3.5 shadow-md">
+              <div className="inline-flex">
                 <Image
-                  src="/logo.png"
-                  width={450}
-                  height={154}
-                  alt="Izabella Rennó Advocacia"
-                  className="h-16 w-auto object-contain"
+                  src="/logo-light.png"
+                  width={480}
+                  height={160}
+                  alt="Advocacia Giovana Franklin"
+                  className="h-14 w-auto object-contain sm:h-[70px]"
                 />
               </div>
               <p className="mt-5 max-w-xs text-xs leading-6 text-white/65">
-                Advocacia estratégica, rigor técnico e dedicação exclusiva. Sede
-                no Centro de Itajubá - MG e atendimento digital em todo o Brasil.
+                Advocacia estratégica, rigor técnico e dedicação artesanal. Sede
+                na Av. Arlindo Figueiredo em Passos - MG e atendimento digital em todo o Brasil.
               </p>
               <p className="mt-3 text-[11px] font-semibold text-brand-300">
-                Inscrição OAB/MG 201.285
+                Inscrição {OAB_NUMBER}
               </p>
             </div>
 
@@ -1344,13 +1510,21 @@ export default function Home() {
                   <Mail size={15} className="shrink-0" /> {EMAIL_CONTACT}
                 </a>
                 <a
+                  href={INSTAGRAM_URL}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="footer-link inline-flex items-center gap-2"
+                >
+                  <InstagramIcon size={15} className="shrink-0" /> @advocacia.giovanafranklin
+                </a>
+                <a
                   href={GOOGLE_MAPS_URL}
                   target="_blank"
                   rel="noreferrer"
                   className="footer-link inline-flex items-start gap-2"
                 >
                   <MapPin size={15} className="mt-0.5 shrink-0" />
-                  <span>Ed. Santa Clara · R. Cel. Francisco Braz, 185 - Sl 205, Itajubá - MG</span>
+                  <span>Av. Arlindo Figueiredo, 756 - B, Passos - MG</span>
                 </a>
               </div>
             </div>
@@ -1358,7 +1532,7 @@ export default function Home() {
 
           <div className="mx-auto mt-12 flex max-w-7xl flex-col gap-3 border-t border-white/15 pt-6 text-[10px] text-white/50 sm:flex-row sm:items-center sm:justify-between">
             <p>
-              © {new Date().getFullYear()} Dra. Izabella Rennó Del-Ducca de Souza (OAB/MG 201.285). Todos os direitos reservados.
+              © {new Date().getFullYear()} Advocacia Giovana Franklin ({OAB_NUMBER}). Todos os direitos reservados.
             </p>
             <p>
               Conteúdo meramente informativo, em estrita conformidade com o Código de Ética e Disciplina da OAB.
@@ -1411,7 +1585,7 @@ export default function Home() {
 
                 <div className="mt-6 border-t border-ink/10 pt-5">
                   <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-brand-800">
-                    Principais temas e demandas atendidas:
+                    Principais demandas e serviços atendidos:
                   </p>
                   <ul className="mt-4 space-y-3">
                     {activeArea.topics.map((topic) => (

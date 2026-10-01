@@ -17,51 +17,62 @@ const bodyFont = Plus_Jakarta_Sans({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#16100c",
+  themeColor: "#0e0c0a",
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.draizabellarenno.com"),
-  title: "Dra. Izabella Rennó | Advocacia & Consultoria Jurídica em Itajubá - MG",
+  metadataBase: new URL("https://www.giovanafranklin.adv.br"),
+  title: "Advocacia Giovana Franklin | Dra. Giovana Franklin · OAB/MG 208.554 · Passos - MG",
   description:
-    "Advocacia estratégica, rigor técnico e atendimento dedicado conduzido pela Dra. Izabella Rennó (OAB/MG 201.285). Formação HarvardX em Direito Contratual, Cível, Consumidor, Bancário, Família e Trabalhista. Atendimento presencial no Ed. Santa Clara em Itajubá e on-line em todo o Brasil.",
+    "Advocacia especializada e combativa conduzida pela Dra. Giovana Franklin (OAB/MG 208.554). Atuação de destaque em Direito Previdenciário, Planejamento Previdenciário, Direito do Trabalho, Cível e Família. Sede na Av. Arlindo Figueiredo em Passos - MG e atendimento digital em todo o Brasil.",
   keywords: [
-    "Dra. Izabella Rennó",
-    "Izabella Rennó Advocacia",
-    "advogada em Itajubá",
-    "Edifício Santa Clara Itajubá",
-    "OAB MG 201285",
-    "direito civil Itajubá",
-    "contratos HarvardX",
-    "direito bancário e consumidor",
-    "direito de família e sucessões",
+    "Advocacia Giovana Franklin",
+    "Dra. Giovana Franklin",
+    "Giovana Franklin Advogada",
+    "advogada em Passos MG",
+    "OAB MG 208554",
+    "direito previdenciario Passos MG",
+    "planejamento previdenciario Passos MG",
+    "desconto indevido aposentadoria INSS Passos",
+    "aposentadoria INSS Passos",
+    "advogada trabalhista Passos MG",
+    "direito do trabalho Passos",
+    "direito civil Passos MG",
+    "direito de família Passos MG",
+    "inventário em cartório Passos MG",
     "advocacia especializada Minas Gerais",
   ],
-  authors: [{ name: "Dra. Izabella Rennó Del-Ducca de Souza" }],
-  creator: "Izabella Rennó Advocacia",
-  publisher: "Izabella Rennó Advocacia",
+  authors: [{ name: "Dra. Giovana Franklin" }],
+  creator: "Advocacia Giovana Franklin",
+  publisher: "Advocacia Giovana Franklin",
   formatDetection: {
     telephone: true,
     address: true,
   },
   icons: {
-    icon: "/icon.png",
-    apple: "/apple-icon.png",
+    icon: [
+      { url: "/favicon.png?v=3", sizes: "64x64", type: "image/png" },
+      { url: "/icon.png?v=3", sizes: "512x512", type: "image/png" },
+    ],
+    shortcut: "/favicon.png?v=3",
+    apple: [
+      { url: "/apple-icon.png?v=3", sizes: "180x180", type: "image/png" },
+    ],
   },
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://www.draizabellarenno.com",
-    title: "Dra. Izabella Rennó | Advocacia de Alta Precisão em Itajubá - MG",
+    url: "https://www.giovanafranklin.adv.br",
+    title: "Advocacia Giovana Franklin | Dra. Giovana Franklin · OAB/MG 208.554",
     description:
-      "Advocacia estratégica com dedicação exclusiva a cada causa. Atendimento presencial em Itajubá - MG e on-line para todo o Brasil.",
-    siteName: "Izabella Rennó Advocacia",
+      "Assessoria jurídica estratégica, dedicação artesanal a cada caso e combatividade comprovada. Sede em Passos - MG e atendimento digital em todo o Brasil.",
+    siteName: "Advocacia Giovana Franklin",
     images: [
       {
         url: "/logo.png",
         width: 1200,
-        height: 410,
-        alt: "Izabella Rennó Advocacia",
+        height: 630,
+        alt: "Advocacia Giovana Franklin — OAB/MG 208.554",
       },
     ],
   },
@@ -77,6 +88,11 @@ export default function RootLayout({
       lang="pt-BR"
       className={`${bodyFont.variable} ${displayFont.variable} scroll-smooth`}
     >
+      <head>
+        <link rel="icon" href="/favicon.png?v=3" type="image/png" sizes="64x64" />
+        <link rel="icon" href="/icon.png?v=3" type="image/png" sizes="512x512" />
+        <link rel="apple-touch-icon" href="/apple-icon.png?v=3" sizes="180x180" />
+      </head>
       <body className="min-h-screen overflow-x-clip bg-ivory font-sans text-ink antialiased selection:bg-brand-700 selection:text-white">
         {children}
       </body>
