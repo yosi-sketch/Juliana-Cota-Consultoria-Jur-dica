@@ -2,34 +2,45 @@
 
 :root {
   color-scheme: light;
-  --brand-gold: #c59758;
-  --brand-gold-dark: #9e6f32;
-  --brand-gold-light: #f3c082;
-  --brand-espresso: #0e0c0a;
-  --brand-ink: #161311;
-  --brand-ink-soft: #665f58;
-  --brand-ivory: #faf7f2;
-  --brand-paper: #ffffff;
+  --brand-amber: #d97706;
+  --brand-amber-dark: #b45309;
+  --brand-amber-light: #fbbf24;
+  --brand-obsidian: #090a0f;
+  --brand-slate: #0f1219;
+  --brand-card: #ffffff;
+  --brand-bg: #f8fafc;
+  --brand-text: #090a0f;
+  --brand-text-soft: #475569;
 }
 
 @theme inline {
-  --font-serif: var(--font-display), "Cormorant Garamond", Georgia, serif;
+  --font-display: var(--font-display), "Outfit", system-ui, sans-serif;
+  --font-body: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
   --font-sans: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
-  --color-ink: #161311;
-  --color-ink-soft: #665f58;
-  --color-ivory: #faf7f2;
-  --color-brand-50: #fdfbf7;
-  --color-brand-100: #f8f1e5;
-  --color-brand-200: #f0debe;
-  --color-brand-300: #e2c695;
-  --color-brand-400: #d4a96a;
-  --color-brand-500: #c59758;
-  --color-brand-600: #b28243;
-  --color-brand-700: #9e6f32;
-  --color-brand-800: #7d5424;
-  --color-brand-900: #503413;
-  --color-brand-950: #120e0a;
-  --shadow-card: 0 18px 48px rgba(18, 14, 10, 0.08);
+
+  --color-obsidian: #090a0f;
+  --color-slate-dark: #0f1219;
+  --color-ink: #090a0f;
+  --color-ink-soft: #475569;
+
+  --color-amber-gold: #d97706;
+  --color-amber-gold-dark: #b45309;
+  --color-amber-gold-light: #fbbf24;
+
+  --color-brand-50: #fffbeb;
+  --color-brand-100: #fef3c7;
+  --color-brand-200: #fde68a;
+  --color-brand-300: #fcd34d;
+  --color-brand-400: #fbbf24;
+  --color-brand-500: #f59e0b;
+  --color-brand-600: #d97706;
+  --color-brand-700: #b45309;
+  --color-brand-800: #92400e;
+  --color-brand-900: #78350f;
+  --color-brand-950: #090a0f;
+
+  --shadow-card: 0 16px 36px -8px rgba(9, 10, 15, 0.07), 0 0 0 1px rgba(9, 10, 15, 0.05);
+  --shadow-card-dark: 0 20px 40px -12px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.08);
 }
 
 html {
@@ -38,13 +49,13 @@ html {
 }
 
 body {
-  background: var(--brand-ivory);
-  color: var(--brand-ink);
+  background: var(--brand-bg);
+  color: var(--brand-text);
   font-family: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
 }
 
 ::selection {
-  background: #9e6f32;
+  background: #d97706;
   color: #ffffff;
 }
 
@@ -53,25 +64,25 @@ body {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  font-size: 0.67rem;
+  font-size: 0.68rem;
   font-weight: 700;
   line-height: 1.4;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
 }
 
 .eyebrow {
-  color: #9e6f32;
+  color: #b45309;
 }
 
 .eyebrow-light {
-  color: #e2c695;
+  color: #fbbf24;
 }
 
 .eyebrow::before,
 .eyebrow-light::before {
   width: 1.75rem;
-  height: 1px;
+  height: 1.5px;
   flex: none;
   background: currentColor;
   content: "";
@@ -82,8 +93,8 @@ body {
   padding-block: 0.5rem;
   color: rgba(255, 255, 255, 0.82);
   font-size: 0.68rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
+  font-weight: 700;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   transition: color 180ms ease;
 }
@@ -93,8 +104,8 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  height: 1.5px;
-  background: #c59758;
+  height: 2px;
+  background: #f59e0b;
   content: "";
   transform: scaleX(0);
   transform-origin: left;
@@ -102,7 +113,7 @@ body {
 }
 
 .nav-link:hover {
-  color: #f3c082;
+  color: #fbbf24;
 }
 
 .nav-link:hover::after {
@@ -114,25 +125,24 @@ body {
 }
 
 .footer-link:hover {
-  color: #f3c082;
+  color: #fbbf24;
 }
 
 ::-webkit-scrollbar {
-  width: 9px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f3ede4;
+  background: #090a0f;
 }
 
 ::-webkit-scrollbar-thumb {
-  border: 2px solid #f3ede4;
   border-radius: 999px;
-  background: #c59758;
+  background: #d97706;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #9e6f32;
+  background: #f59e0b;
 }
 
 @media (prefers-reduced-motion: reduce) {

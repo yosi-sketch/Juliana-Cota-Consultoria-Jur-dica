@@ -1,78 +1,78 @@
 import type { Metadata, Viewport } from "next";
-import { Cormorant_Garamond, Plus_Jakarta_Sans } from "next/font/google";
+import { Outfit, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 
-const displayFont = Cormorant_Garamond({
+const displayFont = Outfit({
   variable: "--font-display",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700", "800", "900"],
   display: "swap",
 });
 
 const bodyFont = Plus_Jakarta_Sans({
   variable: "--font-body",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["300", "400", "500", "600", "700", "800"],
   display: "swap",
 });
 
 export const viewport: Viewport = {
-  themeColor: "#0e0c0a",
+  themeColor: "#090a0f",
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.giovanafranklin.adv.br"),
-  title: "Advocacia Giovana Franklin | Dra. Giovana Franklin · OAB/MG 208.554 · Passos - MG",
+  metadataBase: new URL("https://www.augustolima.adv.br"),
+  title: "Augusto Lima Advocacia | Dr. Augusto Lima · Passos - MG · Direito Bancário & Cível",
   description:
-    "Advocacia especializada e combativa conduzida pela Dra. Giovana Franklin (OAB/MG 208.554). Atuação de destaque em Direito Previdenciário, Planejamento Previdenciário, Direito do Trabalho, Cível e Família. Sede na Av. Arlindo Figueiredo em Passos - MG e atendimento digital em todo o Brasil.",
+    "Augusto Lima Advocacia — Escritório jurídico de alta performance liderado pelo Dr. Augusto Lima em Passos - MG e com atuação em todo o Brasil. Foco estratégico em Direito Bancário, revisão de contratos de empréstimo e financiamento, cancelamento de juros abusivos, gestão de passivos bancários para empresas, litígios cíveis, trabalhistas e direito de família. Avaliação máxima 5,0 estrelas no Google (70 avaliações).",
   keywords: [
-    "Advocacia Giovana Franklin",
-    "Dra. Giovana Franklin",
-    "Giovana Franklin Advogada",
-    "advogada em Passos MG",
-    "OAB MG 208554",
-    "direito previdenciario Passos MG",
-    "planejamento previdenciario Passos MG",
-    "desconto indevido aposentadoria INSS Passos",
-    "aposentadoria INSS Passos",
-    "advogada trabalhista Passos MG",
-    "direito do trabalho Passos",
-    "direito civil Passos MG",
-    "direito de família Passos MG",
-    "inventário em cartório Passos MG",
+    "Augusto Lima Advogado",
+    "Augusto Lima Advocacia",
+    "Dr. Augusto Lima",
+    "advogado em Passos MG",
+    "advogado direito bancario Passos",
+    "revisao de juros abusivos Passos MG",
+    "gestao de passivos bancarios empresas",
+    "revisao contrato emprestimo Passos",
+    "trava de recebiveis advogado",
+    "desconto indevido RMC RCC Passos",
+    "advogado civel Passos MG",
+    "litigio trabalhista Passos",
+    "divorcio e partilha Passos MG",
+    "inventario em cartorio Passos MG",
     "advocacia especializada Minas Gerais",
   ],
-  authors: [{ name: "Dra. Giovana Franklin" }],
-  creator: "Advocacia Giovana Franklin",
-  publisher: "Advocacia Giovana Franklin",
+  authors: [{ name: "Dr. Augusto Lima" }],
+  creator: "Augusto Lima Advocacia",
+  publisher: "Augusto Lima Advocacia",
   formatDetection: {
     telephone: true,
     address: true,
   },
   icons: {
     icon: [
-      { url: "/favicon.png?v=3", sizes: "64x64", type: "image/png" },
-      { url: "/icon.png?v=3", sizes: "512x512", type: "image/png" },
+      { url: "/favicon.png?v=2026", sizes: "64x64", type: "image/png" },
+      { url: "/icon.png?v=2026", sizes: "512x512", type: "image/png" },
     ],
-    shortcut: "/favicon.png?v=3",
+    shortcut: "/favicon.png?v=2026",
     apple: [
-      { url: "/apple-icon.png?v=3", sizes: "180x180", type: "image/png" },
+      { url: "/apple-icon.png?v=2026", sizes: "180x180", type: "image/png" },
     ],
   },
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://www.giovanafranklin.adv.br",
-    title: "Advocacia Giovana Franklin | Dra. Giovana Franklin · OAB/MG 208.554",
+    url: "https://www.augustolima.adv.br",
+    title: "Augusto Lima Advocacia | Dr. Augusto Lima · Soluções Jurídicas Estratégicas",
     description:
-      "Assessoria jurídica estratégica, dedicação artesanal a cada caso e combatividade comprovada. Sede em Passos - MG e atendimento digital em todo o Brasil.",
-    siteName: "Advocacia Giovana Franklin",
+      "Existe uma diferença entre dever e ser cobrado indevidamente. Advocacia combativa com foco em Direito Bancário, revisão de juros e defesa patrimonial em Passos - MG e em todo o Brasil.",
+    siteName: "Augusto Lima Advocacia",
     images: [
       {
-        url: "/logo.png",
-        width: 1200,
-        height: 630,
-        alt: "Advocacia Giovana Franklin — OAB/MG 208.554",
+        url: "/logo-augusto-lima-dark.png",
+        width: 1840,
+        height: 685,
+        alt: "Augusto Lima Advocacia",
       },
     ],
   },
@@ -89,11 +89,11 @@ export default function RootLayout({
       className={`${bodyFont.variable} ${displayFont.variable} scroll-smooth`}
     >
       <head>
-        <link rel="icon" href="/favicon.png?v=3" type="image/png" sizes="64x64" />
-        <link rel="icon" href="/icon.png?v=3" type="image/png" sizes="512x512" />
-        <link rel="apple-touch-icon" href="/apple-icon.png?v=3" sizes="180x180" />
+        <link rel="icon" href="/favicon.png?v=2026" type="image/png" sizes="64x64" />
+        <link rel="icon" href="/icon.png?v=2026" type="image/png" sizes="512x512" />
+        <link rel="apple-touch-icon" href="/apple-icon.png?v=2026" sizes="180x180" />
       </head>
-      <body className="min-h-screen overflow-x-clip bg-ivory font-sans text-ink antialiased selection:bg-brand-700 selection:text-white">
+      <body className="min-h-screen overflow-x-clip bg-slate-50 font-sans text-slate-900 antialiased selection:bg-amber-600 selection:text-white">
         {children}
       </body>
     </html>
