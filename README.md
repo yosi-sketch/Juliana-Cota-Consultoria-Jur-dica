@@ -1,14 +1,14 @@
-# Augusto Lima Advocacia
+# Silva Cabral Advocacia Previdenciária · Dra. Bianca Santos
 
-Site institucional de alto padrão do **Dr. Augusto Lima** e equipe jurídica, com foco em Direito Bancário, revisão de contratos e juros abusivos, gestão de passivos bancários empresariais, litígios cíveis, trabalhistas e direito de família. Sede física em Passos - MG e atendimento digital em todo o Brasil.
+Site institucional de alto padrão da **Dra. Bianca Santos** e equipe da **Silva Cabral Advocacia Previdenciária**, com foco especializado em Direito Previdenciário (Aposentadorias, BPC/LOAS, Benefícios por Incapacidade, Pensão por Morte, Planejamento Previdenciário e Revisão de Benefícios perante o INSS e a Justiça Federal). Sede física no Centro de Conselheiro Lafaiete - MG e atendimento digital em todo o Brasil.
 
 ## Informações do Cliente
-- **Nome:** Augusto Lima Advocacia / Dr. Augusto Lima Advogado
-- **WhatsApp:** (35) 99841-3800
-- **E-mail:** contato@augustolima.adv.br
-- **Endereço:** Av. Arlindo Figueiredo, 124 - São Francisco, Passos - MG, CEP 37902-026
-- **Instagram:** [@advaugustolima](https://www.instagram.com/advaugustolima/)
-- **Avaliações no Google:** 5,0 estrelas (70 avaliações verificadas)
+- **Nome:** Silva Cabral Advocacia Previdenciária / Dra. Bianca Santos
+- **Telefone / WhatsApp:** (31) 3721-4798
+- **E-mail:** contato@silvacabral.adv.br
+- **Endereço:** Rua José Nicolau de Queirós, 256 - 1º Andar - Centro, Conselheiro Lafaiete - MG, CEP 36400-000
+- **Instagram:** [@biancasantos.advogada](https://www.instagram.com/biancasantos.advogada/)
+- **Avaliações no Google:** 4,9 estrelas (133+ avaliações verificadas)
 
 ## Tecnologias
 - **Next.js 16** (App Router)

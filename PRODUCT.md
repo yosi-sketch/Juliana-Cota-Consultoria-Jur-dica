@@ -1,47 +1,43 @@
-# Augusto Lima Advocacia
+# Silva Cabral Advocacia Previdenciária · Dra. Bianca Santos
 
 ## Plataforma
-Site institucional e comercial de alto padrão em Next.js 16 (App Router), projetado para transmitir autoridade jurídica, combatividade, solidez técnica e clareza comercial, com navegação responsiva, modais analíticos de serviços jurídicos e integração direta com WhatsApp e canais de atendimento oficial.
+Site institucional e comercial de alto padrão em Next.js 16 (App Router), Tailwind CSS v4, Framer Motion e Lucide Icons, projetado para transmitir autoridade jurídica, acolhimento humano, rigor técnico e excelência comercial, com navegação responsiva, modais detalhados de áreas de atuação previdenciária e integração direta com WhatsApp e canais oficiais.
 
-## Público
-- Pessoas físicas com contratos de financiamento, empréstimos com juros abusivos, descontos indevidos (RMC/RCC) ou vítimas de fraudes bancárias.
-- Pequenas, médias e grandes empresas com endividamento bancário, fluxo de caixa asfixiado por travas de recebíveis e necessidade de renegociação global de passivos financeiros.
-- Clientes com demandas cíveis, litígios trabalhistas, relações de consumo, divórcios, partilhas e inventários patrimoniais.
-- Região de Passos, Sudoeste Mineiro e clientes de todo o Brasil via atendimento digital estruturado.
+## Titular & Marca
+- **Escritório:** Silva Cabral Advocacia Previdenciária
+- **Titular:** Dra. Bianca Santos
+- **Nicho Principal:** Direito Previdenciário (Aposentadorias, BPC/LOAS, Benefícios por Incapacidade / Auxílio-Doença, Pensão por Morte, Planejamento Previdenciário, Revisão de Benefícios e Concessões Rápidas).
+- **Prova Social:** 4,9 estrelas com 133+ avaliações autênticas no Google Meu Negócio.
 
 ## Posicionamento & Proposta de Valor
-- "Existe uma diferença entre dever e ser cobrado indevidamente."
-- "Você não precisa continuar pagando aquilo que a lei não autoriza que te cobrem."
-- Foco primordial em Direito Bancário, auditoria de contratos, expurgo de taxas ilegais, gestão de passivos bancários e defesa cível de alta resolutividade.
-- Prova social máxima: 5,0 estrelas com 70 avaliações autênticas no Google Meu Negócio.
+- "Aposentadoria e benefícios do INSS conquistados com agilidade, respeito e segurança."
+- "Você não precisa aceitar uma resposta negativa do INSS nem esperar anos pelo que é seu por direito."
+- Atuação humanizada com escuta atenta, diagnóstico individualizado e combate técnico contra indeferimentos administrativos do INSS perante as agências e a Justiça Federal.
 
-## Identidade Visual & Cores
-- Marca: Augusto Lima Advocacia
-- Titular: Dr. Augusto Lima
-- Equipe Jurídica: Drª. Junia Maria e associadas especializadas
-- Paleta extraída da marca e do ambiente executivo:
-  - Primária: Preto Ônix / Obsidian (#0b0c0e) e Titânio / Slate metálico (#121417)
-  - Secundária / Acento: Ouro Nobre / Bronze Âmbar (#b88646 / #976527), Champagne (#e4bd84 / #f3d9ad)
-  - Neutros: Marfim Suave / Alabastro (#faf8f5 / #f5eedf), Branco Puro (#ffffff), Grafite Texto (#121417 / #5b626e)
-- Tipografia: Cormorant Garamond nos títulos de autoridade e Plus Jakarta Sans para leitura clara e técnica.
+## Identidade Visual & Cores (Baseada no Logo e Escritório Físico)
+- **Logotipo:** Tipografia serifada nobre com acabamento 3D em Ouro Nobre metálico e sombreamento refinado.
+- **Paleta de Cores:**
+  - Primária Escura: Deep Petrol Slate / Azul Petróleo Nobre (`#081017`, `#0a1722`, `#0e1f2d`), reproduzindo o tom de veludo/camurça da parede de destaque do escritório físico da Dra. Bianca.
+  - Acento Ouro Nobre & Champagne: Ouro Metálico (`#c99738`, `#b88628`), Dourado Claro (`#f3d88b`), Ouro Profundo / Bronze (`#966718`).
+  - Neutros Claros: Branco Puro (`#ffffff`), Gelo Suave / Alabastro (`#f8fafc`, `#fbf4e5`), Grafite Texto (`#081017`, `#475569`, `#64748b`).
+- **Tipografia:** Outfit nos títulos de autoridade e Plus Jakarta Sans para leitura clara, confortável e acessível.
 
-## Informações de Contato
-- Endereço físico: Av. Arlindo Figueiredo, 124 - São Francisco, Passos - MG, CEP 37902-026
-- Telefone / WhatsApp: (35) 99841-3800
-- WhatsApp Link: https://wa.me/5535998413800
-- E-mail: contato@augustolima.adv.br
-- Instagram: @advaugustolima (https://www.instagram.com/advaugustolima/)
-- Horário: Segunda a Sexta, das 08h30 às 18h00 (Aberto · Fecha às 18:00)
-- Google Maps: Augusto Lima Advogado - Av. Arlindo Figueiredo, 124, Passos - MG
+## Informações de Contato & Sede
+- **Endereço Físico:** Rua José Nicolau de Queirós, 256 - 1º Andar - Centro, Conselheiro Lafaiete - MG, CEP 36400-000, Brasil.
+- **Telefone / WhatsApp:** (31) 3721-4798
+- **WhatsApp Link:** https://wa.me/553137214798
+- **E-mail:** contato@silvacabral.adv.br
+- **Instagram:** @biancasantos.advogada (https://www.instagram.com/biancasantos.advogada/)
+- **Horário de Atendimento:** Segunda a Sexta, das 08h30 às 17h30.
+- **Abrangência:** Atendimento presencial acolhedor no Centro de Conselheiro Lafaiete/MG e consultoria digital estruturada em todo o Brasil.
 
 ## Assets Utilizados
-- `public/logo.png`: Logotipo corporativo recortado para fundos claros
-- `public/logo-light.png`: Logotipo corporativo em acabamento platina/prata para cabeçalho e rodapé escuros
-- `public/icon.png`: Monograma AL em alta definição (512x512)
-- `public/apple-icon.png`: Monograma AL para dispositivos Apple (180x180)
-- `public/favicon.ico` e `public/favicon.png`: Ícones de navegador
-- `public/augusto-lima-hero.jpg`: Retrato executivo do Dr. Augusto Lima em sua mesa de escritório
-- `public/augusto-lima-social.jpg`: Retrato de Dr. Augusto Lima com selo @advaugustolima
-- `public/sobre-nos.jpg` e `public/equipe-augusto-lima.jpg`: Fotografia institucional da equipe (Dr. Augusto Lima, Drª. Junia Maria e associada)
-- `public/artigo-direito-bancario.webp`: Editorial sobre contratos bancários e juros abusivos
-- `public/artigo-gestao-passivos.webp`: Editorial sobre reestruturação de dívidas e travas bancárias para empresas
+- `public/logo.png`: Logotipo oficial da Dra. Bianca Santos ("Bianca Santos ADVOCACIA PREVIDENCIÁRIA") em alta resolução com acabamento 3D em ouro nobre.
+- `public/dra-bianca-hero.jpg`: Retrato executivo da Dra. Bianca Santos em atendimento executivo em seu escritório em Conselheiro Lafaiete.
+- `public/dra-bianca-sobre.jpg`: Fotografia institucional da Dra. Bianca Santos prestando atendimento acolhedor e atencioso à mesa com cliente.
+- `public/dra-bianca-social.jpg`: Retrato da Dra. Bianca Santos para a seção de conexão com o Instagram (@biancasantos.advogada).
+- `public/artigo-previdenciario-negado.jpg`: Editorial exclusivo sobre reversão de benefícios indeferidos pelo INSS e recebimento de atrasados.
+- `public/artigo-planejamento-previdenciario.jpg`: Editorial exclusivo sobre planejamento previdenciário e cálculo do benefício máximo.
+- `app/icon.png`, `public/icon.png` (512x512): Monograma "BS" em ouro nobre sobre fundo azul petróleo profundo.
+- `app/apple-icon.png`, `public/apple-icon.png` (180x180): Ícone otimizado para dispositivos Apple.
+- `app/favicon.ico`, `public/favicon.ico`, `public/favicon.png`: Ícones de navegador.

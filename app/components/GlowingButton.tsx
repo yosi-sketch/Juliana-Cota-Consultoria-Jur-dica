@@ -28,13 +28,13 @@ export default function GlowingButton({
   }[size];
 
   const variantClasses = {
-    gold: "border border-amber-500/30 bg-gradient-to-r from-amber-600 via-amber-600 to-amber-700 text-white shadow-md shadow-amber-950/20 hover:-translate-y-0.5 hover:from-amber-500 hover:to-amber-600 hover:shadow-lg hover:shadow-amber-600/30",
-    outline: "border border-amber-600/40 bg-transparent text-amber-800 hover:-translate-y-0.5 hover:border-amber-600 hover:bg-amber-50 hover:text-amber-950",
-    white: "border border-white/20 bg-white text-slate-950 shadow-md hover:-translate-y-0.5 hover:bg-amber-50 hover:shadow-lg",
+    gold: "border border-[#d4a34b]/40 bg-gradient-to-r from-[#b88628] via-[#c99738] to-[#966718] text-white shadow-md shadow-[#966718]/20 hover:-translate-y-0.5 hover:from-[#c99738] hover:via-[#dfad4a] hover:to-[#b88628] hover:shadow-lg hover:shadow-[#c99738]/30",
+    outline: "border border-[#c99738]/50 bg-transparent text-[#966718] hover:-translate-y-0.5 hover:border-[#c99738] hover:bg-[#c99738]/10 hover:text-[#744e10]",
+    white: "border border-white/20 bg-white text-slate-950 shadow-md hover:-translate-y-0.5 hover:bg-[#fbf8f0] hover:shadow-lg",
   }[variant];
 
   const classes =
-    "inline-flex items-center justify-center gap-2 rounded-full font-bold uppercase transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-amber-600 select-none text-center cursor-pointer " +
+    "inline-flex items-center justify-center gap-2 rounded-full font-bold uppercase transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#c99738] select-none text-center cursor-pointer " +
     sizeClasses +
     " " +
     variantClasses +

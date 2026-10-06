@@ -12,34 +12,33 @@ import {
   ArrowRight,
   ArrowUpRight,
   Award,
-  Briefcase,
   CheckCircle2,
   Clock,
+  FileText,
   HeartHandshake,
   Mail,
   MapPin,
   Menu,
   Phone,
   Scale,
-  ShieldAlert,
   ShieldCheck,
   Sparkles,
   Star,
-  TrendingDown,
+  Users,
   X,
 } from "lucide-react";
 import GlowingButton from "./components/GlowingButton";
 
-const WHATSAPP_NUMBER = "5535998413800";
-const PHONE_DISPLAY = "(35) 99841-3800";
-const EMAIL_CONTACT = "contato@augustolima.adv.br";
-const INSTAGRAM_URL = "https://www.instagram.com/advaugustolima/";
+const WHATSAPP_NUMBER = "553137214798";
+const PHONE_DISPLAY = "(31) 3721-4798";
+const EMAIL_CONTACT = "contato@silvacabral.adv.br";
+const INSTAGRAM_URL = "https://www.instagram.com/biancasantos.advogada/";
 const GOOGLE_MAPS_URL =
-  "https://maps.google.com/maps?vet=10CAAQoqAOahcKEwiomZ7jipyXAxUAAAAAHQAAAAAQDw..i&udm&fvr=1&pvq=Cg0vZy8xMXZqYzhiNzFqIhsKFUF1Z3VzdG8gTGltYSBBZHZvZ2FkbxACGAM&lqi=ChVBdWd1c3RvIExpbWEgQWR2b2dhZG9IsLiUtMG6gIAIWiMQABABEAIYABgBGAIiFWF1Z3VzdG8gbGltYSBhZHZvZ2Fkb5IBDmxlZ2FsX3NlcnZpY2VzmgEjQ2haRFNVaE5NRzluUzBWSlEwRm5TVU16TUMxMmJFNUJFQUX6AQQIABA_&cs=1&um=1&ie=UTF-8&fb=1&gl=br&sa=X&ftid=0x94b6c3915ac9e9ad:0xafbc178e7254d65";
+  "https://maps.google.com/?q=Rua+Jos%C3%A9+Nicolau+de+Queir%C3%B3s,+256+-+Centro,+Conselheiro+Lafaiete+-+MG,+36400-000";
 
 function getWhatsAppUrl(message?: string) {
   const defaultText =
-    "Olá, Dr. Augusto Lima. Gostaria de solicitar uma avaliação jurídica do meu caso.";
+    "Olá, Dra. Bianca Santos. Gostaria de solicitar uma avaliação previdenciária do meu caso no escritório Silva Cabral Advocacia.";
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
     message || defaultText
   )}`;
@@ -120,223 +119,223 @@ interface PracticeArea {
 
 const practiceAreas: PracticeArea[] = [
   {
-    id: "direito-bancario-juros",
-    title: "Direito Bancário & Revisão de Contratos",
-    icon: Scale,
-    tag: "Juros Abusivos & Financiamentos",
-    summary:
-      "Revisão técnica de contratos de empréstimo, financiamento veicular e imobiliário para expurgar taxas abusivas e recalcular o saldo devedor.",
-    details:
-      "Milhares de contratos bancários contêm cobranças ilegais como capitalização indevida de juros, taxas de juros remuneratórios substancialmente superiores à taxa média de mercado divulgada pelo Banco Central, seguros embutidos e venda casada. Atuamos com perícia contábil-jurídica para recalcular seu saldo devedor, estancar abusividades, diminuir o valor das parcelas e buscar a restituição de quantias cobradas em excesso.",
-    topics: [
-      "Ações revisionais de financiamentos de veículos e imóveis com redução de parcelas",
-      "Expurgo de juros abusivos acima da taxa média de mercado do Banco Central",
-      "Exclusão de tarifas ilegais embutidas (TAC, TEC, serviços de terceiros e vendas casadas)",
-      "Defesa estratégica contra ações de busca e apreensão de veículos",
-      "Restituição de valores pagos indevidamente com repetição de indébito",
-      "Recálculo pericial contábil de contratos de empréstimo consignado e pessoal",
-    ],
-    whatsAppText:
-      "Olá, Dr. Augusto Lima. Gostaria de solicitar uma análise de contrato bancário para verificar juros e cobranças indevidas.",
-  },
-  {
-    id: "gestao-passivos-empresas",
-    title: "Gestão de Passivos Bancários para Empresas",
-    icon: Briefcase,
-    tag: "Empresas & Fluxo de Caixa",
-    summary:
-      "Reestruturação e renegociação de dívidas bancárias, liberação de travas de recebíveis e preservação do capital de giro da sua empresa.",
-    details:
-      "O endividamento bancário pode sufocar empresas saudáveis por meio de juros compostos, renovações compulsórias de limites rotativos e retenções automáticas de faturamento em maquininhas de cartão. Atuamos na interlocução técnica e contenciosa contra instituições financeiras para destravar seus recebíveis, suspender execuções e renegociar o passivo em parcelas compatíveis com a realidade operacional do negócio.",
-    topics: [
-      "Desbloqueio e revisão jurídica de travas de recebíveis em maquininhas e domicílio bancário",
-      "Renegociação global de passivos bancários (Capital de Giro, Conta Garantida e Cheque Especial)",
-      "Auditoria e revisão de Cédulas de Crédito Bancário (CCB) e contratos de fomento",
-      "Defesa de empresas em execuções de títulos extrajudiciais e bloqueios de contas",
-      "Adequação do endividamento financeiro ao fluxo de caixa real da operação",
-      "Assessoria jurídica estratégica para blindagem preventiva da atividade empresarial",
-    ],
-    whatsAppText:
-      "Olá, Dr. Augusto Lima. Gostaria de uma consultoria para reestruturação de dívidas bancárias e gestão de passivos da minha empresa.",
-  },
-  {
-    id: "fraudes-descontos-rmc",
-    title: "Fraudes Bancárias, RMC/RCC & Descontos Indevidos",
-    icon: ShieldCheck,
-    tag: "Proteção Contra Fraudes",
-    summary:
-      "Cancelamento de descontos não autorizados de Reserva de Margem Consignável (RMC e RCC), golpes bancários e negativações indevidas.",
-    details:
-      "Muitos aposentados, pensionistas e servidores sofrem descontos perpétuos em seus contracheques decorrentes de cartões de crédito consignados que nunca contrataram ou utilizaram, além de serem vítimas de empréstimos fraudulentos ou fraudes eletrônicas. Atuamos rapidamente para cancelar os descontos em folha, obter a devolução em dobro do montante retido e indenização por danos morais.",
-    topics: [
-      "Cancelamento definitivo de contratos de RMC (Reserva de Margem Consignável) e RCC",
-      "Restituição em dobro (Art. 42 do CDC) dos descontos indevidos em aposentadorias e folhas",
-      "Ações judiciais por fraudes de falso empréstimo consignado e golpes do PIX",
-      "Pedido de liminar urgente para exclusão de negativação indevida no SPC, Serasa e Registrato (SCR)",
-      "Indenizações por danos morais decorrentes de fraudes financeiras e violações de segurança bancária",
-      "Suspensão de cobranças vexatórias e ligações abusivas de empresas de telecobrança",
-    ],
-    whatsAppText:
-      "Olá, Dr. Augusto Lima. Gostaria de orientações sobre descontos indevidos (RMC/RCC) ou fraudes bancárias no meu benefício.",
-  },
-  {
-    id: "litigio-civil-consumidor",
-    title: "Litígio Civil & Defesa do Consumidor",
-    icon: Scale,
-    tag: "Contratos & Indenizações",
-    summary:
-      "Ações indenizatórias, cobrança e execução de títulos, descumprimento de contratos, responsabilidade civil e juizados especiais cíveis.",
-    details:
-      "Atuamos com determinação na defesa de direitos civis, reparação de prejuízos patrimoniais e morais decorrentes de má prestação de serviços, inadimplência contratual e danos ilícitos. Conduzimos ações judiciais contundentes perante a Justiça Comum e Juizados Especiais Cíveis (Pequenas Causas), sempre com transparência e foco no melhor resultado para o cliente.",
-    topics: [
-      "Ações de indenização por danos materiais, danos morais e lucros cessantes",
-      "Cobrança e execução judicial de dívidas, cheques, notas promissórias e contratos",
-      "Rescisão de contratos com cobrança de multas rescisórias e reparação de prejuízos",
-      "Representação em Juizados Especiais Cíveis (Pequenas Causas)",
-      "Defesa do consumidor em litígios contra seguradoras, concessionárias e empresas",
-      "Soluções em disputas contratuais, obrigações de fazer e responsabilidade civil",
-    ],
-    whatsAppText:
-      "Olá, Dr. Augusto Lima. Preciso de assessoria jurídica em uma causa cível / direito do consumidor.",
-  },
-  {
-    id: "litigio-trabalhista",
-    title: "Litígio Trabalhista",
+    id: "aposentadorias-inss",
+    title: "Aposentadorias do INSS & Concessões Rápidas",
     icon: Award,
-    tag: "Direitos Trabalhistas",
+    tag: "Idade · Tempo · Especial · Rural",
     summary:
-      "Defesa combativa dos direitos do trabalhador em rescisões indiretas, horas extras, verbas rescisórias e consultoria preventiva empresarial.",
+      "Concessão célere e estratégica de aposentadorias por idade urbana e rural, tempo de contribuição, aposentadoria especial e da pessoa com deficiência.",
     details:
-      "Atuação intransigente na garantia do cumprimento rigoroso das leis trabalhistas. Auxiliamos empregados na busca de reparação por irregularidades contratuais, bem como prestamos consultoria técnica a pequenas e médias empresas na prevenção e defesa estratégica de litígios perante a Justiça do Trabalho.",
+      "Aposentar-se é o coroamento de uma vida inteira de trabalho e dedicação. Após as recentes reformas da previdência, existem múltiplas regras de transição e cálculos distintos que podem alterar radicalmente o valor da sua renda mensal. Realizamos uma análise minuciosa de todo o seu histórico contributivo perante o INSS para escolher a regra mais favorável, averbar períodos rurais, insalubres e garantir a aprovação sem atrasos.",
     topics: [
-      "Rescisão indireta do contrato de trabalho por descumprimento do empregador (Art. 483 da CLT)",
-      "Reversão de demissão por justa causa injustificada com liberação de guias e FGTS + 40%",
-      "Cobrança de horas extraordinárias, intervalos não concedidos e trabalho em turnos",
-      "Adicionais legais de insalubridade, periculosidade e equiparação salarial",
-      "Indenizações por acidentes de trabalho, assédio moral e doenças ocupacionais",
-      "Defesa de empresas em reclamações trabalhistas e compliance nas relações laborais",
+      "Aposentadoria por Idade Urbana e Rural com cômputo de períodos em regime de economia familiar",
+      "Aposentadoria Especial para profissionais expostos a agentes nocivos, químicos e insalubridade",
+      "Enquadramento seguro nas 5 Regras de Transição mais vantajosas da Reforma da Previdência",
+      "Aposentadoria da Pessoa com Deficiência (PCD) com requisitos de idade e tempo reduzidos",
+      "Reconhecimento de vínculos de trabalho sem carteira assinada e regularização de autônomos",
+      "Conversão de tempo especial em comum para antecipar a concessão e elevar o benefício",
     ],
     whatsAppText:
-      "Olá, Dr. Augusto Lima. Gostaria de conversar com a equipe sobre uma questão de Direito Trabalhista.",
+      "Olá, Dra. Bianca Santos. Gostaria de solicitar uma análise para dar entrada na minha aposentadoria pelo INSS.",
   },
   {
-    id: "familia-divorcio-sucessoes",
-    title: "Direito de Família, Divórcio & Sucessões",
+    id: "bpc-loas",
+    title: "BPC / LOAS (Benefício de Prestação Continuada)",
     icon: HeartHandshake,
-    tag: "Família, Divórcio & Herança",
+    tag: "Idosos 65+ & Doenças / PCD",
     summary:
-      "Condução humanizada, célere e segura em divórcios consensuais e litigiosos, partilha de patrimônio, inventários em cartório e testamentos.",
+      "Garantia de 1 salário mínimo mensal para idosos acima de 65 anos e pessoas com deficiência ou enfermidades graves de baixa renda, sem necessidade de contribuição prévia.",
     details:
-      "Conflitos familiares e transmissões patrimoniais requerem discrição, empatia e absoluta precisão técnica. Auxiliamos você e sua família a superar momentos delicados com serenidade, seja na formalização rápida de um divórcio e partilha equilibrada de bens, seja na condução de inventários em cartório de notas e elaboração de testamentos protetivos.",
+      "O BPC/LOAS é um direito fundamental assegurado pela Lei Orgânica da Assistência Social. Milhares de pedidos são injustamente indeferidos pelo INSS devido a interpretações restritivas de renda familiar ou perícias sociais equivocadas. Atuamos com firmeza para comprovar a real vulnerabilidade socioeconômica, deduzir gastos essenciais com saúde e medicamentos, e garantir a rápida implantação do benefício com pagamento de todos os retroativos.",
     topics: [
-      "Divórcio consensual ágil em cartório e divórcio contencioso com partilha estratégica de bens",
-      "Inventários extrajudiciais rápidos em cartório de notas e inventários judiciais complexos",
-      "Fixação, revisão e execução de pensão alimentícia e guarda de menores",
-      "Planejamento sucessório patrimonial e redação de testamentos seguros",
-      "Reconhecimento e dissolução de união estável com partilha de bens comuns",
-      "Doações de bens com cláusula de usufruto, inalienabilidade e impenhorabilidade",
+      "Concessão do BPC para idosos com 65 anos ou mais sem renda ou previdência própria",
+      "BPC para pessoas com deficiência física, intelectual, mental ou sensorial de qualquer idade",
+      "BPC para pessoas com doenças graves ou incapacitantes (câncer, autismo, sequelas neurológicas)",
+      "Superação jurídica do limite de 1/4 do salário mínimo mediante dedução de gastos médicos",
+      "Reversão de cancelamentos ou suspensões indevidas no CadÚnico e INSS",
+      "Cobrança integral de todas as parcelas retroativas desde a data do primeiro requerimento",
     ],
     whatsAppText:
-      "Olá, Dr. Augusto Lima. Gostaria de uma consulta sobre divórcio, partilha de bens ou inventário.",
+      "Olá, Dra. Bianca Santos. Gostaria de orientações sobre o BPC/LOAS (idoso ou pessoa com deficiência/doença).",
+  },
+  {
+    id: "beneficios-incapacidade",
+    title: "Benefícios por Incapacidade & Auxílio-Doença",
+    icon: ShieldCheck,
+    tag: "Auxílio-Doença · Invalidez · Acidente",
+    summary:
+      "Atuação ágil para restabelecimento de auxílio-doença cortado pelo INSS, concessão de aposentadoria por invalidez e auxílio-acidente indenizatório.",
+    details:
+      "Trabalhadores acometidos por doenças graves, problemas ortopédicos, transtornos psicológicos ou acidentes frequentemente enfrentam perícias médicas do INSS desumanas e apressadas, resultando em altas indevidas. Estruturamos todo o dossiê médico com laudos, exames e relatórios detalhados, ingressando imediatamente com recursos e ações na Justiça Federal para reverter a negativa.",
+    topics: [
+      "Auxílio por Incapacidade Temporária (antigo Auxílio-Doença) indeferido ou cessado no 'pente-fino'",
+      "Aposentadoria por Incapacidade Permanente (antiga Aposentadoria por Invalidez)",
+      "Adicional de 25% para aposentados por invalidez que necessitam de auxílio permanente de terceiros",
+      "Auxílio-Acidente mensal indenizatório (pago cumulativamente com o salário até a aposentadoria)",
+      "Reconhecimento de nexo causal para doenças ocupacionais e acidentes típicos de trabalho",
+      "Manutenção da qualidade de segurado e cômputo correto do 'período de graça'",
+    ],
+    whatsAppText:
+      "Olá, Dra. Bianca Santos. Tive meu auxílio-doença negado ou cortado pelo INSS e preciso de ajuda profissional.",
+  },
+  {
+    id: "pensao-morte-dependentes",
+    title: "Pensão por Morte & Amparo aos Dependentes",
+    icon: Users,
+    tag: "Cônjuge · Filhos · Família",
+    summary:
+      "Concessão rápida de pensão por morte para cônjuges, companheiros em união estável, filhos e dependentes econômicos com cálculo do valor justo.",
+    details:
+      "Em momentos de luto e dor familiar, a demora e a burocracia do INSS em conceder a pensão por morte geram profunda insegurança financeira. Atuamos com extrema sensibilidade e agilidade para reunir as comprovações cabíveis, provar união estável sem necessidade de certidão de casamento e garantir o sustento digno da família sem exigências abusivas.",
+    topics: [
+      "Concessão célere de Pensão por Morte para segurados urbanos, rurais e servidores",
+      "Comprovação documental e testemunhal consistente de união estável homoafetiva ou heteroafetiva",
+      "Pensão por morte para filhos menores de 21 anos, equiparados e dependentes com deficiência",
+      "Pensão por morte para pais idosos mediante comprovação de dependência econômica",
+      "Reconhecimento da qualidade de segurado do falecido mesmo quando desempregado no óbito",
+      "Revisão e recálculo da cota-parte e do valor mensal da pensão previdenciária",
+    ],
+    whatsAppText:
+      "Olá, Dra. Bianca Santos. Preciso de auxílio jurídico para dar entrada na pensão por morte perante o INSS.",
+  },
+  {
+    id: "planejamento-previdenciario",
+    title: "Planejamento Previdenciário Estratégico",
+    icon: Scale,
+    tag: "Auditoria de CNIS · Maior Benefício",
+    summary:
+      "Estudo matemático e jurídico detalhado para descobrir o melhor momento de se aposentar, corrigir pendências no CNIS e alcançar o valor máximo.",
+    details:
+      "Contribuir para o INSS sem estratégia pode significar jogar dinheiro fora ou perder até 40% da renda mensal da aposentadoria para o resto da vida. Com o Planejamento Previdenciário, realizamos um diagnóstico completo da sua vida contributiva, identificamos lacunas, descartamos recolhimentos desvantajosos e calculamos o retorno exato de cada real investido na previdência.",
+    topics: [
+      "Auditoria minuciosa de todo o extrato CNIS com saneamento de indicadores de pendência (PEXT, PREV)",
+      "Simulação matemática comparativa de todas as regras de transição trazidas pela Reforma",
+      "Estratégia avançada de descarte de contribuições menores para alavancar a média salarial",
+      "Planejamento sob medida para empresários (pró-labore), autônomos, médicos e profissionais liberais",
+      "Cálculo de custo-benefício de recolhimento de contribuições em atraso (indenização previdenciária)",
+      "Relatório executivo completo com cronograma de datas e projeções reais de valor de benefício",
+    ],
+    whatsAppText:
+      "Olá, Dra. Bianca Santos. Gostaria de solicitar um Planejamento Previdenciário para calcular minha melhor aposentadoria.",
+  },
+  {
+    id: "revisao-beneficios-atrasados",
+    title: "Revisão de Benefícios & Atrasados na Justiça",
+    icon: FileText,
+    tag: "Correção de Valor · Retroativos",
+    summary:
+      "Revisão minuciosa de benefícios concedidos com erro de cálculo pelo INSS, inclusão de períodos omitidos e recebimento de valores atrasados dos últimos 5 anos.",
+    details:
+      "O sistema do INSS comete erros frequentes no cálculo da Renda Mensal Inicial (RMI), desconsiderando períodos insalubres, vínculos em carteiras de trabalho antigas ou salários de contribuição maiores. Se você já recebe aposentadoria ou pensão concedida há menos de 10 anos, analisamos seu processo para verificar se o valor pode ser aumentado e cobrar todos os retroativos na Justiça Federal.",
+    topics: [
+      "Revisão da Renda Mensal Inicial (RMI) por cálculo incorreto da média aritmética do INSS",
+      "Inclusão de períodos de atividade especial (insalubridade e periculosidade) não computados",
+      "Inclusão de vínculos empregatícios e diferenças salariais reconhecidas na Justiça do Trabalho",
+      "Averbação de tempo de serviço rural ou militar para acréscimo no coeficiente do benefício",
+      "Cobrança judicial de parcelas retroativas e atrasados corrigidos monetariamente (RPV e Precatórios)",
+      "Revisão para recebimento de benefício mais vantajoso que o segurado já tinha direito adquirido",
+    ],
+    whatsAppText:
+      "Olá, Dra. Bianca Santos. Já sou aposentado(a) e gostaria de revisar o cálculo do meu benefício do INSS.",
   },
 ];
 
 const clientReviews = [
   {
-    name: "Kaua Reis",
+    name: "Alessandra Melo",
+    reviewsCount: "1 avaliação",
+    date: "Há 2 meses",
+    highlight: "Equipe super atenciosa, só elogios pelo atendimento e apoio!",
+    content:
+      "Excelente profissional, com uma equipe super atenciosa, me ajudou no que foi necessário. Só tenho elogios pelo atendimento e apoio!",
+  },
+  {
+    name: "Marcia Valeria",
+    reviewsCount: "1 avaliação",
+    date: "Há 1 mês",
+    highlight: "Meu atendimento foi excelente, fui muito bem recebida e acolhida",
+    content:
+      "Meu atendimento foi excelente, fui muito bem recebida, muito bem tratada, atendimento maravilhoso, só tenho a agradecer pelo belíssimo trabalho. Que Jesus abençoe o trabalho de vocês, iremos sermos mais do que vencedoras.",
+  },
+  {
+    name: "Carla Costa",
     reviewsCount: "2 avaliações",
-    date: "Há 6 meses",
-    highlight: "Excelente profissional, sério e comprometido",
+    date: "Há 2 meses",
+    highlight: "Tive um excelente resultado, estou muito feliz e grata!",
     content:
-      "Excelente profissional, muito atencioso e competente. Conduziu meu processo com responsabilidade e sempre me manteve informado sobre cada etapa. Recomendo para quem procura um advogado sério e comprometido.",
+      "É com muita satisfação que eu compartilho minha experiência com Dra. Bianca Santos (Silva Cabral Advogados). Fui muito bem assistida e representada graças a Deus e Dra. Bianca tive um excelente resultado estou muito feliz e grata também.",
   },
   {
-    name: "Daniele Oliveira",
-    reviewsCount: "4 avaliações",
-    date: "Há 6 meses",
-    highlight: "Resolveu meu problema muito rápido, atendimento impecável",
-    content:
-      "Excelente profissional, honesto, atendimento impecável, está de parabéns, resolveu meu problema muito rápido além de deixar a gente muito a vontade,... GRATIDÃO AUGUSTO 🙏🏽🙏🏽🙏🏽",
-  },
-  {
-    name: "Ailton Ribeiro de Araujo",
+    name: "Manuela",
     reviewsCount: "1 avaliação",
-    date: "Há 6 meses",
-    highlight: "Acabei de ganhar a causa em relação a pessoas jurídicas",
+    date: "Há 2 meses",
+    highlight: "A melhor de toda Lafaiete. Minha mãezinha está aposentada hoje!",
     content:
-      "Pessoal, acabei de ganhar a causa em relação a algumas pessoas jurídicas. Quero deixar aqui meu agradecimento ao Dr. Augusto, um profissional muito atencioso e inteligente. Parabéns, doutor, pelo excelente trabalho!",
+      "A melhor profissional nessa área q já vi em toda Lafaiete. Atenciosa, carinhosa, se preocupa em resolver o problema do próximo, seus funcionários tbm tão atenciosos... se minha mãezinha está aposentada hj agradeço a Dra. Bianca e toda equipe. Deus abençoe todos vcs.",
   },
   {
-    name: "Sidney Verginio",
-    reviewsCount: "Local Guide · 86 avaliações",
-    date: "Há 1 ano",
-    highlight: "Encontrar o Augusto foi um alívio enorme com minhas dívidas",
+    name: "Robson Vitor Castro",
+    reviewsCount: "Local Guide · 8 avaliações · 14 fotos",
+    date: "Há 1 mês",
+    highlight: "Paciência, profissionalismo e domínio do assunto. Parabéns!",
     content:
-      "Eu estava muito angustiado com minhas dívidas e já não sabia o que fazer. Encontrar o Augusto foi um alívio enorme! Fui tratado com respeito, paciência e acolhimento desde o primeiro contato. Ele me passou confiança e cuidou de cada detalhe com total responsabilidade.",
+      "Excelente atendimento, pontualidade, elucidações de todas dúvidas, paciência, profissionalismo, domínio do assunto. Silva Cabral Advocacia Previdenciária está de parabéns. Um ambiente acolhedor desde a chegada para atendimento até a saída.",
   },
   {
-    name: "Rafaela Alves",
-    reviewsCount: "7 avaliações",
-    date: "Há 9 meses",
-    highlight: "Melhor equipe de advocacia da cidade!",
-    content:
-      "Melhor equipe de advocacia da cidade!!! São muito pacientes e educados, principalmente em relação explicar às possibilidades do processo e também muito honestos e transparentes. Recomendo demais!!!",
-  },
-  {
-    name: "Thales Elias",
-    reviewsCount: "1 avaliação",
-    date: "Há 7 meses",
-    highlight: "Sempre explicou tudo com calma e passou confiança",
-    content:
-      "Fui muito bem atendido pelo Dr. Augusto. Sempre explicou tudo com calma, me passou confiança e resolveu meu problema com agilidade. Profissional sério e honesto. Super recomendo!",
-  },
-  {
-    name: "Ericä Matos",
-    reviewsCount: "10 avaliações",
-    date: "Há 1 ano",
-    highlight: "Clareza, profissionalismo e dedicação em cada detalhe",
-    content:
-      "Quero deixar registrado meu agradecimento ao Dr. Augusto. Sempre demonstrou clareza, profissionalismo e dedicação em cada detalhe do processo, e disponível para tirar dúvidas, conduziu tudo com segurança e transparência.",
-  },
-  {
-    name: "Cristiano Araújo da Silva",
-    reviewsCount: "8 avaliações",
-    date: "Há 2 anos",
-    highlight: "Extremamente ético e técnico. Ganhou minha causa!",
-    content:
-      "Contratei seus serviços como advogado e gostei muito. Extremamente ético, profissional, técnico. Muito claro nas suas explicações sobre o processo. E melhor, ganhou minha causa. Recomendo demais.",
-  },
-  {
-    name: "Wesley de Oliveira",
-    reviewsCount: "1 avaliação",
-    date: "Há 2 anos",
-    highlight: "Habilidade técnica e conhecimento profundo da lei",
-    content:
-      "Super recomendo por sua habilidade técnica e conhecimento profundo da lei, admiro sua empatia e seu respeito pelos outros. Você não é apenas um advogado excepcional, mas também uma pessoa maravilhosa, que sempre está disposta a ouvir e apoiar quem precisa.",
-  },
-  {
-    name: "Otávio Ferreira",
-    reviewsCount: "2 avaliações",
+    name: "Gracy Kelly Campos",
+    reviewsCount: "3 avaliações",
     date: "Há 5 meses",
-    highlight: "Resolveu meu caso muito rápido, ágil e competente",
+    highlight: "Sempre tirou minhas dúvidas e passa orientações importantes",
     content:
-      "Ótimo advogado, resolveu meu caso muito rápido, ágil e competente. Super indico a todos que precisam de uma solução jurídica de verdade.",
+      "Dra. Bianca é uma excelente profissional, muito prestativa, atenciosa, educada e sempre tirou minhas dúvidas quando precisei. Ela sempre passa dicas e orientações importantes pelo Instagram, WhatsApp e pelo atendimento.",
   },
   {
-    name: "Marcelo Muzetti Silva",
-    reviewsCount: "3 avaliações",
+    name: "Debora Feitoza",
+    reviewsCount: "4 avaliações",
     date: "Há 2 anos",
-    highlight: "Um dos melhores advogados de Passos e Região",
+    highlight: "Conseguiu o benefício em menos de 2 meses, sou eternamente grata",
     content:
-      "Excelente profissional, extremamente competente. Um dos melhores advogados de Passos e Região com toda certeza.",
+      "Dra. Bianca, uma ótima profissional, dedicada e atenciosa. Conseguiu o benefício em menos de 2 meses, sou eternamente grata a ela, super indico.",
   },
   {
-    name: "Tamires Cunha",
+    name: "Sabrina Magalhães Vieira",
     reviewsCount: "3 avaliações",
-    date: "Há 1 ano",
-    highlight: "Drª. Junia Maria sempre muito querida e competente",
+    date: "Há 3 anos",
+    highlight: "Aposentou meu pai em pouco tempo. Super recomendo!",
     content:
-      "Drª. Junia Maria sempre muito querida e competente, assim como toda a equipe do Dr. Augusto Lima. Atendimento acolhedor e dedicado a quem precisa.",
+      "Super recomendo! Excelente advogada. Parabéns pela competência e profissionalismo. Aposentou meu pai em pouco tempo. 👏🏻",
+  },
+  {
+    name: "Eni Tiquinha",
+    reviewsCount: "2 avaliações",
+    date: "Há 2 meses",
+    highlight: "Trabalha com seriedade. Agradeço por aposentar meu marido!",
+    content:
+      "Dra. Bianca é maravilhosa e muito profissional, trabalha com seriedade e profissionalismo. Agradeço a ela por tudo que fez para meu marido se aposentar. 🙏🏻😘",
+  },
+  {
+    name: "Bianca Demetrio",
+    reviewsCount: "3 avaliações",
+    date: "Há 3 anos",
+    highlight: "Trouxe pra mim e pros meus filhos a dignidade que merecemos",
+    content:
+      "Doutora Bianca, foi leal ao que se propôs, com todo o carinho e cuidado trouxe pra mim e para os meu filhos a dignidade que só uma profissional de responsabilidade e competência como ela tem. Gratidão por tanto!",
+  },
+  {
+    name: "fredy verona",
+    reviewsCount: "1 avaliação",
+    date: "Há 5 meses",
+    highlight: "Conhecimento técnico aprofundado no direito previdenciário",
+    content:
+      "Excelente profissional. Muito competente e receptiva no atendimento. Demonstra conhecimento técnico aprofundado na área do direito previdenciário, expressando com clareza sobre o assunto.",
+  },
+  {
+    name: "Anderson Francisco",
+    reviewsCount: "Local Guide · 76 avaliações · 5 fotos",
+    date: "Há 5 meses",
+    highlight: "Simplesmente maravilhoso o atendimento da Silva Cabral",
+    content:
+      "Simplesmente maravilhoso o atendimento da Advocacia Silva Cabral em especial minha amiga Dra. Bianca Santos. Todas muito simpáticas e atenciosas. Prontas para tirar nossas dúvidas. Parabéns a todos funcionários eficientes e proativos.",
   },
 ];
 
@@ -353,12 +352,12 @@ function Heading({
 }) {
   return (
     <div className="max-w-2xl">
-      <p className={light ? "eyebrow-light mb-4" : "eyebrow mb-4"}>{eyebrow}</p>
+      <div className={light ? "eyebrow-light mb-4" : "eyebrow mb-4"}>{eyebrow}</div>
       <h2
         className={
           light
-            ? "font-display text-3xl sm:text-5xl lg:text-[3.25rem] font-extrabold leading-[1.08] tracking-[-0.035em] text-white"
-            : "font-display text-3xl sm:text-5xl lg:text-[3.25rem] font-extrabold leading-[1.08] tracking-[-0.035em] text-slate-950"
+            ? "font-display text-3xl sm:text-5xl lg:text-[3.25rem] font-bold leading-[1.12] tracking-[-0.015em] text-white"
+            : "font-display text-3xl sm:text-5xl lg:text-[3.25rem] font-bold leading-[1.12] tracking-[-0.015em] text-[#08131a]"
         }
       >
         {children}
@@ -367,8 +366,8 @@ function Heading({
         <p
           className={
             light
-              ? "mt-5 max-w-xl text-[15px] leading-relaxed text-slate-300"
-              : "mt-5 max-w-xl text-[15px] leading-relaxed text-slate-600"
+              ? "mt-5 max-w-xl text-[15px] leading-relaxed text-slate-300 font-normal"
+              : "mt-5 max-w-xl text-[15px] leading-relaxed text-[#4a5c68] font-normal"
           }
         >
           {description}
@@ -395,24 +394,24 @@ export default function Home() {
 
   return (
     <MotionConfig reducedMotion="user">
-      <main className="overflow-hidden bg-slate-50 text-slate-900">
+      <main className="overflow-hidden bg-[#fcfbf9] text-[#08131a]">
         {/* Navigation Bar */}
-        <header className="sticky top-0 z-40 border-b border-white/10 bg-[#090a0f]/95 backdrop-blur-xl">
+        <header className="sticky top-0 z-40 border-b border-[#cfa043]/20 bg-[#08131a]/95 backdrop-blur-xl">
           <div className="mx-auto flex h-[95px] max-w-7xl items-center justify-between gap-5 px-5 sm:h-[110px] sm:px-8 lg:px-12">
             <a
               href="#inicio"
-              aria-label="Augusto Lima Advocacia — Início"
+              aria-label="Dra. Bianca Santos — Silva Cabral Advocacia Previdenciária"
               onClick={closeMenu}
-              className="flex items-center gap-3 transition-opacity hover:opacity-90 py-2"
+              className="flex items-center gap-3 transition-opacity hover:opacity-95 py-2"
             >
-              {/* Official Augusto Lima Logo in metallic white/silver */}
+              {/* Official 3D Gold Logo on Deep Petrol Header with True Alpha Transparency */}
               <Image
-                src="/logo-augusto-lima-header.png"
-                width={380}
-                height={130}
-                alt="Augusto Lima Advocacia"
+                src="/logo.png"
+                width={2020}
+                height={427}
+                alt="Dra. Bianca Santos - Advocacia Previdenciária"
                 priority
-                className="h-12 w-auto object-contain sm:h-[64px]"
+                className="h-10 w-auto object-contain sm:h-12 lg:h-[52px]"
               />
             </a>
 
@@ -430,13 +429,13 @@ export default function Home() {
                 Atuação
               </a>
               <a className="nav-link" href="#manifesto">
-                Direito Bancário
+                Soluções INSS
               </a>
               <a className="nav-link" href="#artigos">
-                Análises
+                Orientações
               </a>
               <a className="nav-link" href="#avaliacoes">
-                Avaliações (70)
+                Avaliações (133)
               </a>
               <a className="nav-link" href="#contato">
                 Contato
@@ -448,8 +447,8 @@ export default function Home() {
                 href={INSTAGRAM_URL}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="Instagram do Dr. Augusto Lima"
-                className="grid size-10 place-items-center rounded-full border border-white/20 text-slate-300 transition-all hover:border-amber-400 hover:bg-white/10 hover:text-white"
+                aria-label="Instagram da Dra. Bianca Santos"
+                className="grid size-10 place-items-center rounded-full border border-[#cfa043]/30 text-slate-300 transition-all hover:border-[#cfa043] hover:bg-[#cfa043]/10 hover:text-white"
               >
                 <InstagramIcon size={17} />
               </a>
@@ -457,8 +456,8 @@ export default function Home() {
                 href={getWhatsAppUrl()}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="WhatsApp do Dr. Augusto Lima"
-                className="grid size-10 place-items-center rounded-full border border-white/20 text-slate-300 transition-all hover:border-amber-400 hover:bg-white/10 hover:text-white"
+                aria-label="WhatsApp da Dra. Bianca Santos"
+                className="grid size-10 place-items-center rounded-full border border-[#cfa043]/30 text-slate-300 transition-all hover:border-[#cfa043] hover:bg-[#cfa043]/10 hover:text-white"
               >
                 <WhatsAppIcon size={18} />
               </a>
@@ -477,7 +476,7 @@ export default function Home() {
               aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
               aria-expanded={menuOpen}
               aria-controls="mobile-navigation"
-              className="grid size-11 place-items-center rounded-full border border-white/20 text-white lg:hidden"
+              className="grid size-11 place-items-center rounded-full border border-[#cfa043]/30 text-white lg:hidden"
               onClick={() => setMenuOpen((open) => !open)}
             >
               {menuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -493,30 +492,30 @@ export default function Home() {
                 animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}
                 transition={{ duration: 0.22 }}
-                className="overflow-hidden border-t border-white/10 bg-[#090a0f] px-6 lg:hidden"
+                className="overflow-hidden border-t border-[#cfa043]/20 bg-[#08131a] px-6 lg:hidden"
               >
                 <div className="mx-auto flex max-w-7xl flex-col gap-1 py-4">
                   {[
                     ["Início", "#inicio"],
-                    ["Sobre Nós & Equipe", "#sobre"],
-                    ["Áreas de Atuação", "#atuacao"],
-                    ["Foco em Direito Bancário", "#manifesto"],
-                    ["Análises Jurídicas", "#artigos"],
-                    ["Avaliações no Google (70)", "#avaliacoes"],
+                    ["Sobre Nós & Dra. Bianca", "#sobre"],
+                    ["Áreas de Atuação Previdenciária", "#atuacao"],
+                    ["Soluções Contra Negativas do INSS", "#manifesto"],
+                    ["Orientações & Dicas", "#artigos"],
+                    ["Avaliações no Google (133)", "#avaliacoes"],
                     ["Contato & Sede", "#contato"],
                   ].map(([label, href]) => (
                     <a
                       key={label}
                       href={href}
                       onClick={closeMenu}
-                      className="py-3 text-sm font-semibold text-slate-200 hover:text-amber-400"
+                      className="py-3 text-sm font-semibold text-slate-200 hover:text-[#f3d88b]"
                     >
                       {label}
                     </a>
                   ))}
                   <div className="mt-3 flex flex-col gap-2">
                     <a
-                      className="inline-flex items-center justify-center gap-2 rounded-full bg-amber-600 px-5 py-3.5 text-xs font-bold uppercase tracking-[0.14em] text-white shadow-md transition-all hover:bg-amber-500"
+                      className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#916315] via-[#cfa043] to-[#e3b865] px-5 py-3.5 text-xs font-bold uppercase tracking-[0.14em] text-[#08131a] shadow-md transition-all hover:brightness-110"
                       href={getWhatsAppUrl()}
                       target="_blank"
                       rel="noreferrer"
@@ -525,13 +524,13 @@ export default function Home() {
                       <WhatsAppIcon size={16} /> Falar no WhatsApp
                     </a>
                     <a
-                      className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/5 px-5 py-3 text-xs font-semibold text-white/90 hover:bg-white/10"
+                      className="inline-flex items-center justify-center gap-2 rounded-full border border-[#cfa043]/30 bg-white/5 px-5 py-3 text-xs font-semibold text-white/90 hover:bg-white/10"
                       href={INSTAGRAM_URL}
                       target="_blank"
                       rel="noreferrer"
                       onClick={closeMenu}
                     >
-                      <InstagramIcon size={15} /> Siga @advaugustolima
+                      <InstagramIcon size={15} /> Siga @biancasantos.advogada
                     </a>
                   </div>
                 </div>
@@ -540,13 +539,14 @@ export default function Home() {
           </AnimatePresence>
         </header>
 
-        {/* Hero Section */}
+        {/* Hero Section — Immersive Deep Velvet Petrol Blue replicating the office accent wall */}
         <section
           id="inicio"
-          className="relative isolate scroll-mt-24 border-b border-slate-200/80 bg-white"
+          className="relative isolate scroll-mt-24 border-b border-[#cfa043]/20 bg-[#08131a] text-white"
         >
-          <div className="pointer-events-none absolute -right-32 top-8 -z-10 size-[36rem] rounded-full bg-amber-100/40 blur-3xl" />
-          <div className="pointer-events-none absolute -left-20 bottom-10 -z-10 size-[28rem] rounded-full bg-slate-200/50 blur-3xl" />
+          {/* Ambient Petrol & Gold halo matching the office wall and golden signage */}
+          <div className="pointer-events-none absolute -right-32 top-8 -z-10 size-[38rem] rounded-full bg-gradient-to-bl from-[#cfa043]/15 via-[#0f2432]/40 to-transparent blur-3xl" />
+          <div className="pointer-events-none absolute -left-20 bottom-10 -z-10 size-[32rem] rounded-full bg-[#0b1a24]/80 blur-3xl" />
 
           <div className="mx-auto grid min-h-[660px] max-w-7xl items-center gap-12 px-5 py-16 sm:px-8 sm:py-20 lg:min-h-[720px] lg:grid-cols-[1.1fr_0.9fr] lg:gap-10 lg:px-12 lg:py-20">
             <motion.div
@@ -555,33 +555,34 @@ export default function Home() {
               variants={stagger}
               className="relative z-10 max-w-2xl lg:py-6"
             >
-              <motion.div variants={reveal} className="mb-6">
-                <span className="inline-flex items-center gap-2.5 rounded-full border border-slate-200 bg-slate-50 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.16em] text-slate-800 shadow-xs">
-                  <span className="size-2 rounded-full bg-amber-600 animate-pulse" />
-                  Av. Arlindo Figueiredo, 124 · Passos - MG · Atendimento Nacional
+              <motion.div variants={reveal} className="mb-6 flex flex-col items-start gap-3">
+                <span className="eyebrow-light">Silva Cabral Advocacia Previdenciária</span>
+                <span className="inline-flex items-center gap-2 rounded-full border border-[#cfa043]/30 bg-[#0f2432]/80 px-4 py-1.5 text-[11px] font-semibold text-[#fbe5a2] shadow-xs backdrop-blur-md">
+                  <span className="size-2 rounded-full bg-[#cfa043] animate-pulse" />
+                  R. José Nicolau de Queirós, 256 · Centro · Conselheiro Lafaiete - MG
                 </span>
               </motion.div>
 
               <motion.h1
                 variants={reveal}
-                className="max-w-[760px] font-display text-[2.85rem] font-extrabold leading-[1.02] tracking-[-0.04em] text-slate-950 sm:text-6xl lg:text-[4.65rem]"
+                className="max-w-[760px] font-display text-[2.85rem] font-bold leading-[1.06] tracking-[-0.02em] text-white sm:text-6xl lg:text-[4.65rem]"
               >
-                Existe uma diferença entre dever e ser{" "}
-                <span className="block mt-1 bg-gradient-to-r from-amber-600 via-amber-500 to-amber-700 bg-clip-text text-transparent font-extrabold">
-                  cobrado indevidamente.
+                Aposentadoria e benefícios do INSS com{" "}
+                <span className="block mt-2 font-display italic text-gold-gradient font-normal">
+                  agilidade, respeito e segurança.
                 </span>
               </motion.h1>
 
               <motion.p
                 variants={reveal}
-                className="mt-7 max-w-xl text-[15px] leading-relaxed text-slate-600 sm:text-base sm:leading-8 font-normal"
+                className="mt-7 max-w-xl text-[15px] leading-relaxed text-slate-300 sm:text-base sm:leading-8 font-normal"
               >
-                Atuação jurídica combativa e estratégica com foco primordial em{" "}
-                <strong className="text-slate-900 font-semibold">Direito Bancário</strong>,
-                revisão de contratos de empréstimo e financiamento, cancelamento de
-                juros abusivos, gestão de passivos para empresas e litígios cíveis.
-                Conduzido pelo <strong className="text-slate-900 font-semibold">Dr. Augusto Lima</strong> e
-                equipe, com sede em Passos/MG e atendimento on-line seguro em todo o Brasil.
+                Atuação especializada e humanizada em{" "}
+                <strong className="text-white font-semibold">Direito Previdenciário</strong> liderada
+                pela <strong className="text-[#fbe5a2] font-semibold">Dra. Bianca Santos</strong>.
+                Conquistamos aposentadorias rápidas, BPC/LOAS, benefícios por incapacidade e pensões por morte
+                com rigor técnico perante o INSS e a Justiça Federal. Atendimento acolhedor no Centro de
+                Conselheiro Lafaiete/MG e consultoria digital estruturada em todo o Brasil.
               </motion.p>
 
               <motion.div
@@ -594,11 +595,11 @@ export default function Home() {
                   size="lg"
                   className="rounded-full shadow-lg"
                 >
-                  <WhatsAppIcon size={16} /> Falar com o Dr. Augusto Lima
+                  <WhatsAppIcon size={16} /> Falar com a Dra. Bianca Santos
                 </GlowingButton>
                 <a
                   href="#atuacao"
-                  className="group inline-flex items-center gap-2 px-3 py-3 text-sm font-bold text-slate-900 transition-colors hover:text-amber-600"
+                  className="group inline-flex items-center gap-2 px-3 py-3 text-sm font-bold text-slate-200 transition-colors hover:text-[#f3d88b]"
                 >
                   Conhecer áreas de atuação{" "}
                   <ArrowRight
@@ -610,19 +611,19 @@ export default function Home() {
 
               <motion.div
                 variants={reveal}
-                className="mt-12 flex flex-wrap items-center gap-x-7 gap-y-4 border-t border-slate-200/80 pt-6 text-xs text-slate-600"
+                className="mt-12 flex flex-wrap items-center gap-x-7 gap-y-4 border-t border-white/10 pt-6 text-xs text-slate-300"
               >
                 <span className="inline-flex items-center gap-2 font-medium">
-                  <Star size={16} className="fill-amber-500 text-amber-500" />{" "}
-                  <strong className="text-slate-950 font-bold">5,0 estrelas</strong> no Google (70 avaliações)
+                  <Star size={16} className="fill-[#cfa043] text-[#cfa043]" />{" "}
+                  <strong className="text-white font-bold">4,9 estrelas</strong> no Google (133+ avaliações)
                 </span>
                 <span className="inline-flex items-center gap-2 font-medium">
-                  <ShieldCheck size={16} className="text-amber-600" /> Foco em
-                  Direito Bancário & Empresarial
+                  <ShieldCheck size={16} className="text-[#cfa043]" /> Especialista
+                  em Direito Previdenciário & INSS
                 </span>
                 <span className="inline-flex items-center gap-2 font-medium">
-                  <MapPin size={16} className="text-amber-600" /> Presencial em
-                  Passos - MG e on-line
+                  <MapPin size={16} className="text-[#cfa043]" /> Presencial em
+                  Conselheiro Lafaiete e on-line
                 </span>
               </motion.div>
             </motion.div>
@@ -639,16 +640,16 @@ export default function Home() {
               className="relative mx-auto w-full max-w-[480px] lg:ml-auto lg:mr-2"
             >
               {/* Luxury ambient backlight aura */}
-              <div className="absolute -inset-4 rounded-3xl bg-gradient-to-tr from-amber-500/20 via-slate-500/10 to-transparent blur-2xl -z-10" />
+              <div className="absolute -inset-4 rounded-3xl bg-gradient-to-tr from-[#cfa043]/30 via-[#0f2432]/20 to-transparent blur-2xl -z-10" />
 
-              {/* Architectural outer hairline frame */}
-              <div className="absolute -inset-2.5 rounded-2xl border border-slate-900/10 pointer-events-none" />
+              {/* Architectural outer hairline gold frame */}
+              <div className="absolute -inset-2.5 rounded-2xl border border-[#cfa043]/30 pointer-events-none" />
 
               {/* Main portrait executive card */}
-              <div className="relative aspect-[0.76] overflow-hidden rounded-2xl bg-[#090a0f] shadow-2xl ring-1 ring-slate-900/10">
+              <div className="relative aspect-[0.76] overflow-hidden rounded-2xl bg-[#08131a] shadow-2xl ring-1 ring-[#cfa043]/30">
                 <Image
-                  src="/augusto-lima-hero.jpg"
-                  alt="Dr. Augusto Lima — Advogado Titular"
+                  src="/dra-bianca-hero.jpg"
+                  alt="Dra. Bianca Santos — Silva Cabral Advocacia Previdenciária"
                   fill
                   priority
                   sizes="(max-width: 640px) 90vw, (max-width: 1024px) 70vw, 42vw"
@@ -656,68 +657,68 @@ export default function Home() {
                 />
 
                 {/* Gradient vignette on bottom */}
-                <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#08131a] via-[#08131a]/60 to-transparent" />
 
                 {/* Executive name overlay */}
                 <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between gap-3 text-white sm:bottom-7 sm:left-7 sm:right-7">
                   <div>
                     <p className="font-display text-2xl font-bold tracking-tight text-white">
-                      Dr. Augusto Lima
+                      Dra. Bianca Santos
                     </p>
-                    <p className="mt-1 text-[11px] font-bold uppercase tracking-[0.18em] text-amber-400">
-                      Augusto Lima Advocacia
+                    <p className="mt-1 text-[11px] font-bold uppercase tracking-[0.2em] text-[#fbe5a2]">
+                      Silva Cabral Advocacia Previdenciária
                     </p>
                   </div>
-                  <span className="grid size-11 shrink-0 place-items-center rounded-full border border-amber-400/40 bg-black/60 text-amber-400 backdrop-blur-md">
+                  <span className="grid size-11 shrink-0 place-items-center rounded-full border border-[#cfa043]/40 bg-[#08131a]/80 text-[#fbe5a2] backdrop-blur-md shadow-lg">
                     <Scale size={18} />
                   </span>
                 </div>
               </div>
 
               {/* Floating badges */}
-              <div className="absolute -left-3 top-[10%] rounded-full border border-slate-200 bg-white/95 px-4 py-2.5 text-[10px] font-bold tracking-[0.14em] text-slate-900 shadow-xl backdrop-blur-md sm:-left-6 sm:px-5">
-                DIREITO BANCÁRIO & CÍVEL
+              <div className="absolute -left-3 top-[10%] rounded-full border border-[#cfa043]/40 bg-[#0b1a24]/95 px-4 py-2.5 text-[10px] font-bold tracking-[0.16em] text-[#fbe5a2] shadow-xl backdrop-blur-md sm:-left-6 sm:px-5">
+                ADVOCACIA PREVIDENCIÁRIA & INSS
               </div>
 
-              <div className="absolute -right-3 bottom-[18%] rounded-2xl border border-slate-200 bg-white/95 p-4 shadow-2xl backdrop-blur-md sm:-right-6">
-                <div className="flex items-center gap-2 text-amber-500">
-                  <Star size={16} className="fill-amber-500" />
-                  <span className="font-display text-lg font-extrabold text-slate-950">
-                    5,0 / 5,0
+              <div className="absolute -right-3 bottom-[18%] rounded-2xl border border-[#cfa043]/40 bg-[#0b1a24]/95 p-4 shadow-2xl backdrop-blur-md sm:-right-6">
+                <div className="flex items-center gap-2 text-[#cfa043]">
+                  <Star size={16} className="fill-[#cfa043]" />
+                  <span className="font-display text-lg font-bold text-white">
+                    4,9 / 5,0
                   </span>
                 </div>
-                <p className="mt-0.5 text-[10px] font-bold uppercase tracking-wider text-slate-500">
-                  70 Avaliações no Google
+                <p className="mt-0.5 text-[10px] font-bold uppercase tracking-wider text-slate-300">
+                  133+ Avaliações no Google
                 </p>
               </div>
             </motion.div>
           </div>
         </section>
 
-        {/* Highlights Banner */}
+        {/* Highlights Banner — Deep Petrol Slate */}
         <section
           aria-label="Credenciais e Destaques"
-          className="border-b border-slate-200/80 bg-slate-100/70"
+          className="border-b border-[#cfa043]/20 bg-[#0b1a24] text-white"
         >
           <div className="mx-auto grid max-w-7xl gap-7 px-5 py-8 sm:grid-cols-4 sm:gap-4 sm:px-8 lg:px-12">
             {[
-              ["5,0 ★", "classificação máxima com 70 avaliações no Google"],
-              ["Bancário & Empresas", "foco em revisão de juros e proteção de caixa"],
-              ["Passos - MG", "Av. Arlindo Figueiredo, 124 - São Francisco"],
-              ["Brasil Inteiro", "atendimento presencial e consultoria on-line"],
+              ["4,9 ★", "classificação com 133+ avaliações reais no Google"],
+              ["Concessão Ágil", "histórico de benefícios concedidos com rapidez"],
+              ["Conselheiro Lafaiete", "R. José Nicolau de Queirós, 256 - Centro"],
+              ["Brasil Inteiro", "atendimento presencial e suporte on-line"],
             ].map(([value, label], index) => (
               <div
                 key={label}
                 className={
                   index > 0
-                    ? "flex items-center gap-4 sm:justify-center sm:border-l sm:border-slate-300"
+                    ? "flex items-center gap-4 sm:justify-center sm:border-l sm:border-white/10"
                     : "flex items-center gap-4 sm:justify-center"
                 }
               >
-                <span className="font-display text-3xl sm:text-4xl font-black text-amber-600">
+                <span className="font-display text-3xl sm:text-4xl font-bold text-gold-gradient">
                   {value}
                 </span>
-                <span className="max-w-[155px] text-[11px] font-medium leading-5 text-slate-600">
+                <span className="max-w-[155px] text-[11px] font-medium leading-5 text-slate-300">
                   {label}
                 </span>
               </div>
@@ -725,10 +726,10 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Sobre a Equipe / Sobre Nós (Echoing the flyer design) */}
+        {/* Sobre a Equipe / Sobre Nós — Warm Alabaster Stone */}
         <section
           id="sobre"
-          className="scroll-mt-24 bg-white py-20 sm:py-28 lg:py-32"
+          className="scroll-mt-24 bg-[#faf8f4] py-20 sm:py-28 lg:py-32"
         >
           <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-[0.96fr_1.04fr] lg:gap-20 lg:px-12">
             {/* Team Institutional Photo Presentation */}
@@ -739,34 +740,34 @@ export default function Home() {
               variants={reveal}
               className="relative mx-auto w-full max-w-[540px]"
             >
-              <div className="relative aspect-[1.08] overflow-hidden rounded-2xl bg-slate-100 shadow-2xl ring-1 ring-slate-900/10">
+              <div className="relative aspect-[1.08] overflow-hidden rounded-2xl bg-white shadow-2xl ring-1 ring-[#cfa043]/20">
                 <Image
-                  src="/sobre-nos.jpg"
-                  alt="Equipe Augusto Lima Advocacia — Dr. Augusto Lima, Drª. Junia Maria e associadas"
+                  src="/dra-bianca-sobre.jpg"
+                  alt="Dra. Bianca Santos e Equipe — Atendimento Acolhedor na Silva Cabral Advocacia"
                   fill
                   sizes="(max-width: 1024px) 90vw, 45vw"
-                  className="object-cover object-center"
+                  className="object-cover object-top"
                 />
               </div>
 
               {/* Authority card */}
-              <div className="absolute -bottom-6 right-3 max-w-[310px] rounded-xl border border-slate-200/80 bg-white p-5 shadow-2xl sm:-right-6 sm:p-6">
-                <div className="flex items-center gap-2 text-amber-600">
+              <div className="absolute -bottom-6 right-3 max-w-[310px] rounded-xl border border-[#cfa043]/30 bg-white p-5 shadow-2xl sm:-right-6 sm:p-6">
+                <div className="flex items-center gap-2 text-[#916315]">
                   <ShieldCheck size={18} />
                   <p className="text-[10px] font-bold uppercase tracking-[0.16em]">
-                    Corpo Jurídico Especializado
+                    Atendimento Humanizado
                   </p>
                 </div>
-                <p className="mt-1.5 font-display text-lg font-bold leading-snug text-slate-950">
-                  Dr. Augusto Lima & Sócias
+                <p className="mt-1.5 font-display text-lg font-bold leading-snug text-[#08131a]">
+                  Dra. Bianca Santos & Equipe
                 </p>
-                <p className="mt-1 text-xs leading-relaxed text-slate-600">
-                  Atendimento minucioso, transparente e com reconhecida
-                  competência na solução ágil de conflitos bancários e cíveis.
+                <p className="mt-1 text-xs leading-relaxed text-[#4a5c68]">
+                  Acolhimento empático, escuta atenta e dedicação incansável
+                  para garantir a aposentadoria ou benefício que você merece.
                 </p>
               </div>
 
-              <span className="absolute -left-4 -top-4 -z-10 size-24 rounded-tl-2xl border-l-2 border-t-2 border-amber-600/30 sm:-left-6 sm:-top-6 sm:size-32" />
+              <span className="absolute -left-4 -top-4 -z-10 size-24 rounded-tl-2xl border-l-2 border-t-2 border-[#cfa043]/50 sm:-left-6 sm:-top-6 sm:size-32" />
             </motion.div>
 
             {/* Text description */}
@@ -777,141 +778,132 @@ export default function Home() {
               variants={stagger}
             >
               <motion.div variants={reveal}>
-                <span className="inline-block rounded-md bg-amber-50 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.18em] text-amber-800 mb-4">
-                  sobre nós · augusto lima advocacia
-                </span>
+                <span className="eyebrow mb-4">sobre nós · silva cabral advocacia</span>
               </motion.div>
 
               <motion.h2
                 variants={reveal}
-                className="font-display text-3xl sm:text-5xl lg:text-[3.35rem] font-extrabold leading-[1.06] tracking-[-0.035em] text-slate-950"
+                className="font-display text-3xl sm:text-5xl lg:text-[3.35rem] font-bold leading-[1.08] tracking-[-0.015em] text-[#08131a]"
               >
-                Defesa implacável de seus direitos com{" "}
-                <span className="text-amber-600">
-                  seriedade e transparência.
+                Defesa incansável dos seus direitos com{" "}
+                <span className="font-display italic text-[#916315]">
+                  acolhimento, agilidade e respeito.
                 </span>
               </motion.h2>
 
               <motion.p
                 variants={reveal}
-                className="mt-6 max-w-xl text-[15px] leading-relaxed text-slate-600 font-normal"
+                className="mt-6 max-w-xl text-[15px] leading-relaxed text-[#4a5c68] font-normal"
               >
-                A <strong className="text-slate-950 font-semibold">Augusto Lima Advocacia</strong> nasceu
-                com uma premissa clara: a lei não pode ser utilizada como instrumento
-                de opressão financeira contra cidadãos e empresas. Liderado pelo{" "}
-                <strong className="text-slate-950 font-semibold">Dr. Augusto Lima</strong> e composto
-                por uma equipe qualificada — com destaque para a atuação dedicada da{" "}
-                <strong className="text-slate-950 font-semibold">Drª. Junia Maria</strong> e advogadas
-                associadas —, nosso escritório une profundo conhecimento técnico a um
-                atendimento acolhedor e humanizado.
+                A <strong className="text-[#08131a] font-semibold">Silva Cabral Advocacia Previdenciária</strong>,
+                liderada com paixão e precisão técnica pela{" "}
+                <strong className="text-[#08131a] font-semibold">Dra. Bianca Santos</strong>, nasceu com uma missão clara:
+                fazer com que os anos de esforço, suor e dedicação de cada trabalhador sejam honrados perante o INSS.
               </motion.p>
 
               <motion.p
                 variants={reveal}
-                className="mt-4 max-w-xl text-[15px] leading-relaxed text-slate-600 font-normal"
+                className="mt-4 max-w-xl text-[15px] leading-relaxed text-[#4a5c68] font-normal"
               >
-                Reconhecido pela nota máxima de <strong className="text-slate-950 font-semibold">5,0 estrelas no Google</strong> por
-                dezenas de clientes em Passos e região, o escritório não trabalha com
-                soluções automáticas: cada contrato bancário, litígio empresarial ou
-                processo de família é examinado em seus mínimos detalhes, buscando a
-                mais rápida e vantajosa resolução para quem nos confia sua causa.
+                Reconhecida com nota <strong className="text-[#08131a] font-semibold">4,9 estrelas no Google (133+ avaliações)</strong> por
+                famílias de Conselheiro Lafaiete e toda a região, nossa equipe não trata causas como papéis burocráticos.
+                Analisamos cada laudo, cada mês de contribuição e cada detalhe documental com o carinho e o rigor necessários
+                para conquistar sua concessão no menor tempo possível.
               </motion.p>
 
               <motion.div
                 variants={reveal}
                 className="mt-7 grid grid-cols-1 gap-3 sm:grid-cols-2"
               >
-                <div className="flex items-center gap-2.5 text-xs text-slate-900 font-semibold">
-                  <CheckCircle2 size={16} className="text-amber-600 shrink-0" />
-                  <span>Auditoria minuciosa de cláusulas e recálculo pericial</span>
+                <div className="flex items-center gap-2.5 text-xs text-[#08131a] font-semibold">
+                  <CheckCircle2 size={16} className="text-[#916315] shrink-0" />
+                  <span>Auditoria minuciosa do CNIS e cálculo do maior valor</span>
                 </div>
-                <div className="flex items-center gap-2.5 text-xs text-slate-900 font-semibold">
-                  <CheckCircle2 size={16} className="text-amber-600 shrink-0" />
-                  <span>Acompanhamento direto e comunicação clara via WhatsApp</span>
+                <div className="flex items-center gap-2.5 text-xs text-[#08131a] font-semibold">
+                  <CheckCircle2 size={16} className="text-[#916315] shrink-0" />
+                  <span>Acompanhamento direto e transparente via WhatsApp</span>
                 </div>
-                <div className="flex items-center gap-2.5 text-xs text-slate-900 font-semibold">
-                  <CheckCircle2 size={16} className="text-amber-600 shrink-0" />
-                  <span>Sede estruturada na Av. Arlindo Figueiredo, 124 em Passos</span>
+                <div className="flex items-center gap-2.5 text-xs text-[#08131a] font-semibold">
+                  <CheckCircle2 size={16} className="text-[#916315] shrink-0" />
+                  <span>Sede na R. José Nicolau de Queirós, 256 no Centro de Lafaiete</span>
                 </div>
-                <div className="flex items-center gap-2.5 text-xs text-slate-900 font-semibold">
-                  <CheckCircle2 size={16} className="text-amber-600 shrink-0" />
-                  <span>Atendimento digital estruturado para clientes de todo o país</span>
+                <div className="flex items-center gap-2.5 text-xs text-[#08131a] font-semibold">
+                  <CheckCircle2 size={16} className="text-[#916315] shrink-0" />
+                  <span>Atendimento presencial e consultoria on-line estruturada</span>
                 </div>
               </motion.div>
 
               <motion.div variants={reveal} className="mt-9">
                 <GlowingButton
                   href={getWhatsAppUrl(
-                    "Olá, Dr. Augusto Lima. Gostaria de entender como o escritório pode me auxiliar no meu caso."
+                    "Olá, Dra. Bianca Santos. Gostaria de entender como o escritório Silva Cabral pode me auxiliar com meu benefício do INSS."
                   )}
                   target="_blank"
                   size="md"
                   className="rounded-full shadow-md"
                 >
-                  <WhatsAppIcon size={16} /> Falar com o Dr. Augusto Lima
+                  <WhatsAppIcon size={16} /> Falar com a Dra. Bianca Santos
                 </GlowingButton>
               </motion.div>
             </motion.div>
           </div>
         </section>
 
-        {/* Manifesto / Foco Bancário (Core Value Proposition) */}
+        {/* Manifesto / Foco Previdenciário — Deep Velvet Petrol Blue */}
         <section
           id="manifesto"
-          className="relative isolate overflow-hidden bg-[#090a0f] py-20 text-white sm:py-28 lg:py-32"
+          className="relative isolate overflow-hidden bg-[#08131a] py-20 text-white sm:py-28 lg:py-32"
         >
-          <div className="pointer-events-none absolute -left-28 top-1/4 size-96 rounded-full bg-amber-600/15 blur-3xl" />
-          <div className="pointer-events-none absolute -right-28 bottom-1/4 size-96 rounded-full bg-amber-700/10 blur-3xl" />
+          <div className="pointer-events-none absolute -left-28 top-1/4 size-96 rounded-full bg-[#cfa043]/15 blur-3xl" />
+          <div className="pointer-events-none absolute -right-28 bottom-1/4 size-96 rounded-full bg-[#cfa043]/10 blur-3xl" />
 
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
             <div className="mx-auto max-w-3xl text-center">
-              <span className="inline-flex items-center gap-2 rounded-full border border-amber-400/30 bg-amber-400/10 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.2em] text-amber-400 backdrop-blur-md">
-                <Sparkles size={14} /> Posicionamento Estratégico
-              </span>
-              <h2 className="mt-6 font-display text-3xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.08] tracking-[-0.035em] text-white">
-                Você não precisa continuar pagando aquilo que a lei{" "}
-                <span className="text-amber-400">
-                  não autoriza que te cobrem.
+              <span className="eyebrow-light mb-4">posicionamento estratégico</span>
+              <h2 className="mt-4 font-display text-3xl sm:text-5xl lg:text-6xl font-bold leading-[1.08] tracking-[-0.015em] text-white">
+                Você não precisa aceitar uma resposta negativa do INSS{" "}
+                <span className="font-display italic text-gold-gradient font-normal">
+                  nem esperar anos pelo que é seu por direito.
                 </span>
               </h2>
             </div>
 
             <div className="mx-auto mt-12 grid max-w-4xl gap-6 sm:grid-cols-2">
-              <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-8 backdrop-blur-md hover:border-amber-400/40 transition-colors">
-                <div className="flex size-12 items-center justify-center rounded-xl bg-amber-500/20 text-amber-400">
-                  <ShieldAlert size={24} />
+              <div className="rounded-2xl border border-[#cfa043]/30 bg-[#0f2432]/80 p-8 backdrop-blur-md hover:border-[#cfa043]/60 transition-colors shadow-xl">
+                <div className="flex size-12 items-center justify-center rounded-xl bg-[#cfa043]/20 text-[#fbe5a2]">
+                  <ShieldCheck size={24} />
                 </div>
                 <h3 className="mt-5 font-display text-2xl font-bold text-white">
-                  Para Pessoas Físicas & Aposentados
+                  Para Quem Teve Benefício Negado ou Cortado
                 </h3>
                 <p className="mt-3 text-sm leading-relaxed text-slate-300">
-                  Muita gente paga por anos uma parcela que nunca conferiu ou
-                  assina um contrato que não leu. Juros capitalizados, tarifas
-                  embutidas e descontos perpétuos de cartões RMC e RCC drenam sua
-                  renda mensal. Nós recalculamos o que é justo e recuperamos o
-                  que foi pago a mais.
+                  Perícias médicas apressadas e exigências descabidas do INSS deixam
+                  trabalhadores doentes, idosos e famílias sem seu sustento legítimo.
+                  Nós ingressamos com recursos administrativos e ações judiciais
+                  perante a Justiça Federal, revertendo o indeferimento e garantindo
+                  o pagamento de todos os valores atrasados desde o primeiro pedido.
                 </p>
-                <div className="mt-6 flex items-center gap-2 text-xs font-bold text-amber-400">
-                  <CheckCircle2 size={16} /> Cessação de cobranças abusivas
+                <div className="mt-6 flex items-center gap-2 text-xs font-bold text-[#fbe5a2]">
+                  <CheckCircle2 size={16} /> Reversão de negativas & Recebimento de atrasados
                 </div>
               </div>
 
-              <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-8 backdrop-blur-md hover:border-amber-400/40 transition-colors">
-                <div className="flex size-12 items-center justify-center rounded-xl bg-amber-500/20 text-amber-400">
-                  <TrendingDown size={24} />
+              <div className="rounded-2xl border border-[#cfa043]/30 bg-[#0f2432]/80 p-8 backdrop-blur-md hover:border-[#cfa043]/60 transition-colors shadow-xl">
+                <div className="flex size-12 items-center justify-center rounded-xl bg-[#cfa043]/20 text-[#fbe5a2]">
+                  <Award size={24} />
                 </div>
                 <h3 className="mt-5 font-display text-2xl font-bold text-white">
-                  Para Empresas & Produtores
+                  Para Quem Deseja Aposentar com o Maior Valor
                 </h3>
                 <p className="mt-3 text-sm leading-relaxed text-slate-300">
-                  Com a empresa acontece o mesmo: o endividamento bancário se
-                  acumula em contratos renovados sem revisão e em travas de
-                  recebíveis que asfixiam o caixa operacional. Atuamos na
-                  gestão de passivos bancários, destravando recebíveis e
-                  renegociando dívidas em parcelas que caibam no fluxo de caixa.
+                  Pedir a aposentadoria no momento errado ou sem auditar o extrato
+                  CNIS pode custar milhares de reais todos os meses pelo resto da vida.
+                  Atuamos no planejamento previdenciário minucioso, descartando
+                  recolhimentos desfavoráveis e aplicando a regra de transição mais
+                  vantajosa para maximizar seu benefício.
                 </p>
-                <div className="mt-6 flex items-center gap-2 text-xs font-bold text-amber-400">
-                  <CheckCircle2 size={16} /> Destrave imediato de recebíveis
+                <div className="mt-6 flex items-center gap-2 text-xs font-bold text-[#fbe5a2]">
+                  <CheckCircle2 size={16} /> Planejamento matemático & Maior teto possível
                 </div>
               </div>
             </div>
@@ -919,25 +911,25 @@ export default function Home() {
             <div className="mt-12 text-center">
               <GlowingButton
                 href={getWhatsAppUrl(
-                  "Olá, Dr. Augusto. Gostaria de enviar meu contrato bancário para uma análise inicial de juros e cobranças indevidas."
+                  "Olá, Dra. Bianca Santos. Gostaria de enviar os dados do meu caso para uma avaliação inicial do meu benefício previdenciário."
                 )}
                 target="_blank"
                 size="lg"
                 className="rounded-full shadow-lg"
               >
-                <WhatsAppIcon size={17} /> Enviar meu contrato para análise no WhatsApp
+                <WhatsAppIcon size={17} /> Enviar meu caso para avaliação no WhatsApp
               </GlowingButton>
               <p className="mt-3 text-xs text-slate-400">
-                Atendimento sigiloso e direto com nossa equipe especializada.
+                Atendimento sigiloso, transparente e com retorno prioritário pela equipe.
               </p>
             </div>
           </div>
         </section>
 
-        {/* Áreas de Atuação */}
+        {/* Áreas de Atuação — Alabaster Background */}
         <section
           id="atuacao"
-          className="scroll-mt-24 bg-slate-50 py-20 sm:py-28 lg:py-32"
+          className="scroll-mt-24 bg-[#faf8f4] py-20 sm:py-28 lg:py-32"
         >
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
             <motion.div
@@ -948,17 +940,17 @@ export default function Home() {
               className="flex flex-col justify-between gap-6 md:flex-row md:items-end"
             >
               <Heading
-                eyebrow="ÁREAS DE ATUAÇÃO ESTRATÉGICA"
-                description="Assessoria jurídica especializada com alto rigor analítico para defender seu patrimônio, sua empresa e sua família."
+                eyebrow="áreas de atuação previdenciária"
+                description="Assessoria jurídica especializada com alto rigor analítico para defender sua aposentadoria, sua saúde e o futuro da sua família."
               >
-                Soluções técnicas e combativas nos{" "}
-                <span className="text-amber-600">
-                  momentos mais decisivos.
+                Soluções técnicas e humanizadas em{" "}
+                <span className="font-display italic text-[#916315]">
+                  Direito Previdenciário.
                 </span>
               </Heading>
-              <p className="max-w-[260px] pb-1 text-xs leading-relaxed text-slate-500 font-medium">
+              <p className="max-w-[260px] pb-1 text-xs leading-relaxed text-[#4a5c68] font-medium">
                 Selecione uma área para visualizar o detalhamento das causas
-                atendidas e conversar com o Dr. Augusto Lima.
+                atendidas e conversar com a Dra. Bianca Santos.
               </p>
             </motion.div>
 
@@ -975,25 +967,25 @@ export default function Home() {
                   <motion.article
                     key={area.id}
                     variants={reveal}
-                    className="group flex min-h-[350px] flex-col rounded-2xl border border-slate-200/80 bg-white p-8 transition-all duration-300 hover:-translate-y-1.5 hover:border-amber-500/50 hover:shadow-xl"
+                    className="group flex min-h-[350px] flex-col rounded-2xl border border-[#cfa043]/20 bg-white p-8 transition-all duration-300 hover:-translate-y-1.5 hover:border-[#cfa043]/60 hover:shadow-xl"
                   >
                     <div className="flex items-start justify-between">
-                      <span className="grid size-12 place-items-center rounded-xl bg-amber-50 text-amber-600 transition-colors group-hover:bg-amber-600 group-hover:text-white">
+                      <span className="grid size-12 place-items-center rounded-xl bg-[#fbf3e2] text-[#916315] transition-colors group-hover:bg-[#cfa043] group-hover:text-white">
                         <Icon size={22} strokeWidth={1.8} />
                       </span>
-                      <span className="font-display font-black text-2xl text-slate-300 group-hover:text-amber-600 transition-colors">
+                      <span className="font-display font-bold text-2xl text-slate-300 group-hover:text-[#cfa043] transition-colors">
                         0{index + 1}
                       </span>
                     </div>
 
                     <div className="mt-6">
-                      <span className="inline-block rounded-md bg-amber-50 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-amber-800">
+                      <span className="inline-block rounded-md bg-[#fbf3e2] px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#916315]">
                         {area.tag}
                       </span>
-                      <h3 className="mt-3 font-display font-bold text-xl leading-snug text-slate-950">
+                      <h3 className="mt-3 font-display font-bold text-xl leading-snug text-[#08131a]">
                         {area.title}
                       </h3>
-                      <p className="mt-3 text-[13px] leading-relaxed text-slate-600">
+                      <p className="mt-3 text-[13px] leading-relaxed text-[#4a5c68]">
                         {area.summary}
                       </p>
                     </div>
@@ -1001,7 +993,7 @@ export default function Home() {
                     <button
                       type="button"
                       onClick={() => setActiveArea(area)}
-                      className="group/link mt-auto inline-flex w-fit items-center gap-2 pt-6 text-[11px] font-bold uppercase tracking-[0.16em] text-amber-700 hover:text-amber-600 cursor-pointer"
+                      className="group/link mt-auto inline-flex w-fit items-center gap-2 pt-6 text-[11px] font-bold uppercase tracking-[0.16em] text-[#916315] hover:text-[#cfa043] cursor-pointer"
                     >
                       Ver detalhes e tópicos{" "}
                       <ArrowRight
@@ -1017,41 +1009,42 @@ export default function Home() {
         </section>
 
         {/* Informação e Análise Jurídica (Artigos Editoriais) */}
-        <section id="artigos" className="bg-slate-100 py-20 sm:py-28">
+        <section id="artigos" className="bg-[#0b1a24] py-20 sm:py-28 text-white">
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
             <div className="grid items-end gap-7 md:grid-cols-[1fr_auto]">
               <Heading
-                eyebrow="ANÁLISE & CONTEÚDO JURÍDICO"
-                description="Artigos e esclarecimentos práticos da Augusto Lima Advocacia sobre abusividades bancárias, direitos de empresas e consumidores."
+                eyebrow="análise & conteúdo previdenciário"
+                light
+                description="Artigos e orientações práticas da Silva Cabral Advocacia sobre negativas do INSS, planejamento de aposentadorias e direitos dos segurados."
               >
-                Orientação clara sobre{" "}
-                <span className="text-amber-600">situações reais.</span>
+                Esclarecimentos práticos para{" "}
+                <span className="font-display italic text-gold-gradient font-normal">proteger o seu benefício.</span>
               </Heading>
               <a
                 href={getWhatsAppUrl(
-                  "Olá, Dr. Augusto. Vi seus artigos sobre Direito Bancário e gostaria de tirar uma dúvida sobre o meu caso."
+                  "Olá, Dra. Bianca Santos. Vi seus artigos sobre Direito Previdenciário e gostaria de tirar uma dúvida sobre a minha situação."
                 )}
                 target="_blank"
                 rel="noreferrer"
-                className="group mb-1 inline-flex w-fit items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-amber-700 hover:text-amber-600"
+                className="group mb-1 inline-flex w-fit items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-[#fbe5a2] hover:text-white"
               >
                 Fazer uma pergunta jurídica <ArrowUpRight size={15} />
               </a>
             </div>
 
             <div className="mt-11 grid gap-8 md:grid-cols-2">
-              {/* Card 1: Juros Abusivos e Contratos Bancários */}
+              {/* Card 1: Negativa do INSS */}
               <motion.article
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.65 }}
-                className="group relative flex flex-col overflow-hidden rounded-2xl border border-slate-900/10 bg-[#090a0f] text-white shadow-xl transition-all duration-300 hover:-translate-y-1 hover:border-amber-400/40"
+                className="group relative flex flex-col overflow-hidden rounded-2xl border border-[#cfa043]/30 bg-[#08131a] text-white shadow-xl transition-all duration-300 hover:-translate-y-1 hover:border-[#cfa043]/60"
               >
                 <div className="relative aspect-[1080/700] w-full overflow-hidden bg-slate-900">
                   <Image
-                    src="/artigo-direito-bancario.webp"
-                    alt="Direito Bancário e Revisão de Contratos — Augusto Lima Advocacia"
+                    src="/artigo-previdenciario-negado.jpg"
+                    alt="Benefício Negado no INSS — Silva Cabral Advocacia Previdenciária"
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
                     className="object-cover object-center transition-transform duration-700 group-hover:scale-[1.03]"
@@ -1059,46 +1052,44 @@ export default function Home() {
                 </div>
                 <div className="flex flex-1 flex-col justify-between p-7 sm:p-8">
                   <div>
-                    <span className="inline-block rounded-md bg-amber-400/15 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-amber-400">
-                      Direito Bancário & Financiamentos
+                    <span className="inline-block rounded-md bg-[#cfa043]/20 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-[#fbe5a2]">
+                      Direito Previdenciário & Recursos
                     </span>
                     <h3 className="mt-4 font-display font-bold text-2xl leading-snug sm:text-3xl text-white">
-                      Juros Abusivos e Tarifas Ocultas: Como recalcular empréstimos e estancar cobranças ilegais
+                      Benefício Negado no INSS: Como reverter a decisão e receber todos os atrasados
                     </h3>
                     <p className="mt-3 text-xs leading-relaxed text-slate-300">
-                      Grande parte dos contratos de empréstimo e financiamento
-                      veicular ou habitacional contêm taxas muito acima da média
-                      de mercado do Banco Central, além de anatocismo e tarifas
-                      embutidas sem autorização. É direito legal do consumidor
-                      requerer a revisão judicial para reduzir parcelas e reaver
-                      o que pagou indevidamente.
+                      O indeferimento pelo INSS não é a palavra final. Através da ação judicial
+                      com perícia médica e social independente na Justiça Federal, é possível
+                      reverter o indeferimento e receber todas as parcelas retroativas desde a
+                      data em que você fez o primeiro pedido no INSS.
                     </p>
                   </div>
                   <a
                     href={getWhatsAppUrl(
-                      "Olá, Dr. Augusto. Gostaria de uma análise no meu contrato de financiamento/empréstimo para verificar se há cobrança abusiva."
+                      "Olá, Dra. Bianca Santos. Tive meu benefício negado no INSS e gostaria de entender como reverter judicialmente."
                     )}
                     target="_blank"
                     rel="noreferrer"
-                    className="mt-6 inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.16em] text-amber-400 transition-colors hover:text-white"
+                    className="mt-6 inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.16em] text-[#fbe5a2] transition-colors hover:text-white"
                   >
-                    Analisar meu contrato bancário <ArrowUpRight size={14} />
+                    Analisar minha negativa do INSS <ArrowUpRight size={14} />
                   </a>
                 </div>
               </motion.article>
 
-              {/* Card 2: Gestão de Passivos Empresariais */}
+              {/* Card 2: Planejamento Previdenciário */}
               <motion.article
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.65, delay: 0.1 }}
-                className="group relative flex flex-col overflow-hidden rounded-2xl border border-slate-900/10 bg-[#090a0f] text-white shadow-xl transition-all duration-300 hover:-translate-y-1 hover:border-amber-400/40"
+                className="group relative flex flex-col overflow-hidden rounded-2xl border border-[#cfa043]/30 bg-[#08131a] text-white shadow-xl transition-all duration-300 hover:-translate-y-1 hover:border-[#cfa043]/60"
               >
                 <div className="relative aspect-[1080/700] w-full overflow-hidden bg-slate-900">
                   <Image
-                    src="/artigo-gestao-passivos.webp"
-                    alt="Gestão de Passivos Bancários para Empresas — Augusto Lima Advocacia"
+                    src="/artigo-planejamento-previdenciario.jpg"
+                    alt="Planejamento Previdenciário — Silva Cabral Advocacia Previdenciária"
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
                     className="object-cover object-center transition-transform duration-700 group-hover:scale-[1.03]"
@@ -1106,30 +1097,28 @@ export default function Home() {
                 </div>
                 <div className="flex flex-1 flex-col justify-between p-7 sm:p-8">
                   <div>
-                    <span className="inline-block rounded-md bg-amber-400/15 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-amber-400">
-                      Gestão Empresarial & Passivos
+                    <span className="inline-block rounded-md bg-[#cfa043]/20 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-[#fbe5a2]">
+                      Planejamento & Cálculos
                     </span>
                     <h3 className="mt-4 font-display font-bold text-2xl leading-snug sm:text-3xl text-white">
-                      Travas de Recebíveis e Endividamento Bancário: Estratégias para proteger o fluxo de caixa
+                      Planejamento Previdenciário: Como se aposentar na hora certa com o maior valor
                     </h3>
                     <p className="mt-3 text-xs leading-relaxed text-slate-300">
-                      Quando as instituições financeiras retêm automaticamente o
-                      faturamento das maquininhas de cartão ou debitam parcelas
-                      direto da conta operacional, o negócio perde liquidez e
-                      risco de insolvência aumenta. A intervenção jurídica
-                      permite liberar travas ilegais e renegociar Cédulas de
-                      Crédito Bancário com parcelamentos realistas.
+                      Após as regras de transição da Reforma, pequenos ajustes no extrato CNIS
+                      e o descarte inteligente de contribuições desfavoráveis podem fazer a sua
+                      renda mensal saltar expressivamente. Conheça a estratégia para planejar
+                      a aposentadoria ideal.
                     </p>
                   </div>
                   <a
                     href={getWhatsAppUrl(
-                      "Olá, Dr. Augusto. Sou empresário e gostaria de entender como liberar travas de recebíveis e renegociar passivos bancários da minha empresa."
+                      "Olá, Dra. Bianca Santos. Gostaria de entender mais sobre o Planejamento Previdenciário e agendar um cálculo do meu benefício."
                     )}
                     target="_blank"
                     rel="noreferrer"
-                    className="mt-6 inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.16em] text-amber-400 transition-colors hover:text-white"
+                    className="mt-6 inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.16em] text-[#fbe5a2] transition-colors hover:text-white"
                   >
-                    Consultar situação da empresa <ArrowUpRight size={14} />
+                    Agendar planejamento previdenciário <ArrowUpRight size={14} />
                   </a>
                 </div>
               </motion.article>
@@ -1137,20 +1126,20 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Nosso Compromisso Profissional */}
-        <section className="relative overflow-hidden bg-[#090a0f] py-20 text-white sm:py-28 lg:py-32">
-          <div className="pointer-events-none absolute -left-28 top-1/4 size-96 rounded-full bg-amber-600/15 blur-3xl" />
+        {/* Nosso Compromisso Profissional — Deep Petrol Velvet */}
+        <section className="relative overflow-hidden bg-[#08131a] py-20 text-white sm:py-28 lg:py-32 border-b border-[#cfa043]/20">
+          <div className="pointer-events-none absolute -left-28 top-1/4 size-96 rounded-full bg-[#cfa043]/15 blur-3xl" />
           <div className="pointer-events-none absolute -right-28 bottom-1/4 size-96 rounded-full bg-slate-800/40 blur-3xl" />
 
           <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20 lg:px-12">
             <Heading
-              eyebrow="NOSSO COMPROMISSO PROFISSIONAL"
+              eyebrow="nosso compromisso profissional"
               light
-              description="A condução de cada demanda com a máxima técnica, transparência irrestrita e respeito absoluto ao tempo e aos direitos de quem nos procura."
+              description="A condução de cada demanda previdenciária com absoluto rigor técnico, acolhimento humano e respeito irrestrito aos direitos de quem trabalhou a vida toda."
             >
-              A precisão jurídica aliada à{" "}
-              <span className="text-amber-400">
-                combatividade que sua causa merece.
+              A precisão técnica aliada ao{" "}
+              <span className="font-display italic text-gold-gradient font-normal">
+                cuidado humano que sua história merece.
               </span>
             </Heading>
 
@@ -1164,18 +1153,18 @@ export default function Home() {
               {[
                 [
                   "01",
-                  "Estudo aprofundado e cálculo pericial de cada caso",
-                  "Analisamos cláusula por cláusula dos seus contratos e extratos bancários. Recalculamos cada taxa com precisão contábil para embasar teses jurídicas sólidas, sem modelos prontos ou promessas genéricas.",
+                  "Auditoria profunda e cálculo individualizado",
+                  "Analisamos cada vínculo da sua carteira, carnê e laudo médico. Realizamos cálculos matemáticos detalhados para embasar pedidos sólidos, sem modelos genéricos ou soluções automáticas.",
                 ],
                 [
                   "02",
-                  "Comunicação direta, transparente e ágil no WhatsApp",
-                  "Você é mantido informado sobre cada andamento processual em linguagem clara e acessível, com acesso direto ao Dr. Augusto Lima e equipe para esclarecer qualquer dúvida.",
+                  "Atendimento acolhedor e comunicação direta no WhatsApp",
+                  "Você é mantido informado sobre cada andamento processual em linguagem clara e acessível, com acesso direto à equipe da Dra. Bianca Santos para esclarecer qualquer dúvida com carinho e agilidade.",
                 ],
                 [
                   "03",
-                  "Combatividade e foco em resultados concretos",
-                  "Atuamos com determinação inegociável perante bancos, cartórios e tribunais para desbloquear contas, estancar cobranças ilegais e alcançar a vitória jurídica que você precisa.",
+                  "Combatividade e foco em resultados comprovados",
+                  "Atuamos com determinação perante o INSS e a Justiça Federal para destravar benefícios, cessar indeferimentos abusivos e entregar a tranquilidade financeira que você e seus dependentes merecem.",
                 ],
               ].map(([number, title, description]) => (
                 <motion.div
@@ -1183,7 +1172,7 @@ export default function Home() {
                   variants={reveal}
                   className="grid gap-3 py-6 first:pt-0 sm:grid-cols-[70px_1fr] sm:gap-6 sm:py-7"
                 >
-                  <span className="font-display text-2xl font-black text-amber-400">
+                  <span className="font-display text-2xl font-bold text-gold-gradient">
                     {number}
                   </span>
                   <div>
@@ -1198,21 +1187,21 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Avaliações no Google (Depoimentos Reais do Dr. Augusto Lima) */}
+        {/* Avaliações no Google (Depoimentos Reais da Dra. Bianca Santos) */}
         <section
           id="avaliacoes"
-          className="scroll-mt-24 bg-white py-20 sm:py-28 lg:py-32"
+          className="scroll-mt-24 bg-[#faf8f4] py-20 sm:py-28 lg:py-32"
         >
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
             <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20 lg:items-center">
               <div>
                 <Heading
-                  eyebrow="PROVA SOCIAL & AVALIAÇÕES REAIS"
-                  description="A reputação do Dr. Augusto Lima e equipe é construída com ética, inteligência e resultados reais. Confira o que dizem os clientes que tiveram suas causas conduzidas pelo escritório no Google."
+                  eyebrow="prova social & avaliações reais"
+                  description="A reputação da Dra. Bianca Santos e da Silva Cabral Advocacia é construída com ética, afeto e resultados reais. Confira o que dizem os clientes que tiveram suas causas conduzidas pelo escritório no Google."
                 >
                   Confiança atestada por{" "}
-                  <span className="text-amber-600">
-                    quem teve sua causa resolvida.
+                  <span className="font-display italic text-[#916315]">
+                    mais de 133 clientes satisfeitos.
                   </span>
                 </Heading>
 
@@ -1221,27 +1210,27 @@ export default function Home() {
                     href={GOOGLE_MAPS_URL}
                     target="_blank"
                     rel="noreferrer"
-                    className="group inline-flex items-center gap-2 border-b-2 border-amber-600 pb-1.5 text-xs font-bold uppercase tracking-[0.14em] text-slate-900 hover:text-amber-600"
+                    className="group inline-flex items-center gap-2 border-b-2 border-[#916315] pb-1.5 text-xs font-bold uppercase tracking-[0.14em] text-[#08131a] hover:text-[#cfa043]"
                   >
-                    Ver todas as 70 avaliações no Google <ArrowUpRight size={15} />
+                    Ver todas as avaliações no Google Maps <ArrowUpRight size={15} />
                   </a>
                 </div>
 
                 {/* Rating highlights pills */}
                 <div className="mt-9 flex flex-wrap gap-2">
                   {[
-                    "Nota 5,0 no Google",
-                    "Ganhou minha causa",
-                    "Alívio com dívidas",
-                    "Atendimento impecável",
-                    "Honesto e inteligente",
-                    "Melhor equipe da cidade",
+                    "Nota 4,9 no Google",
+                    "Aposentou em menos de 2 meses",
+                    "Aposentou meu pai rápido",
+                    "Equipe super atenciosa",
+                    "Trouxe dignidade pra família",
+                    "Domínio do Direito Previdenciário",
                   ].map((tag) => (
                     <span
                       key={tag}
-                      className="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-slate-50 px-3.5 py-1.5 text-[11px] font-semibold text-slate-700"
+                      className="inline-flex items-center gap-1.5 rounded-full border border-[#cfa043]/30 bg-white px-3.5 py-1.5 text-[11px] font-semibold text-[#08131a] shadow-xs"
                     >
-                      <CheckCircle2 size={14} className="text-amber-600" />
+                      <CheckCircle2 size={14} className="text-[#916315]" />
                       {tag}
                     </span>
                   ))}
@@ -1249,12 +1238,12 @@ export default function Home() {
               </div>
 
               {/* Public score box */}
-              <div className="relative flex min-h-[260px] flex-col justify-between overflow-hidden rounded-2xl border border-slate-200/80 bg-slate-50 p-8 shadow-xl sm:p-10">
+              <div className="relative flex min-h-[260px] flex-col justify-between overflow-hidden rounded-2xl border border-[#cfa043]/30 bg-white p-8 shadow-xl sm:p-10">
                 <div className="relative flex items-center justify-between gap-4">
-                  <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-slate-700">
+                  <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#4a5c68]">
                     Avaliações Verificadas · Google Maps
                   </span>
-                  <div className="flex gap-1 text-amber-500" aria-label="5 estrelas">
+                  <div className="flex gap-1 text-[#cfa043]" aria-label="4.9 de 5 estrelas">
                     {Array.from({ length: 5 }, (_, index) => (
                       <Star
                         key={index}
@@ -1268,19 +1257,19 @@ export default function Home() {
 
                 <div className="relative mt-8 flex flex-wrap items-end justify-between gap-6">
                   <div>
-                    <span className="font-display text-7xl sm:text-8xl font-black leading-none text-slate-950">
-                      5,0
+                    <span className="font-display text-7xl sm:text-8xl font-bold leading-none text-[#08131a]">
+                      4,9
                     </span>
-                    <p className="mt-2 text-xs font-bold text-amber-700">
-                      Excelente · Classificação Máxima
+                    <p className="mt-2 text-xs font-bold text-[#916315]">
+                      Excelente · Quase Máxima
                     </p>
                   </div>
                   <div className="pb-1 text-right">
-                    <p className="font-display text-3xl font-extrabold text-amber-600">
-                      70 avaliações
+                    <p className="font-display text-3xl font-bold text-gold-gradient">
+                      133 avaliações
                     </p>
-                    <p className="mt-1 text-xs text-slate-500 font-medium">
-                      100% de satisfação declarada
+                    <p className="mt-1 text-xs text-[#4a5c68] font-medium">
+                      Reconhecimento comprovado em Lafaiete
                     </p>
                   </div>
                 </div>
@@ -1292,11 +1281,11 @@ export default function Home() {
               {clientReviews.slice(0, 4).map((review) => (
                 <div
                   key={review.name}
-                  className="flex flex-col justify-between rounded-2xl border border-slate-200/80 bg-white p-6 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-lg"
+                  className="flex flex-col justify-between rounded-2xl border border-[#cfa043]/20 bg-white p-6 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:border-[#cfa043]/50 hover:shadow-lg"
                 >
                   <div>
                     <div className="flex items-center justify-between gap-2">
-                      <div className="flex gap-0.5 text-amber-500">
+                      <div className="flex gap-0.5 text-[#cfa043]">
                         {Array.from({ length: 5 }, (_, i) => (
                           <Star
                             key={i}
@@ -1311,17 +1300,17 @@ export default function Home() {
                       </span>
                     </div>
 
-                    <p className="mt-4 text-xs font-bold text-slate-900">
+                    <p className="mt-4 text-xs font-bold text-[#08131a]">
                       &ldquo;{review.highlight}&rdquo;
                     </p>
 
-                    <p className="mt-2.5 text-[13px] leading-relaxed text-slate-600">
+                    <p className="mt-2.5 text-[13px] leading-relaxed text-[#4a5c68]">
                       &ldquo;{review.content}&rdquo;
                     </p>
                   </div>
 
                   <div className="mt-6 border-t border-slate-100 pt-4">
-                    <p className="font-display text-sm font-bold text-slate-950">
+                    <p className="font-display text-sm font-bold text-[#08131a]">
                       {review.name}
                     </p>
                     <p className="text-[10px] font-semibold uppercase tracking-wider text-slate-400">
@@ -1337,11 +1326,11 @@ export default function Home() {
               {clientReviews.slice(4, 8).map((review) => (
                 <div
                   key={review.name}
-                  className="flex flex-col justify-between rounded-2xl border border-slate-200/80 bg-slate-50/70 p-6 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-lg"
+                  className="flex flex-col justify-between rounded-2xl border border-[#cfa043]/20 bg-[#fdfaf3] p-6 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:border-[#cfa043]/50 hover:shadow-lg"
                 >
                   <div>
                     <div className="flex items-center justify-between gap-2">
-                      <div className="flex gap-0.5 text-amber-500">
+                      <div className="flex gap-0.5 text-[#cfa043]">
                         {Array.from({ length: 5 }, (_, i) => (
                           <Star
                             key={i}
@@ -1356,17 +1345,17 @@ export default function Home() {
                       </span>
                     </div>
 
-                    <p className="mt-4 text-xs font-bold text-slate-900">
+                    <p className="mt-4 text-xs font-bold text-[#08131a]">
                       &ldquo;{review.highlight}&rdquo;
                     </p>
 
-                    <p className="mt-2.5 text-[13px] leading-relaxed text-slate-600">
+                    <p className="mt-2.5 text-[13px] leading-relaxed text-[#4a5c68]">
                       &ldquo;{review.content}&rdquo;
                     </p>
                   </div>
 
                   <div className="mt-6 border-t border-slate-200 pt-4">
-                    <p className="font-display text-sm font-bold text-slate-950">
+                    <p className="font-display text-sm font-bold text-[#08131a]">
                       {review.name}
                     </p>
                     <p className="text-[10px] font-semibold uppercase tracking-wider text-slate-400">
@@ -1382,11 +1371,11 @@ export default function Home() {
               {clientReviews.slice(8, 12).map((review) => (
                 <div
                   key={review.name}
-                  className="flex flex-col justify-between rounded-2xl border border-slate-200/80 bg-white p-6 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-lg"
+                  className="flex flex-col justify-between rounded-2xl border border-[#cfa043]/20 bg-white p-6 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:border-[#cfa043]/50 hover:shadow-lg"
                 >
                   <div>
                     <div className="flex items-center justify-between gap-2">
-                      <div className="flex gap-0.5 text-amber-500">
+                      <div className="flex gap-0.5 text-[#cfa043]">
                         {Array.from({ length: 5 }, (_, i) => (
                           <Star
                             key={i}
@@ -1401,17 +1390,17 @@ export default function Home() {
                       </span>
                     </div>
 
-                    <p className="mt-4 text-xs font-bold text-slate-900">
+                    <p className="mt-4 text-xs font-bold text-[#08131a]">
                       &ldquo;{review.highlight}&rdquo;
                     </p>
 
-                    <p className="mt-2.5 text-[13px] leading-relaxed text-slate-600">
+                    <p className="mt-2.5 text-[13px] leading-relaxed text-[#4a5c68]">
                       &ldquo;{review.content}&rdquo;
                     </p>
                   </div>
 
                   <div className="mt-6 border-t border-slate-100 pt-4">
-                    <p className="font-display text-sm font-bold text-slate-950">
+                    <p className="font-display text-sm font-bold text-[#08131a]">
                       {review.name}
                     </p>
                     <p className="text-[10px] font-semibold uppercase tracking-wider text-slate-400">
@@ -1424,30 +1413,29 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Conecte-se com o Dr. Augusto Lima no Instagram */}
-        <section className="border-t border-slate-200/80 bg-slate-50 py-16 sm:py-20">
+        {/* Conecte-se com a Dra. Bianca Santos no Instagram */}
+        <section className="border-t border-[#cfa043]/20 bg-[#08131a] py-16 sm:py-20 text-white">
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
-            <div className="flex flex-col items-center justify-between gap-8 rounded-3xl border border-slate-200/80 bg-white p-8 sm:p-12 lg:flex-row lg:gap-14 shadow-xl">
+            <div className="flex flex-col items-center justify-between gap-8 rounded-3xl border border-[#cfa043]/30 bg-[#0f2432]/90 p-8 sm:p-12 lg:flex-row lg:gap-14 shadow-2xl backdrop-blur-md">
               <div className="flex flex-col items-center gap-6 sm:flex-row sm:items-center">
-                <div className="relative size-28 shrink-0 overflow-hidden rounded-full border-2 border-amber-500/50 shadow-md sm:size-32">
+                <div className="relative size-28 shrink-0 overflow-hidden rounded-full border-2 border-[#cfa043] shadow-lg sm:size-32">
                   <Image
-                    src="/augusto-lima-social.jpg"
-                    alt="Dr. Augusto Lima no Instagram @advaugustolima"
+                    src="/dra-bianca-social.jpg"
+                    alt="Dra. Bianca Santos no Instagram @biancasantos.advogada"
                     fill
                     className="object-cover object-[50%_15%]"
                   />
                 </div>
                 <div className="text-center sm:text-left">
-                  <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.16em] text-amber-600">
-                    <InstagramIcon size={16} /> @advaugustolima
+                  <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.16em] text-[#fbe5a2]">
+                    <InstagramIcon size={16} /> @biancasantos.advogada
                   </span>
-                  <h3 className="mt-2 font-display text-2xl font-bold text-slate-950 sm:text-3xl">
-                    Acompanhe o Dr. Augusto Lima no Instagram
+                  <h3 className="mt-2 font-display text-2xl font-bold text-white sm:text-3xl">
+                    Acompanhe a Dra. Bianca Santos no Instagram
                   </h3>
-                  <p className="mt-2 max-w-md text-xs leading-relaxed text-slate-600 sm:text-sm">
-                    Orientações jurídicas práticas, bastidores dos tribunais e
-                    dicas fundamentais sobre como evitar abusos bancários e
-                    proteger seus direitos.
+                  <p className="mt-2 max-w-md text-xs leading-relaxed text-slate-300 sm:text-sm">
+                    Orientações práticas sobre regras do INSS, novidades sobre aposentadorias,
+                    BPC/LOAS, direitos dos segurados e dicas diárias sobre previdência.
                   </p>
                 </div>
               </div>
@@ -1455,7 +1443,7 @@ export default function Home() {
                 href={INSTAGRAM_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="group inline-flex shrink-0 items-center gap-2.5 rounded-full bg-slate-950 px-7 py-3.5 text-xs font-bold uppercase tracking-[0.14em] text-white shadow-md transition-all hover:bg-amber-600"
+                className="group inline-flex shrink-0 items-center gap-2.5 rounded-full bg-gradient-to-r from-[#916315] via-[#cfa043] to-[#e3b865] px-7 py-3.5 text-xs font-bold uppercase tracking-[0.14em] text-[#08131a] shadow-md transition-all hover:brightness-110"
               >
                 <InstagramIcon size={16} /> Seguir no Instagram <ArrowUpRight size={15} />
               </a>
@@ -1466,16 +1454,16 @@ export default function Home() {
         {/* Contato & Localização */}
         <section
           id="contato"
-          className="scroll-mt-24 bg-white py-20 sm:py-28 lg:py-32"
+          className="scroll-mt-24 bg-[#faf8f4] py-20 sm:py-28 lg:py-32"
         >
           <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20 lg:px-12">
             <div>
               <Heading
-                eyebrow="CONTATO & LOCALIZAÇÃO"
-                description="Agende seu atendimento presencial em nossa sede na Av. Arlindo Figueiredo em Passos ou solicite uma consulta on-line com total sigilo e comodidade."
+                eyebrow="contato & localização"
+                description="Agende seu atendimento presencial em nossa sede no Centro de Conselheiro Lafaiete ou solicite uma consulta on-line com total comodidade e atenção."
               >
                 Estamos prontos para{" "}
-                <span className="text-amber-600">analisar sua demanda.</span>
+                <span className="font-display italic text-[#916315]">analisar o seu benefício.</span>
               </Heading>
 
               <div className="mt-9 flex flex-col items-start gap-4">
@@ -1487,88 +1475,90 @@ export default function Home() {
                 >
                   <WhatsAppIcon size={17} /> Iniciar conversa no WhatsApp
                 </GlowingButton>
-                <p className="text-xs text-slate-500 font-medium">
-                  Atendimento direto e retorno com prontidão:{" "}
-                  <strong className="text-slate-900">{PHONE_DISPLAY}</strong>.
+                <p className="text-xs text-[#4a5c68] font-medium">
+                  Atendimento direto e retorno com agilidade:{" "}
+                  <strong className="text-[#08131a]">{PHONE_DISPLAY}</strong>.
                 </p>
               </div>
 
-              <div className="mt-10 space-y-4 text-xs text-slate-600 font-medium">
+              <div className="mt-10 space-y-4 text-xs text-[#4a5c68] font-medium">
                 <div className="flex items-center gap-3">
-                  <Clock size={16} className="text-amber-600" />
-                  <span>Segunda a Sexta: 08h30 às 18h00 (Aberto · Fecha 18:00)</span>
+                  <Clock size={16} className="text-[#916315]" />
+                  <span>Segunda a Sexta: 08h30 às 17h30</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Phone size={16} className="text-amber-600" />
+                  <Phone size={16} className="text-[#916315]" />
                   <a
                     href={`tel:+${WHATSAPP_NUMBER}`}
-                    className="hover:text-amber-600 transition-colors text-slate-900 font-semibold"
+                    className="hover:text-[#916315] transition-colors text-[#08131a] font-semibold"
                   >
                     {PHONE_DISPLAY}
                   </a>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Mail size={16} className="text-amber-600" />
+                  <Mail size={16} className="text-[#916315]" />
                   <a
                     href={`mailto:${EMAIL_CONTACT}`}
-                    className="hover:text-amber-600 transition-colors text-slate-900 font-semibold"
+                    className="hover:text-[#916315] transition-colors text-[#08131a] font-semibold"
                   >
                     {EMAIL_CONTACT}
                   </a>
                 </div>
                 <div className="flex items-center gap-3">
-                  <InstagramIcon size={16} className="text-amber-600" />
+                  <InstagramIcon size={16} className="text-[#916315]" />
                   <a
                     href={INSTAGRAM_URL}
                     target="_blank"
                     rel="noreferrer"
-                    className="hover:text-amber-600 transition-colors text-slate-900 font-semibold"
+                    className="hover:text-[#916315] transition-colors text-[#08131a] font-semibold"
                   >
-                    @advaugustolima
+                    @biancasantos.advogada
                   </a>
                 </div>
               </div>
             </div>
 
             {/* Address & Office Card */}
-            <div className="relative overflow-hidden rounded-2xl border border-slate-200/80 bg-slate-50 p-7 sm:p-10 shadow-xl">
-              <div className="absolute right-0 top-0 h-1.5 w-32 bg-amber-600" />
+            <div className="relative overflow-hidden rounded-2xl border border-[#cfa043]/30 bg-[#08131a] text-white p-7 sm:p-10 shadow-2xl">
+              <div className="absolute right-0 top-0 h-1.5 w-32 bg-gradient-to-r from-[#cfa043] to-[#e3b865]" />
 
               <div className="flex items-center gap-4">
-                <span className="grid size-12 place-items-center rounded-xl bg-amber-50 text-amber-600">
+                <span className="grid size-12 place-items-center rounded-xl bg-[#cfa043]/20 text-[#fbe5a2]">
                   <MapPin size={22} strokeWidth={1.8} />
                 </span>
                 <div>
-                  <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-amber-700">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#fbe5a2]">
                     Sede do Escritório
                   </p>
-                  <p className="mt-1 font-display text-2xl font-bold text-slate-950">
-                    Passos · Minas Gerais
+                  <p className="mt-1 font-display text-2xl font-bold text-white">
+                    Conselheiro Lafaiete · MG
                   </p>
                 </div>
               </div>
 
-              <address className="mt-7 max-w-md not-italic text-[14px] leading-relaxed text-slate-600">
-                <strong className="text-slate-950 font-bold">
-                  Augusto Lima Advocacia
+              <address className="mt-7 max-w-md not-italic text-[14px] leading-relaxed text-slate-300">
+                <strong className="text-white font-bold">
+                  Silva Cabral Advocacia Previdenciária
                 </strong>
                 <br />
-                Av. Arlindo Figueiredo, 124
+                <span className="text-[#fbe5a2] font-semibold">Dra. Bianca Santos</span>
                 <br />
-                Bairro São Francisco, Passos - MG, CEP 37902-026, Brasil
+                R. José Nicolau de Queirós, 256 - 1º Andar
+                <br />
+                Centro, Conselheiro Lafaiete - MG, CEP 36400-000, Brasil
               </address>
 
-              <div className="my-7 h-px bg-slate-200" />
+              <div className="my-7 h-px bg-white/10" />
 
               <div className="flex flex-wrap items-center justify-between gap-4">
-                <p className="text-xs text-slate-500">
-                  Atendimento presencial em Passos/MG e consultoria digital segura em todo o território nacional
+                <p className="text-xs text-slate-400">
+                  Atendimento presencial no Centro de Conselheiro Lafaiete e consultoria digital segura em todo o Brasil
                 </p>
                 <a
                   href={GOOGLE_MAPS_URL}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white px-5 py-3 text-[11px] font-bold uppercase tracking-[0.14em] text-slate-900 transition-colors hover:border-amber-600 hover:text-amber-600 shadow-xs"
+                  className="inline-flex items-center gap-2 rounded-full border border-[#cfa043]/40 bg-[#0f2432] px-5 py-3 text-[11px] font-bold uppercase tracking-[0.14em] text-[#fbe5a2] transition-colors hover:border-[#cfa043] hover:text-white shadow-xs"
                 >
                   Abrir no Google Maps <ArrowUpRight size={14} />
                 </a>
@@ -1577,55 +1567,56 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Pre-Footer CTA Strip */}
-        <section className="bg-amber-600 px-5 py-14 text-white sm:px-8 sm:py-16 lg:px-12 shadow-inner">
+        {/* Pre-Footer CTA Strip — Rich Metallic Gold Gradient */}
+        <section className="bg-gradient-to-r from-[#916315] via-[#cfa043] to-[#b5832e] px-5 py-14 text-[#08131a] sm:px-8 sm:py-16 lg:px-12 shadow-inner">
           <div className="mx-auto flex max-w-7xl flex-col justify-between gap-7 sm:flex-row sm:items-center">
             <div>
-              <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-amber-100">
-                AUGUSTO LIMA ADVOCACIA · PASSOS - MG
+              <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#08131a]/80">
+                SILVA CABRAL ADVOCACIA PREVIDENCIÁRIA · CONSELHEIRO LAFAIETE - MG
               </p>
-              <h2 className="mt-3 max-w-2xl font-display text-3xl sm:text-4xl font-extrabold leading-tight text-white">
-                Pronto para defender seus direitos e renegociar suas dívidas com quem entende da lei?
+              <h2 className="mt-3 max-w-2xl font-display text-3xl sm:text-4xl font-bold leading-tight text-[#08131a]">
+                Pronto para conquistar sua aposentadoria ou benefício do INSS com quem realmente entende da lei?
               </h2>
             </div>
             <a
               href={getWhatsAppUrl(
-                "Olá, Dr. Augusto. Gostaria de agendar um atendimento inicial para avaliar meu caso."
+                "Olá, Dra. Bianca Santos. Gostaria de agendar um atendimento inicial para avaliar minha situação no INSS."
               )}
               target="_blank"
               rel="noreferrer"
-              className="group inline-flex w-fit shrink-0 items-center gap-3 rounded-full bg-slate-950 px-7 py-4 text-[11px] font-bold uppercase tracking-[0.14em] text-white shadow-xl transition-all hover:-translate-y-0.5 hover:bg-black"
+              className="group inline-flex w-fit shrink-0 items-center gap-3 rounded-full bg-[#08131a] px-7 py-4 text-[11px] font-bold uppercase tracking-[0.14em] text-white shadow-2xl transition-all hover:-translate-y-0.5 hover:bg-black"
             >
               <WhatsAppIcon size={17} /> Falar no WhatsApp <ArrowUpRight size={15} />
             </a>
           </div>
         </section>
 
-        {/* Footer */}
-        <footer className="bg-[#090a0f] px-5 py-14 text-white sm:px-8 lg:px-12">
+        {/* Footer — Deep Velvet Petrol Blue */}
+        <footer className="bg-[#060e14] px-5 py-14 text-white sm:px-8 lg:px-12 border-t border-[#cfa043]/20">
           <div className="mx-auto grid max-w-7xl gap-10 sm:grid-cols-2 lg:grid-cols-[1.2fr_0.8fr_1fr]">
             <div>
               <div className="inline-flex">
                 <Image
-                  src="/logo-augusto-lima-header.png"
-                  width={380}
-                  height={130}
-                  alt="Augusto Lima Advocacia"
-                  className="h-12 w-auto object-contain sm:h-[62px]"
+                  src="/logo.png"
+                  width={2020}
+                  height={427}
+                  alt="Dra. Bianca Santos - Silva Cabral Advocacia Previdenciária"
+                  className="h-10 w-auto object-contain sm:h-12"
                 />
               </div>
               <p className="mt-5 max-w-xs text-xs leading-relaxed text-slate-400">
-                Advocacia estratégica, rigor técnico e excelência em Direito Bancário,
-                Passivos Empresariais, Cível e Trabalhista. Sede na Av. Arlindo
-                Figueiredo em Passos - MG e atendimento digital em todo o Brasil.
+                Advocacia previdenciária de alto padrão, rigor técnico e excelência em
+                Aposentadorias, BPC/LOAS, Benefícios por Incapacidade e Pensão por Morte.
+                Sede na R. José Nicolau de Queirós, 256 no Centro de Conselheiro Lafaiete/MG
+                e atendimento digital em todo o Brasil.
               </p>
-              <p className="mt-3 text-xs font-bold text-amber-400">
-                Avaliação 5,0 ★ no Google (70 avaliações)
+              <p className="mt-3 text-xs font-bold text-[#fbe5a2]">
+                Avaliação 4,9 ★ no Google (133+ avaliações)
               </p>
             </div>
 
             <div>
-              <h2 className="text-[11px] font-bold uppercase tracking-[0.2em] text-amber-400">
+              <h2 className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#fbe5a2]">
                 Navegação
               </h2>
               <div className="mt-4 flex flex-col items-start gap-3 text-xs text-slate-300 font-medium">
@@ -1633,19 +1624,19 @@ export default function Home() {
                   Início
                 </a>
                 <a className="footer-link" href="#sobre">
-                  Sobre Nós & Equipe
+                  Sobre Nós & Dra. Bianca
                 </a>
                 <a className="footer-link" href="#atuacao">
                   Áreas de Atuação
                 </a>
                 <a className="footer-link" href="#manifesto">
-                  Foco em Direito Bancário
+                  Soluções Contra Negativas do INSS
                 </a>
                 <a className="footer-link" href="#artigos">
-                  Análises Jurídicas
+                  Orientações Previdenciárias
                 </a>
                 <a className="footer-link" href="#avaliacoes">
-                  Avaliações no Google (70)
+                  Avaliações no Google (133)
                 </a>
                 <a className="footer-link" href="#contato">
                   Contato & Sede
@@ -1654,7 +1645,7 @@ export default function Home() {
             </div>
 
             <div>
-              <h2 className="text-[11px] font-bold uppercase tracking-[0.2em] text-amber-400">
+              <h2 className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#fbe5a2]">
                 Contato Direto
               </h2>
               <div className="mt-4 flex flex-col items-start gap-3 text-xs text-slate-300 font-medium">
@@ -1678,7 +1669,7 @@ export default function Home() {
                   rel="noreferrer"
                   className="footer-link inline-flex items-center gap-2"
                 >
-                  <InstagramIcon size={15} className="shrink-0" /> @advaugustolima
+                  <InstagramIcon size={15} className="shrink-0" /> @biancasantos.advogada
                 </a>
                 <a
                   href={GOOGLE_MAPS_URL}
@@ -1687,7 +1678,7 @@ export default function Home() {
                   className="footer-link inline-flex items-start gap-2"
                 >
                   <MapPin size={15} className="mt-0.5 shrink-0" />
-                  <span>Av. Arlindo Figueiredo, 124, Passos - MG</span>
+                  <span>R. José Nicolau de Queirós, 256, Centro, Conselheiro Lafaiete - MG</span>
                 </a>
               </div>
             </div>
@@ -1695,7 +1686,7 @@ export default function Home() {
 
           <div className="mx-auto mt-12 flex max-w-7xl flex-col gap-3 border-t border-white/10 pt-6 text-[10px] text-slate-500 sm:flex-row sm:items-center sm:justify-between">
             <p>
-              © {new Date().getFullYear()} Augusto Lima Advocacia. Todos os direitos reservados.
+              © {new Date().getFullYear()} Silva Cabral Advocacia Previdenciária · Dra. Bianca Santos. Todos os direitos reservados.
             </p>
             <p>
               Conteúdo meramente informativo, em estrita conformidade com o Código de Ética e Disciplina da OAB.
@@ -1722,41 +1713,41 @@ export default function Home() {
                 exit={{ opacity: 0, y: 16, scale: 0.99 }}
                 transition={{ duration: 0.24 }}
                 onClick={(event) => event.stopPropagation()}
-                className="relative max-h-[90vh] w-full overflow-y-auto rounded-t-2xl border border-slate-200 bg-white p-7 shadow-2xl sm:max-w-xl sm:rounded-2xl sm:p-10"
+                className="relative max-h-[90vh] w-full overflow-y-auto rounded-t-2xl border border-[#cfa043]/30 bg-white p-7 shadow-2xl sm:max-w-xl sm:rounded-2xl sm:p-10"
               >
                 <button
                   type="button"
                   aria-label="Fechar detalhes da área"
                   onClick={() => setActiveArea(null)}
-                  className="absolute right-5 top-5 grid size-10 place-items-center rounded-full border border-slate-200 text-slate-700 transition-colors hover:border-amber-600 hover:text-amber-600 cursor-pointer"
+                  className="absolute right-5 top-5 grid size-10 place-items-center rounded-full border border-slate-200 text-slate-700 transition-colors hover:border-[#cfa043] hover:text-[#916315] cursor-pointer"
                 >
                   <X size={18} />
                 </button>
 
-                <p className="eyebrow">ÁREA DE ATUAÇÃO ESTRATÉGICA</p>
+                <div className="eyebrow mb-2">Área de Atuação Previdenciária</div>
 
                 <h2
                   id="area-dialog-title"
-                  className="mt-4 max-w-sm pr-10 font-display text-2xl sm:text-3xl font-bold leading-snug text-slate-950"
+                  className="mt-4 max-w-sm pr-10 font-display text-2xl sm:text-3xl font-bold leading-snug text-[#08131a]"
                 >
                   {activeArea.title}
                 </h2>
 
-                <p className="mt-5 text-sm leading-relaxed text-slate-600">
+                <p className="mt-5 text-sm leading-relaxed text-[#4a5c68]">
                   {activeArea.details}
                 </p>
 
                 <div className="mt-6 border-t border-slate-200 pt-5">
-                  <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-slate-900">
-                    Principais demandas e serviços atendidos:
+                  <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#08131a]">
+                    Principais demandas e benefícios atendidos:
                   </p>
                   <ul className="mt-4 space-y-3">
                     {activeArea.topics.map((topic) => (
                       <li
                         key={topic}
-                        className="flex items-center gap-3 text-sm text-slate-800"
+                        className="flex items-center gap-3 text-sm text-[#08131a]"
                       >
-                        <span className="size-2 rounded-full bg-amber-600 shrink-0" />
+                        <span className="size-2 rounded-full bg-[#cfa043] shrink-0" />
                         <span>{topic}</span>
                       </li>
                     ))}
@@ -1770,12 +1761,12 @@ export default function Home() {
                     size="md"
                     className="rounded-full shadow-md"
                   >
-                    <WhatsAppIcon size={16} /> Consultar sobre esta área
+                    <WhatsAppIcon size={16} /> Consultar sobre este benefício
                   </GlowingButton>
                   <button
                     type="button"
                     onClick={() => setActiveArea(null)}
-                    className="px-5 py-3 text-xs font-bold text-slate-600 hover:text-slate-900 transition-colors cursor-pointer"
+                    className="px-5 py-3 text-xs font-bold text-[#4a5c68] hover:text-[#08131a] transition-colors cursor-pointer"
                   >
                     Fechar
                   </button>

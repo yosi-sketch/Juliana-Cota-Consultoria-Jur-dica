@@ -1,8 +1,8 @@
 import type { Metadata, Viewport } from "next";
-import { Outfit, Plus_Jakarta_Sans } from "next/font/google";
+import { Playfair_Display, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 
-const displayFont = Outfit({
+const displayFont = Playfair_Display({
   variable: "--font-display",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800", "900"],
@@ -17,34 +17,33 @@ const bodyFont = Plus_Jakarta_Sans({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#090a0f",
+  themeColor: "#081017",
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.augustolima.adv.br"),
-  title: "Augusto Lima Advocacia | Dr. Augusto Lima · Passos - MG · Direito Bancário & Cível",
+  metadataBase: new URL("https://www.silvacabral.adv.br"),
+  title: "Dra. Bianca Santos | Silva Cabral Advocacia Previdenciária · Conselheiro Lafaiete - MG",
   description:
-    "Augusto Lima Advocacia — Escritório jurídico de alta performance liderado pelo Dr. Augusto Lima em Passos - MG e com atuação em todo o Brasil. Foco estratégico em Direito Bancário, revisão de contratos de empréstimo e financiamento, cancelamento de juros abusivos, gestão de passivos bancários para empresas, litígios cíveis, trabalhistas e direito de família. Avaliação máxima 5,0 estrelas no Google (70 avaliações).",
+    "Dra. Bianca Santos (Silva Cabral Advocacia Previdenciária) — Atendimento humanizado e especializado em Direito Previdenciário em Conselheiro Lafaiete/MG e em todo o Brasil. Foco em aposentadorias rápidas, BPC/LOAS, benefícios por incapacidade (auxílio-doença), pensão por morte, planejamento previdenciário e revisões do INSS. Avaliação 4,9 estrelas com 133+ avaliações no Google.",
   keywords: [
-    "Augusto Lima Advogado",
-    "Augusto Lima Advocacia",
-    "Dr. Augusto Lima",
-    "advogado em Passos MG",
-    "advogado direito bancario Passos",
-    "revisao de juros abusivos Passos MG",
-    "gestao de passivos bancarios empresas",
-    "revisao contrato emprestimo Passos",
-    "trava de recebiveis advogado",
-    "desconto indevido RMC RCC Passos",
-    "advogado civel Passos MG",
-    "litigio trabalhista Passos",
-    "divorcio e partilha Passos MG",
-    "inventario em cartorio Passos MG",
-    "advocacia especializada Minas Gerais",
+    "Dra. Bianca Santos",
+    "Bianca Santos Advogada",
+    "Silva Cabral Advocacia Previdenciária",
+    "Silva Cabral Advogados",
+    "advogada previdenciária Conselheiro Lafaiete",
+    "advogado INSS Conselheiro Lafaiete",
+    "aposentadoria Conselheiro Lafaiete MG",
+    "BPC LOAS Conselheiro Lafaiete",
+    "auxílio doença advogado Lafaiete",
+    "planejamento previdenciário Minas Gerais",
+    "revisão de benefício INSS",
+    "advocacia previdenciária MG",
+    "pensão por morte INSS Lafaiete",
+    "concessão de aposentadoria rápida",
   ],
-  authors: [{ name: "Dr. Augusto Lima" }],
-  creator: "Augusto Lima Advocacia",
-  publisher: "Augusto Lima Advocacia",
+  authors: [{ name: "Dra. Bianca Santos" }],
+  creator: "Silva Cabral Advocacia Previdenciária",
+  publisher: "Silva Cabral Advocacia Previdenciária",
   formatDetection: {
     telephone: true,
     address: true,
@@ -62,17 +61,17 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://www.augustolima.adv.br",
-    title: "Augusto Lima Advocacia | Dr. Augusto Lima · Soluções Jurídicas Estratégicas",
+    url: "https://www.silvacabral.adv.br",
+    title: "Dra. Bianca Santos | Silva Cabral Advocacia Previdenciária",
     description:
-      "Existe uma diferença entre dever e ser cobrado indevidamente. Advocacia combativa com foco em Direito Bancário, revisão de juros e defesa patrimonial em Passos - MG e em todo o Brasil.",
-    siteName: "Augusto Lima Advocacia",
+      "Aposentadoria e benefícios do INSS conquistados com agilidade, respeito e excelência técnica. Sede no Centro de Conselheiro Lafaiete - MG e atendimento em todo o Brasil.",
+    siteName: "Silva Cabral Advocacia Previdenciária",
     images: [
       {
-        url: "/logo-augusto-lima-dark.png",
-        width: 1840,
-        height: 685,
-        alt: "Augusto Lima Advocacia",
+        url: "/logo.png",
+        width: 2020,
+        height: 427,
+        alt: "Dra. Bianca Santos - Silva Cabral Advocacia Previdenciária",
       },
     ],
   },
@@ -93,7 +92,7 @@ export default function RootLayout({
         <link rel="icon" href="/icon.png?v=2026" type="image/png" sizes="512x512" />
         <link rel="apple-touch-icon" href="/apple-icon.png?v=2026" sizes="180x180" />
       </head>
-      <body className="min-h-screen overflow-x-clip bg-slate-50 font-sans text-slate-900 antialiased selection:bg-amber-600 selection:text-white">
+      <body className="min-h-screen overflow-x-clip bg-slate-50 font-sans text-slate-900 antialiased selection:bg-[#c99738] selection:text-white">
         {children}
       </body>
     </html>
