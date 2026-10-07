@@ -1,43 +1,41 @@
-# Silva Cabral Advocacia Previdenciária · Dra. Bianca Santos
+# Juliana Cota Consultoria Jurídica & Advocacia · Dra. Juliana Cota
 
 ## Plataforma
-Site institucional e comercial de alto padrão em Next.js 16 (App Router), Tailwind CSS v4, Framer Motion e Lucide Icons, projetado para transmitir autoridade jurídica, acolhimento humano, rigor técnico e excelência comercial, com navegação responsiva, modais detalhados de áreas de atuação previdenciária e integração direta com WhatsApp e canais oficiais.
+Site institucional e comercial de alto padrão em Next.js 16 (App Router), React 19, Tailwind CSS v4, Framer Motion e Lucide Icons, projetado para transmitir autoridade jurídica, combatividade técnica, postura de pulso firme e acolhimento humano, com navegação responsiva, modais aprofundados para as áreas de atuação, prova social verificada com nota máxima no Google e canais diretos para WhatsApp e Instagram.
 
 ## Titular & Marca
-- **Escritório:** Silva Cabral Advocacia Previdenciária
-- **Titular:** Dra. Bianca Santos
-- **Nicho Principal:** Direito Previdenciário (Aposentadorias, BPC/LOAS, Benefícios por Incapacidade / Auxílio-Doença, Pensão por Morte, Planejamento Previdenciário, Revisão de Benefícios e Concessões Rápidas).
-- **Prova Social:** 4,9 estrelas com 133+ avaliações autênticas no Google Meu Negócio.
+- **Escritório:** Juliana Cota Consultoria Jurídica & Advocacia
+- **Titular:** Dra. Juliana Cota
+- **Nicho Principal:** Direito do Trabalho & Defesa do Trabalhador (Rescisão Indireta, Reversão de Justa Causa, Horas Extras, Insalubridade, Acidentes de Trabalho), Consultoria Trabalhista & Compliance Empresarial, Direito Civil, Contratos, Direito de Família e Previdenciário.
+- **Prova Social:** 5,0 estrelas (nota máxima) com 97 avaliações autênticas no Google Meu Negócio.
 
 ## Posicionamento & Proposta de Valor
-- "Aposentadoria e benefícios do INSS conquistados com agilidade, respeito e segurança."
-- "Você não precisa aceitar uma resposta negativa do INSS nem esperar anos pelo que é seu por direito."
-- Atuação humanizada com escuta atenta, diagnóstico individualizado e combate técnico contra indeferimentos administrativos do INSS perante as agências e a Justiça Federal.
+- "Defesa incisiva dos seus direitos e assessoria jurídica com excelência, ética e segurança."
+- "Você não precisa aceitar abusos no trabalho nem abrir mão do que a lei garante a você."
+- "Compromisso inabalável com a verdade e com a justiça que você merece: atendimento acolhedor e pulso firme."
 
-## Identidade Visual & Cores (Baseada no Logo e Escritório Físico)
-- **Logotipo:** Tipografia serifada nobre com acabamento 3D em Ouro Nobre metálico e sombreamento refinado.
+## Identidade Visual & Cores (Baseada no Logo e Materiais Oficiais)
+- **Logotipo:** Emblema circular 3D em Ouro Nobre metálico ("JULIANA COTA - ADVOGADA") com balança da justiça, monograma estilizado "JC" e ramo de louro com brilho especular.
 - **Paleta de Cores:**
-  - Primária Escura: Deep Petrol Slate / Azul Petróleo Nobre (`#081017`, `#0a1722`, `#0e1f2d`), reproduzindo o tom de veludo/camurça da parede de destaque do escritório físico da Dra. Bianca.
-  - Acento Ouro Nobre & Champagne: Ouro Metálico (`#c99738`, `#b88628`), Dourado Claro (`#f3d88b`), Ouro Profundo / Bronze (`#966718`).
-  - Neutros Claros: Branco Puro (`#ffffff`), Gelo Suave / Alabastro (`#f8fafc`, `#fbf4e5`), Grafite Texto (`#081017`, `#475569`, `#64748b`).
-- **Tipografia:** Outfit nos títulos de autoridade e Plus Jakarta Sans para leitura clara, confortável e acessível.
+  - Primária Escura: Deep Dark Olive Charcoal (`#0a110b`, `#111a13`, `#152217`), extraída da identidade corporativa dos posts e insígnias oficiais da Dra. Juliana Cota (`@julianacota.adv`).
+  - Dourado Real & Champagne: Ouro Metálico (`#cda34f`, `#977128`), Dourado Claro (`#eed083`, `#fae4a8`), Bronze Profundo (`#684b12`).
+  - Neutros Claros: Branco Puro (`#ffffff`), Alabastro / Off-white Pérola (`#faf9f5`, `#f5f3ec`), Grafite Texto (`#0a130c`, `#4b5a4d`).
+- **Tipografia:** Playfair Display nos títulos de autoridade e nobreza, combinada com Plus Jakarta Sans para leitura clara, confortável e moderna.
 
 ## Informações de Contato & Sede
-- **Endereço Físico:** Rua José Nicolau de Queirós, 256 - 1º Andar - Centro, Conselheiro Lafaiete - MG, CEP 36400-000, Brasil.
-- **Telefone / WhatsApp:** (31) 3721-4798
-- **WhatsApp Link:** https://wa.me/553137214798
-- **E-mail:** contato@silvacabral.adv.br
-- **Instagram:** @biancasantos.advogada (https://www.instagram.com/biancasantos.advogada/)
-- **Horário de Atendimento:** Segunda a Sexta, das 08h30 às 17h30.
-- **Abrangência:** Atendimento presencial acolhedor no Centro de Conselheiro Lafaiete/MG e consultoria digital estruturada em todo o Brasil.
+- **Endereço Físico:** Em frente ao Supermercado BH - Av. Getúlio Vargas, 5368 - Sl 02/03 - Carneirinhos, João Monlevade - MG, CEP 35930-003, Brasil.
+- **Telefone / WhatsApp:** (31) 99940-5869
+- **WhatsApp Link:** https://wa.me/5531999405869
+- **E-mail:** contato@julianacota.adv.br
+- **Instagram:** @julianacota.adv (https://www.instagram.com/julianacota.adv/)
+- **Horário de Atendimento:** Segunda a Sexta, das 08h30 às 18h00.
+- **Abrangência:** Atendimento presencial acolhedor no bairro Carneirinhos, João Monlevade/MG, e consultoria jurídica digital especializada para clientes em todo o Brasil.
 
 ## Assets Utilizados
-- `public/logo.png`: Logotipo oficial da Dra. Bianca Santos ("Bianca Santos ADVOCACIA PREVIDENCIÁRIA") em alta resolução com acabamento 3D em ouro nobre.
-- `public/dra-bianca-hero.jpg`: Retrato executivo da Dra. Bianca Santos em atendimento executivo em seu escritório em Conselheiro Lafaiete.
-- `public/dra-bianca-sobre.jpg`: Fotografia institucional da Dra. Bianca Santos prestando atendimento acolhedor e atencioso à mesa com cliente.
-- `public/dra-bianca-social.jpg`: Retrato da Dra. Bianca Santos para a seção de conexão com o Instagram (@biancasantos.advogada).
-- `public/artigo-previdenciario-negado.jpg`: Editorial exclusivo sobre reversão de benefícios indeferidos pelo INSS e recebimento de atrasados.
-- `public/artigo-planejamento-previdenciario.jpg`: Editorial exclusivo sobre planejamento previdenciário e cálculo do benefício máximo.
-- `app/icon.png`, `public/icon.png` (512x512): Monograma "BS" em ouro nobre sobre fundo azul petróleo profundo.
-- `app/apple-icon.png`, `public/apple-icon.png` (180x180): Ícone otimizado para dispositivos Apple.
-- `app/favicon.ico`, `public/favicon.ico`, `public/favicon.png`: Ícones de navegador.
+- `public/logo.png` / `public/Emblema Jurídico Dourado Juliana Cota.png`: Logotipo 3D oficial em alta resolução com acabamento dourado e fundo transparente.
+- `public/juliana-cota-hero.jpg` (`public/imgi_54_...jpg`): Retrato executivo da Dra. Juliana Cota de blazer branco, braços cruzados, no topo da página.
+- `public/juliana-cota-sobre.jpg` (`public/imgi_52_...jpg`): Fotografia profissional da Dra. Juliana Cota trabalhando ao notebook para a seção Sobre Nós.
+- `public/juliana-cota-social.jpg` (`public/imgi_53_...jpg`): Retrato elegante em traje executivo escuro para a seção de conexão com o Instagram (@julianacota.adv).
+- `public/artigo-rescisao-indireta.jpg`: Imagem para o artigo sobre Rescisão Indireta e direitos do trabalhador.
+- `public/artigo-direitos-trabalhistas.jpg`: Imagem para o artigo sobre CLT na prática e demissão por justa causa.
+- `public/icon.png`, `public/apple-icon.png`, `public/favicon.png`: Ícones de navegador e web apps gerados a partir do logotipo dourado oficial.

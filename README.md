@@ -1,14 +1,14 @@
-# Silva Cabral Advocacia Previdenciária · Dra. Bianca Santos
+# Juliana Cota Consultoria Jurídica & Advocacia · Dra. Juliana Cota
 
-Site institucional de alto padrão da **Dra. Bianca Santos** e equipe da **Silva Cabral Advocacia Previdenciária**, com foco especializado em Direito Previdenciário (Aposentadorias, BPC/LOAS, Benefícios por Incapacidade, Pensão por Morte, Planejamento Previdenciário e Revisão de Benefícios perante o INSS e a Justiça Federal). Sede física no Centro de Conselheiro Lafaiete - MG e atendimento digital em todo o Brasil.
+Site institucional e comercial de alto padrão da **Dra. Juliana Cota** e equipe da **Juliana Cota Consultoria Jurídica & Advocacia**, com foco especializado em Direito do Trabalho (Rescisão Indireta, Defesa do Trabalhador, Verbas Rescisórias, Horas Extras, Justa Causa), Consultoria Trabalhista & Compliance Empresarial, Direito Civil, Família e Previdenciário. Sede física no bairro Carneirinhos em João Monlevade - MG e atendimento digital em todo o Brasil.
 
 ## Informações do Cliente
-- **Nome:** Silva Cabral Advocacia Previdenciária / Dra. Bianca Santos
-- **Telefone / WhatsApp:** (31) 3721-4798
-- **E-mail:** contato@silvacabral.adv.br
-- **Endereço:** Rua José Nicolau de Queirós, 256 - 1º Andar - Centro, Conselheiro Lafaiete - MG, CEP 36400-000
-- **Instagram:** [@biancasantos.advogada](https://www.instagram.com/biancasantos.advogada/)
-- **Avaliações no Google:** 4,9 estrelas (133+ avaliações verificadas)
+- **Nome:** Juliana Cota Consultoria Jurídica & Advocacia / Dra. Juliana Cota
+- **Telefone / WhatsApp:** (31) 99940-5869
+- **E-mail:** contato@julianacota.adv.br
+- **Endereço:** Em frente ao Supermercado BH - Av. Getúlio Vargas, 5368 - Sl 02/03 - Carneirinhos, João Monlevade - MG, CEP 35930-003, Brasil
+- **Instagram:** [@julianacota.adv](https://www.instagram.com/julianacota.adv/)
+- **Avaliações no Google:** 5,0 estrelas (97 avaliações verificadas)
 
 ## Tecnologias
 - **Next.js 16** (App Router)

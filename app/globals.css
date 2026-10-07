@@ -2,16 +2,16 @@
 
 :root {
   color-scheme: light;
-  --brand-gold: #cfa043;
-  --brand-gold-dark: #916315;
-  --brand-gold-light: #fbe5a2;
-  --brand-petrol: #0b1a24;
-  --brand-petrol-dark: #071118;
-  --brand-petrol-card: #0f2432;
+  --brand-gold: #cda34f;
+  --brand-gold-dark: #977128;
+  --brand-gold-light: #fae4a8;
+  --brand-dark: #111a13;
+  --brand-dark-deep: #0a110b;
+  --brand-dark-card: #152217;
   --brand-card: #ffffff;
-  --brand-bg: #fcfbf9;
-  --brand-text: #08131a;
-  --brand-text-soft: #4a5c68;
+  --brand-bg: #fcfbf8;
+  --brand-text: #0a130c;
+  --brand-text-soft: #4b5a4d;
 }
 
 @theme inline {
@@ -20,35 +20,35 @@
   --font-serif: var(--font-display), "Playfair Display", Georgia, serif;
   --font-sans: var(--font-body), "Plus Jakarta Sans", system-ui, sans-serif;
 
-  --color-petrol-darkest: #060e14;
-  --color-petrol-dark: #08131a;
-  --color-petrol-base: #0b1a24;
-  --color-petrol-surface: #0f2432;
-  --color-petrol-border: rgba(207, 160, 67, 0.2);
+  --color-petrol-darkest: #070d08;
+  --color-petrol-dark: #0a110b;
+  --color-petrol-base: #111a13;
+  --color-petrol-surface: #152217;
+  --color-petrol-border: rgba(205, 163, 79, 0.22);
 
-  --color-gold-highlights: #fbe5a2;
-  --color-gold-light: #f3d88b;
-  --color-gold-base: #cfa043;
-  --color-gold-dark: #916315;
-  --color-gold-deep: #6d4508;
+  --color-gold-highlights: #fae4a8;
+  --color-gold-light: #eed083;
+  --color-gold-base: #cda34f;
+  --color-gold-dark: #977128;
+  --color-gold-deep: #684b12;
 
-  --color-ink: #08131a;
-  --color-ink-soft: #4a5c68;
+  --color-ink: #0a130c;
+  --color-ink-soft: #4b5a4d;
 
   --color-brand-50: #fdfaf3;
   --color-brand-100: #fbf3e2;
   --color-brand-200: #f7e4be;
-  --color-brand-300: #eed093;
+  --color-brand-300: #eed083;
   --color-brand-400: #e3b865;
-  --color-brand-500: #cfa043;
+  --color-brand-500: #cda34f;
   --color-brand-600: #b5832e;
-  --color-brand-700: #916315;
+  --color-brand-700: #977128;
   --color-brand-800: #744b11;
   --color-brand-900: #58370b;
-  --color-brand-950: #0b1a24;
+  --color-brand-950: #111a13;
 
-  --shadow-card: 0 16px 36px -8px rgba(8, 19, 26, 0.08), 0 0 0 1px rgba(207, 160, 67, 0.12);
-  --shadow-card-dark: 0 20px 45px -12px rgba(0, 0, 0, 0.65), 0 0 0 1px rgba(207, 160, 67, 0.22);
+  --shadow-card: 0 16px 36px -8px rgba(10, 19, 12, 0.08), 0 0 0 1px rgba(205, 163, 79, 0.14);
+  --shadow-card-dark: 0 20px 45px -12px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(205, 163, 79, 0.25);
 }
 
 html {
@@ -63,11 +63,11 @@ body {
 }
 
 ::selection {
-  background: #cfa043;
-  color: #071118;
+  background: #cda34f;
+  color: #070d08;
 }
 
-/* Eyebrow mirroring the logo: —— ADVOCACIA PREVIDENCIÁRIA —— */
+/* Eyebrows matching the high-end legal aesthetic */
 .eyebrow,
 .eyebrow-light {
   display: inline-flex;
@@ -82,11 +82,11 @@ body {
 }
 
 .eyebrow {
-  color: #916315;
+  color: #977128;
 }
 
 .eyebrow-light {
-  color: #f3d88b;
+  color: #eed083;
 }
 
 .eyebrow::before,
@@ -100,9 +100,9 @@ body {
   opacity: 0.75;
 }
 
-/* Luxury 3D Gold Gradient text matching the logo */
+/* Luxury 3D Gold Gradient text matching the Juliana Cota 3D logo */
 .text-gold-gradient {
-  background: linear-gradient(135deg, #fbe5a2 0%, #e3b865 30%, #cfa043 65%, #916315 100%);
+  background: linear-gradient(135deg, #fae4a8 0%, #dfb86c 30%, #cda34f 65%, #977128 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -110,7 +110,7 @@ body {
 .nav-link {
   position: relative;
   padding-block: 0.5rem;
-  color: rgba(255, 255, 255, 0.82);
+  color: rgba(255, 255, 255, 0.85);
   font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -124,7 +124,7 @@ body {
   bottom: 0;
   left: 0;
   height: 2px;
-  background: linear-gradient(90deg, #cfa043, #fbe5a2);
+  background: linear-gradient(90deg, #cda34f, #fae4a8);
   content: "";
   transform: scaleX(0);
   transform-origin: left;
@@ -132,7 +132,7 @@ body {
 }
 
 .nav-link:hover {
-  color: #f3d88b;
+  color: #eed083;
 }
 
 .nav-link:hover::after {
@@ -144,7 +144,7 @@ body {
 }
 
 .footer-link:hover {
-  color: #f3d88b;
+  color: #eed083;
 }
 
 ::-webkit-scrollbar {
@@ -152,16 +152,16 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #08131a;
+  background: #0a110b;
 }
 
 ::-webkit-scrollbar-thumb {
   border-radius: 999px;
-  background: linear-gradient(180deg, #cfa043, #916315);
+  background: linear-gradient(180deg, #cda34f, #977128);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #e3b865;
+  background: #dfb86c;
 }
 
 @media (prefers-reduced-motion: reduce) {

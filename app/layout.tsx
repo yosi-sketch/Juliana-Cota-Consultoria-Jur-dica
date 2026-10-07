@@ -17,33 +17,33 @@ const bodyFont = Plus_Jakarta_Sans({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#081017",
+  themeColor: "#0a110b",
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.silvacabral.adv.br"),
-  title: "Dra. Bianca Santos | Silva Cabral Advocacia Previdenciária · Conselheiro Lafaiete - MG",
+  metadataBase: new URL("https://www.julianacota.adv.br"),
+  title: "Dra. Juliana Cota | Consultoria Jurídica & Advocacia · João Monlevade - MG",
   description:
-    "Dra. Bianca Santos (Silva Cabral Advocacia Previdenciária) — Atendimento humanizado e especializado em Direito Previdenciário em Conselheiro Lafaiete/MG e em todo o Brasil. Foco em aposentadorias rápidas, BPC/LOAS, benefícios por incapacidade (auxílio-doença), pensão por morte, planejamento previdenciário e revisões do INSS. Avaliação 4,9 estrelas com 133+ avaliações no Google.",
+    "Juliana Cota Consultoria Jurídica & Advocacia — Atendimento acolhedor, combativo e especializado em Direito do Trabalho (defesa do trabalhador, rescisão indireta, horas extras, justa causa), consultoria empresarial, causas cíveis e previdenciárias em João Monlevade/MG e em todo o Brasil. Avaliação 5,0 estrelas com 97 avaliações no Google.",
   keywords: [
-    "Dra. Bianca Santos",
-    "Bianca Santos Advogada",
-    "Silva Cabral Advocacia Previdenciária",
-    "Silva Cabral Advogados",
-    "advogada previdenciária Conselheiro Lafaiete",
-    "advogado INSS Conselheiro Lafaiete",
-    "aposentadoria Conselheiro Lafaiete MG",
-    "BPC LOAS Conselheiro Lafaiete",
-    "auxílio doença advogado Lafaiete",
-    "planejamento previdenciário Minas Gerais",
-    "revisão de benefício INSS",
-    "advocacia previdenciária MG",
-    "pensão por morte INSS Lafaiete",
-    "concessão de aposentadoria rápida",
+    "Dra. Juliana Cota",
+    "Juliana Cota Advogada",
+    "Juliana Cota Consultoria Jurídica & Advocacia",
+    "Juliana Cota João Monlevade",
+    "advogada João Monlevade",
+    "advogado trabalhista João Monlevade",
+    "direito do trabalho João Monlevade MG",
+    "rescisão indireta João Monlevade",
+    "consultoria jurídica João Monlevade",
+    "advocacia trabalhista Minas Gerais",
+    "demissão sem justa causa advogado",
+    "acidente de trabalho advogado João Monlevade",
+    "advogada Carneirinhos João Monlevade",
+    "horas extras advogado João Monlevade",
   ],
-  authors: [{ name: "Dra. Bianca Santos" }],
-  creator: "Silva Cabral Advocacia Previdenciária",
-  publisher: "Silva Cabral Advocacia Previdenciária",
+  authors: [{ name: "Dra. Juliana Cota" }],
+  creator: "Juliana Cota Consultoria Jurídica & Advocacia",
+  publisher: "Juliana Cota Consultoria Jurídica & Advocacia",
   formatDetection: {
     telephone: true,
     address: true,
@@ -61,17 +61,17 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://www.silvacabral.adv.br",
-    title: "Dra. Bianca Santos | Silva Cabral Advocacia Previdenciária",
+    url: "https://www.julianacota.adv.br",
+    title: "Dra. Juliana Cota | Consultoria Jurídica & Advocacia",
     description:
-      "Aposentadoria e benefícios do INSS conquistados com agilidade, respeito e excelência técnica. Sede no Centro de Conselheiro Lafaiete - MG e atendimento em todo o Brasil.",
-    siteName: "Silva Cabral Advocacia Previdenciária",
+      "Defesa firme dos seus direitos com técnica, ética e acolhimento humano. Sede em Carneirinhos, João Monlevade - MG e atendimento especializado em todo o Brasil.",
+    siteName: "Juliana Cota Consultoria Jurídica & Advocacia",
     images: [
       {
         url: "/logo.png",
-        width: 2020,
-        height: 427,
-        alt: "Dra. Bianca Santos - Silva Cabral Advocacia Previdenciária",
+        width: 1774,
+        height: 887,
+        alt: "Juliana Cota Consultoria Jurídica & Advocacia",
       },
     ],
   },
@@ -92,7 +92,7 @@ export default function RootLayout({
         <link rel="icon" href="/icon.png?v=2026" type="image/png" sizes="512x512" />
         <link rel="apple-touch-icon" href="/apple-icon.png?v=2026" sizes="180x180" />
       </head>
-      <body className="min-h-screen overflow-x-clip bg-slate-50 font-sans text-slate-900 antialiased selection:bg-[#c99738] selection:text-white">
+      <body className="min-h-screen overflow-x-clip bg-[#fcfbf8] font-sans text-[#0a130c] antialiased selection:bg-[#cda34f] selection:text-[#070d08]">
         {children}
       </body>
     </html>
