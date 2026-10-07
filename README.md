@@ -4,7 +4,7 @@ Site institucional e comercial de alto padrão da **Dra. Juliana Cota** e equipe
 
 ## Informações do Cliente
 - **Nome:** Juliana Cota Consultoria Jurídica & Advocacia / Dra. Juliana Cota
-- **Telefone / WhatsApp:** (31) 99940-5869
+- **Telefone / WhatsApp:** (31) 97134-7399
 - **E-mail:** contato@julianacota.adv.br
 - **Endereço:** Em frente ao Supermercado BH - Av. Getúlio Vargas, 5368 - Sl 02/03 - Carneirinhos, João Monlevade - MG, CEP 35930-003, Brasil
 - **Instagram:** [@julianacota.adv](https://www.instagram.com/julianacota.adv/)

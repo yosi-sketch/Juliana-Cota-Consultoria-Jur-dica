@@ -33,8 +33,8 @@ import {
 import GlowingButton from "./components/GlowingButton";
 
 // Informações Oficiais de Contato & Redes Sociais
-const WHATSAPP_NUMBER = "5531999405869";
-const PHONE_DISPLAY = "(31) 99940-5869";
+const WHATSAPP_NUMBER = "5531971347399";
+const PHONE_DISPLAY = "(31) 97134-7399";
 const EMAIL_CONTACT = "contato@julianacota.adv.br";
 const INSTAGRAM_URL = "https://www.instagram.com/julianacota.adv/";
 const GOOGLE_MAPS_URL =

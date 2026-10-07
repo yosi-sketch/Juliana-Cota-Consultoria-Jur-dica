@@ -24,8 +24,8 @@ Site institucional e comercial de alto padrão em Next.js 16 (App Router), React
 
 ## Informações de Contato & Sede
 - **Endereço Físico:** Em frente ao Supermercado BH - Av. Getúlio Vargas, 5368 - Sl 02/03 - Carneirinhos, João Monlevade - MG, CEP 35930-003, Brasil.
-- **Telefone / WhatsApp:** (31) 99940-5869
-- **WhatsApp Link:** https://wa.me/5531999405869
+- **Telefone / WhatsApp:** (31) 97134-7399
+- **WhatsApp Link:** https://wa.me/5531971347399
 - **E-mail:** contato@julianacota.adv.br
 - **Instagram:** @julianacota.adv (https://www.instagram.com/julianacota.adv/)
 - **Horário de Atendimento:** Segunda a Sexta, das 08h30 às 18h00.
